@@ -6,7 +6,7 @@ import java.util.List;
 public class TestAutoboxingAndUnboxing {
 
 	public static void main(String[] args) {
-		byte b = new Byte("10"); //unboxing
+		byte b = new Byte((byte)10); //unboxing
 		Integer integer = 100; //autoboxing
 		List<Float> list = new ArrayList<>();
 		list.add(10f); //autoboxing
