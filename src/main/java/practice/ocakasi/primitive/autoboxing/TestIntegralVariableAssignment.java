@@ -10,10 +10,12 @@ public class TestIntegralVariableAssignment {
 		byte byteResult1 = 127 - 1;	//All operands are literals && byte is smaller than int => evaluated at compile time && result in byte range => OK 
 		byte byteSum = 127 + 1;		//All operands are literals && byte is smaller than int => evaluated at compile time && result not in byte range => Does not compile
 		char charSum = 65535 + 2;// Same as the above
-		int intSum = 2147483647 + 1;//arithmetic expression assigned to int variable is not evaluated at compile time
+		int in = 214748365; //assigned literal out of int range => Does not compile!
+		int intSum = 214748364 + 1;//arithmetic expression assigned to int variable is not evaluated at compile time
 		System.out.println(intSum);//If the syntax errors above is removed, this can compile and run without Exception but printed overflowed result
 		long l = 10;//
 		long l2 = 2147483648L;//This is out of range of int => compulsory to add prefix
+		double d = 10.f;
 	}
 
 }
