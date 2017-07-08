@@ -8,7 +8,7 @@ public class TestIntegralVariableAssignment {
 		byte b1 = 127;//Range in [-127, 127] => OK
 		byte b2 = 128;//out of range of [-127, 127] => Does not compile! 
 		byte byteResult1 = 127 - 1;	//All operands are literals && byte is smaller than int => evaluated at compile time && result in byte range => OK 
-		byte byteSum = 127 + 2;		//All operands are literals && byte is smaller than int => evaluated at compile time && result not in byte range => Does not compile
+		byte byteSum = 127 + 1;		//All operands are literals && byte is smaller than int => evaluated at compile time && result not in byte range => Does not compile
 		char charSum = 65535 + 2;// Same as the above
 		int in = 214748365; //assigned literal out of int range => Does not compile!
 		int intSum = 214748364 + 1;//arithmetic expression assigned to int variable is not evaluated at compile time
