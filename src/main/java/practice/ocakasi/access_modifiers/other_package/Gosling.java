@@ -1,7 +1,5 @@
 package practice.ocakasi.access_modifiers.other_package;
 
-import java.lang.reflect.Field;
-
 import practice.ocakasi.access_modifiers.Swan;
 
 public class Gosling extends Swan {
@@ -11,5 +9,4 @@ public class Gosling extends Swan {
 //	public void tryToFly() {
 //		if (super.canFly) System.out.println("I can fly"); //canFly is not visible => would not compile
 //	}
-
 }
