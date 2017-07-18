@@ -4,4 +4,4 @@
 |`extends` interface                                | yes                                   | yes             |                 
 |allow instance variables                           | no                                    | yes             |
 |/method declaration                                |                                       |                 |
-| <ul><li>static method</li></ul>                                   | **yes** (since Java 8)                | yes             | 
+|   static method                                   | **yes** (since Java 8)                | yes             | 
