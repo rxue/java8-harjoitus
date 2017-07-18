@@ -1,4 +1,5 @@
 # Interface & abstract class
+## Method Name Conflict
 Mehtod name conflict happens when:
  * a *concrete class* `extends` another class (can be either *concrete* or *abstract*) and `implements` at least one interface in the same time or
  * a *concrete class* `implements` at least two interfaces
