@@ -1,4 +1,6 @@
-# Interface VS abstract class
+# Interface & abstract class
+Method conflicts are allowed https://docs.oracle.com/javase/tutorial/java/IandI/override.html
+
 ## `extends`
 |                                               | interface                             | abstract class  |
 |-----------------------------------------------|---------------------------------------|-----------------|
