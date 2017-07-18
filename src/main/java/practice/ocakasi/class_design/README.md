@@ -5,7 +5,7 @@
 |allow instance variables                           | no                                    | yes             |
 
 ## Method declaration
-|                 | interface                                    | abstract class                             |
-|-----------------|----------------------------------------------|--------------------------------------------|
+|                 | interface               | abstract class                             |
+|-----------------|-------------------------|--------------------------------------------|
 | static meth     | **yes** (since Java 8)                       | yes                                        | 
 | abstract method | yes (with default modifier `public abstract`)| yes (`abstract` has to be added explicitly)|
