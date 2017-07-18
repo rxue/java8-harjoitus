@@ -1,6 +1,6 @@
 # Interface & abstract class
 Mehtod name conflict happens when:
- * a *concrete class* `extends` a class and `implements` at least one interface in the same time or
+ * a *concrete class* `extends` another class (can be either *concrete* or *abstract*) and `implements` at least one interface in the same time or
  * a *concrete class* `implements` at least two interfaces
  * the aforementioned interfaces and class contain methods with the common *method signatue*
 
