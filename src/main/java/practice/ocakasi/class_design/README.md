@@ -8,4 +8,4 @@
 |                 | interface                                     | abstract class                                                                                       |
 |-----------------|-----------------------------------------------|------------------------------------------------------------------------------------------------------|
 | static method   | **yes** (since Java 8)                        | yes                                                                                                  | 
-| abstract method | yes <ul><li>`public abstract` only</li><li>without `public abstract`, `public abstract` is added by compiler anyway</li></ul>  | yes <ul><li>`abstract` as to be added</li><li>access modifier can not be `private`, otherwise all OK)|
+| abstract method | yes <ul><li>`public abstract` only</li><li>without `public abstract`, `public abstract` is added by compiler anyway</li></ul>  | yes <ul><li>`abstract` has to be added</li><li>access modifier can not be `private`, otherwise all OK)|
