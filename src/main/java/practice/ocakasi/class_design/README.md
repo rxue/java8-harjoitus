@@ -1,9 +1,11 @@
 # Interface VS abstract class
 ## `extends`
-|                                                   | interface                             | abstract class  |
-|---------------------------------------------------|---------------------------------------|-----------------|
-|`extends`  any class (abstract and <b>concrete</b>)| no                                    | <b>yes</b>      |
-|`extends` interface                                | yes                                   | yes             |                 
+|                                               | interface                             | abstract class  |
+|-----------------------------------------------|---------------------------------------|-----------------|
+|`extends`  class (abstract and <b>concrete</b>)| no                                    | <b>yes</b>      |
+|`extends` interface                            | yes                                   | yes             |                 
+
+Abstract class can extends concrete classes as well!
 
 ## Method declaration
 |                 | interface                                     | abstract class                                                                                       |
