@@ -2,7 +2,7 @@
 Method conflicts are allowed. Reference: https://docs.oracle.com/javase/tutorial/java/IandI/override.html
 
 Method conflicts appear in the Java core API:
-`public class More ...ArrayList<E> extends AbstractList<E>`
+`public class ArrayList<E> extends AbstractList<E> implements List<E>, RandomAccess, Cloneable, java.io.Serializable`
 
 ## `extends`
 |                                               | interface                             | abstract class  |
