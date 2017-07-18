@@ -1,5 +1,8 @@
 # Interface & abstract class
-Method conflicts are allowed https://docs.oracle.com/javase/tutorial/java/IandI/override.html
+Method conflicts are allowed. Reference: https://docs.oracle.com/javase/tutorial/java/IandI/override.html
+
+Method conflicts appear in the Java core API:
+`public class More ...ArrayList<E> extends AbstractList<E>`
 
 ## `extends`
 |                                               | interface                             | abstract class  |
@@ -14,3 +17,6 @@ Abstract class can extends concrete classes as well!
 |-----------------|-----------------------------------------------|------------------------------------------------------------------------------------------------------|
 | static method   | **yes** (since Java 8)                        | yes                                                                                                  | 
 | abstract method | <ul><li>default modifier: `public abstract`</li><li>without `public abstract`, `public abstract` is added by compiler anyway</li></ul> | <ul><li>`abstract` has to be added explicitly</li><li>access modifier can not be `private`, otherwise `protected`, default package-privat, or `public` are all OK)|
+
+## Method implementation
+
