@@ -3,7 +3,8 @@ Mehtod name conflict happens when:
  * a *concrete class* `extends` a class and `implements` at least one interface in the same time or
  * a *concrete class* `implements` at least two interfaces
  * the aforementioned interfaces and class contain methods with the common *method signatue*
-and, if the conflict method has *covariant return type*,  the method name conflict can be resolved. Reference: https://docs.oracle.com/javase/tutorial/java/IandI/override.html
+
+If the conflict method has *covariant return type*,  the method name conflict can be resolved. Reference: https://docs.oracle.com/javase/tutorial/java/IandI/override.html
 
 Method name conflicts appear in the Java core API:
 `public class ArrayList<E> extends AbstractList<E> implements List<E>, RandomAccess, Cloneable, java.io.Serializable`
