@@ -1,7 +1,11 @@
 # Interface & abstract class
-Method conflicts are allowed. Reference: https://docs.oracle.com/javase/tutorial/java/IandI/override.html
+Mehtod name conflict happens when:
+ * a *concrete class* `extends` a class and `implements` at least one interface in the same time or
+ * a *concrete class* `implements` at least two interfaces
+ * the aforementioned interfaces and class contain methods with the common *method signatue*
+and, if the conflict method has *covariant return type*,  the method name conflict can be resolved. Reference: https://docs.oracle.com/javase/tutorial/java/IandI/override.html
 
-Method conflicts appear in the Java core API:
+Method name conflicts appear in the Java core API:
 `public class ArrayList<E> extends AbstractList<E> implements List<E>, RandomAccess, Cloneable, java.io.Serializable`
 
 ## `extends`
@@ -16,7 +20,7 @@ Abstract class can extends concrete classes as well!
 |                 | interface                                     | abstract class                                                                                       |
 |-----------------|-----------------------------------------------|------------------------------------------------------------------------------------------------------|
 | static method   | **yes** (since Java 8)                        | yes                                                                                                  | 
-| abstract method | <ul><li>default modifier: `public abstract`</li><li>without `public abstract`, `public abstract` is added by compiler anyway</li></ul> | <ul><li>`abstract` has to be added explicitly</li><li>access modifier can not be `private`, otherwise `protected`, default package-privat, or `public` are all OK)|
+| abstract method | <ul><li>default modifier: `public abstract`</li><li>without `public abstract`, `public abstract` is added by compiler anyway</li></ul> | <ul><li>`abstract` has to be added explicitly</li><li>access modifier can not be `private`, otherwise `protected`, default *package-private*, or `public` are all OK)|
 
 ## Method implementation
 * when implementing an *interface* method, access modifiers have to be `public` 
