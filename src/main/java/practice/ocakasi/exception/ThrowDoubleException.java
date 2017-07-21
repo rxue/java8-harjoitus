@@ -7,8 +7,8 @@ public class ThrowDoubleException {
 		try {
 			throw new SwallowedException();
 		} catch (SwallowedException e) {
-			System.out.println("Appear");
-			throw new Exception("My own");
+			System.out.println("The caught exception is not handled, i.e. SWALLOWED");
+			throw new Exception("This is a new Exception");
 		} finally {
 			throw new FinallyException();
 		}
