@@ -1,6 +1,10 @@
 package practice.ocakasi.exception;
 
-class FinallyException extends Exception {}
+class FinallyException extends Exception {
+	public FinallyException (String message) {
+		super(message);
+	}
+}
 class SwallowedException extends Exception  {}
 public class ThrowSecondExceptionInFinally {
 	public void openDrawbridge() throws Exception {
@@ -10,7 +14,7 @@ public class ThrowSecondExceptionInFinally {
 			System.out.println("The caught exception is not handled, i.e. SWALLOWED");
 			throw new Exception("a second Exception");
 		} finally {
-			throw new FinallyException();
+			throw new FinallyException("This last thrown exception aborted the previous thrown exception");
 		}
 	}
 	public static void main(String[] arg) {
