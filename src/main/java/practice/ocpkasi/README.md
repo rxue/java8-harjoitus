@@ -1,0 +1,2 @@
+# Buzzwords
+* *marker interface*
