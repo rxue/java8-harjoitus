@@ -2,6 +2,9 @@
 * *marker interface*
 * *functional interface*: an interface that contains a single **abstract** method
 
+# Object Oriented Design Principles
+* *Coupling*: the degree to which one class knows about another class (Reference: Sun Certified Programmer for Java 6 Study Guide)
+  * *Loose coupling*: If the only knowledge that class A has about class B, is what class has exposed through its interface, then class A and class B are loosely coupled
 # Design Pattern
 ## *Creational Patterns*
 ### *Singleton Pattern*
