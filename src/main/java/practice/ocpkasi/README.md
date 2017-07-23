@@ -16,6 +16,8 @@
 * [`java.lang.RunTime`](http://grepcode.com/file/repository.grepcode.com/java/root/jdk/openjdk/8-b132/java/lang/Runtime.java)
 
 ### *Builder Pattern*
+#### *Builder Pattern* Features
+* Tightly coupled
 #### *Builder Pattern* Application in Java Core
 * [`java.lang.StringBuilder`](http://grepcode.com/file/repository.grepcode.com/java/root/jdk/openjdk/8-b132/java/lang/StringBuilder.java)
 
