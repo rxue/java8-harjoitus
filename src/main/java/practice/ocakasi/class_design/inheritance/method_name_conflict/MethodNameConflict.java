@@ -1,4 +1,4 @@
-package practice.ocakasi.class_design.inheritance;
+package practice.ocakasi.class_design.inheritance.method_name_conflict;
 interface Horn {
 	public Number play();
 }
