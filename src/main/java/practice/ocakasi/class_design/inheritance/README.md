@@ -11,10 +11,10 @@ Method name conflicts appear in the Java core API:
 `public class ArrayList<E> extends AbstractList<E> implements List<E>, RandomAccess, Cloneable, java.io.Serializable`
 
 ## `extends`
-|                                               | interface                             | abstract class  |
-|-----------------------------------------------|---------------------------------------|-----------------|
-|`extends`  class (abstract and <b>concrete</b>)| no                                    | <b>yes</b>      |
-|`extends` interface                            | yes                                   | yes             |                 
+|                                               | interface                             | abstract class                |
+|-----------------------------------------------|---------------------------------------|-------------------------------|
+|`extends`  class (abstract and <b>concrete</b>)| 0                                     | **only one**                  |
+|`extends` interface                            | **many**                              | **no** (but can `implements`) |                 
 
 Abstract class can extends concrete classes as well!
 
