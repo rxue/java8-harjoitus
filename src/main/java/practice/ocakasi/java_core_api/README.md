@@ -6,7 +6,7 @@
 * `indexOf`
 * `length`
 * `substring` - Returns a **new String** that contains a subsequence of characters currently contained in this character sequence
-  * `substring(int start, int end)` - the `end` is the **exclusive** end index 
+  * `substring(int start, int end)` - the `end` is the **exclusive** end index and `end` must be smaller or equal to the length of the relevant `String` object 
 
 At heart, from the perspective of source code, these methods don't modify the *instance variables*.
 
@@ -20,8 +20,10 @@ At heart, from the perspective of source code, these methods don't modify the *i
 |`endWith`          | exists                                      | does not exist                              |
 |`contains`         | exists                                      | does not exist                              |
 |`equals`           | **`@overide` `Object.equals(Object obj)`**  | **`inherits` `Object.equals(Object obj)`**  |
-|`replace`          | <ul><li>`replace(char oldChar, char newChar)`</li><li>`replace(CharSequence target, CharSequence replacement)`</li><li>*Immutable* => returns `new` `String`</li></ul> | <ul><li>`replace(int start, int end, String str)`</li><li>*builder design pattern* => returns the instance per se</li></ul> |
-|`append`           | does not exist                              | exists<ul><li>Overloaded with parameters of all primitive data types, `CharSequence` and other `Object` types</li></ul> |
+|`replace`          | <ul><li>`replace(char oldChar, char newChar)`</li><li>`replace(CharSequence target, CharSequence replacement)`</li><li>*Immutable* => returns `new` `String`</li></ul> | <ul><li>`replace(int start, int end, String str)`</li><li>*builder design pattern* => returns the instance per se</li><li>The `end` index is **exclusive** and, it can be even bigger than the length of the relevant string</li></ul> |
+|`append`           | does not exist                              | exists<ul><li>`Overloaded` with parameters of all primitive data types, `CharSequence` and other `Object` types</li></ul> |
+|`insert`           | does not exist                              | exists                                      |
+|`delete`           | does not exist                              | exists<ul><li>`delete(int start, int end)`</li></ul> |
 
 
 
