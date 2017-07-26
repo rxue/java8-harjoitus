@@ -1,5 +1,5 @@
 ## `String`
-`String` is similar with primitive data type wrapper class in that they have common characters:
+Common characters of `String` and primitive data type wrapper classes:
 
 * in the package `java.lang`
 * *immutability*
