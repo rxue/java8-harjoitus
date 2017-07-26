@@ -20,7 +20,8 @@ At heart, from the perspective of source code, these methods don't modify the *i
 |`endWith`          | exists                                      | does not exist                              |
 |`contains`         | exists                                      | does not exist                              |
 |`equals`           | **`@overide` `Object.equals(Object obj)`**  | **`inherits` `Object.equals(Object obj)`**  |
-|`replace`          | <ul><li>`replace(char oldChar, char newChar)`</li><li>`replace(CharSequence target, CharSequence replacement)`</li><li>*Immutable* => returns `new` `String`</li></ul> | <ul><li>`replace(int start, int end, String str)`</li><li>*Mutable* and in *builder pattern* => returns the instance per se</li></ul> |
+|`replace`          | <ul><li>`replace(char oldChar, char newChar)`</li><li>`replace(CharSequence target, CharSequence replacement)`</li><li>*Immutable* => returns `new` `String`</li></ul> | <ul><li>`replace(int start, int end, String str)`</li><li>*builder design pattern* => returns the instance per se</li></ul> |
+|`append`           | does not exist                              | exists                                      |
 
 
 
