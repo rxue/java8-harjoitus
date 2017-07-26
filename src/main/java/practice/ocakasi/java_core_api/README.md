@@ -5,7 +5,8 @@
 * `charAt`
 * `indexOf`
 * `length`
-* `substring`
+* `substring` - Returns a **new String** that contains a subsequence of characters currently contained in this character sequence
+  * `substring(int start, int end)` - the `end` is the **exclusive** end index 
 
-At hear, say from the perspective of source code, these methods don't modify the *instance variables*.
+At heart, from the perspective of source code, these methods don't modify the *instance variables*.
 
