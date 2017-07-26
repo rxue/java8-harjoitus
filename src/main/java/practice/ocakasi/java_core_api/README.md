@@ -1,8 +1,7 @@
 # `String` VS `StringBuilder`
-| **`String`** 	| **`StringBuilder`**	| Comment	|
-|---------------|-----------------------|---------------|
-|`charAt`	| `charAt`	      	| same		|
-|`indexOf`	| `indexOf`	      	| same		|
-|`length`	| `length`	      	| same		|
-|`substring`	| `substring`	      	| same		|
+4 methods in `String` and `StringBuilder` work exactly the same, they are:
+* `charAt`
+* `indexOf`
+* `length`
+* `substring`
 
