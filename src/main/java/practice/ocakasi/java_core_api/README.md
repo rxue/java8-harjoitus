@@ -10,8 +10,10 @@
 
 At heart, from the perspective of source code, these methods don't modify the *instance variables*.
 
-### Method Comparison between `String` and `StringBuilder`
-| **`String`** | **`StringBuilder`** | Comment   |
-|--------------|---------------------|-----------|
-
+### Comparison of Methods between `String` and `StringBuilder`
+|               | **`String`**  | **`StringBuilder`** |
+|---------------|---------------|---------------------|
+|`toLowerCase`  | exists        | **does not exist**  |
+|`toUpperCase`  | exists        | **does not exist**  |
+|`equals`       | **overide**   | **not override**    |
 
