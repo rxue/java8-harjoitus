@@ -1,1 +1,1 @@
-`java.time.Period` `>` `java.time.Duration`
+`java.time.Period` > `java.time.Duration`
