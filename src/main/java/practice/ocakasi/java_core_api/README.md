@@ -25,6 +25,7 @@ At heart, from the perspective of source code, these methods don't modify the *i
 |`append`           | does not exist                              | exists<ul><li>`Overloaded` with parameters of all primitive data types, `CharSequence` and other `Object` types</li></ul> |
 |`insert`           | does not exist                              | exists                                      |
 |`delete`           | does not exist                              | exists<ul><li>`delete(int start, int end)`</li><li>The `end` index is **exclusive** and, at heart, from the aspect of source code, if the `end` is greater than the length of the relevant string, `end` is set to the length of the relevant string</li></ul> |
+|`reverse`          | does not exist                              | exists                                      |
 
 
 
