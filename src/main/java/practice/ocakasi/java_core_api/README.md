@@ -11,9 +11,11 @@
 At heart, from the perspective of source code, these methods don't modify the *instance variables*.
 
 ### Comparison of Methods between `String` and `StringBuilder`
-|               | **`String`**                | **`StringBuilder`**           |
-|---------------|-----------------------------|-------------------------------|
-|`toLowerCase`  | exists                      | **does not exist**            |
-|`toUpperCase`  | exists                      | **does not exist**            |
-|`equals`       | **overide `Object.equals`** | **inherited `Object.equals`** |
+|                   | **`String`**                                | **`StringBuilder`**                         |
+|-------------------|---------------------------------------------|---------------------------------------------|
+|`toLowerCase`      | exists                                      | **does not exist**                          |
+|`toUpperCase`      | exists                                      | **does not exist**                          |
+|`equals`           | **`@overide` `Object.equals(Object obj)`**  | **`inherits` `Object.equals(Object obj)`**  |
+|`equalsIgnoreCase` | exists                                      | **does not exist**                          |
+
 
