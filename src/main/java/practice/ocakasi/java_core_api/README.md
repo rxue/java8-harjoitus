@@ -27,5 +27,12 @@ At heart, from the perspective of source code, these methods don't modify the *i
 |`delete`           | does not exist                              | exists<ul><li>`delete(int start, int end)`</li><li>The `end` index is **exclusive** and, at heart, from the aspect of source code, if the `end` is greater than the length of the relevant string, `end` is set to the length of the relevant string</li></ul> |
 |`reverse`          | does not exist                              | exists                                      |
 
+As to `StringBuilder`, the following methods contains both **start index** and **end index** as parameters:
+
+* `substring(int start, int end)`
+* `replace(int start, int end, String str)` (skipped in OCA)
+* `delete(int start, int end)`
+
+The common character of **end index** in all the three methods is the **exclusiveness**, say the `char` in the **end index** is exclusive in the computation
 
 
