@@ -13,9 +13,14 @@ At heart, from the perspective of source code, these methods don't modify the *i
 ### Comparison of Methods between `String` and `StringBuilder`
 |                   | **`String`**                                | **`StringBuilder`**                         |
 |-------------------|---------------------------------------------|---------------------------------------------|
-|`toLowerCase`      | exists                                      | **does not exist**                          |
-|`toUpperCase`      | exists                                      | **does not exist**                          |
+|`toLowerCase`      | exists                                      | does not exist                              |
+|`toUpperCase`      | exists                                      | does not exist                              |
+|`equalsIgnoreCase` | exists                                      | does not exist                              |
+|`startWith`        | exists                                      | does not exist                              |
+|`endWith`          | exists                                      | does not exist                              |
+|`contains`         | exists                                      | does not exist                              |
 |`equals`           | **`@overide` `Object.equals(Object obj)`**  | **`inherits` `Object.equals(Object obj)`**  |
-|`equalsIgnoreCase` | exists                                      | **does not exist**                          |
+|`replace`          | <ul><li>*Immutable* => returns `new` `String`</li><li>Can be chained</li></ul> | <ul><li>*Mutable* and in *builder pattern* => returns the instance per se</li><li>Can be chained</li></ul> |
+
 
 
