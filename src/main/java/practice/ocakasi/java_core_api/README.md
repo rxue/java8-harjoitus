@@ -1,3 +1,11 @@
+## `String`
+`String` is similar with primitive data type wrapper class in that they have common characters:
+
+* in the package `java.lang`
+* *immutability*
+* have `static` method `valueOf`
+* have *overridden* `toString` method
+
 ## `String` VS `StringBuilder`
 ### Same Methods Among `String` and `StringBuilder` 
 4 methods in `String` and `StringBuilder` work exactly the same, they are:
