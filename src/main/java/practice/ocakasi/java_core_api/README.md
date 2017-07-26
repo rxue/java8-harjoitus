@@ -29,10 +29,10 @@ At heart, from the perspective of source code, these methods don't modify the *i
 
 As to `StringBuilder`, the following methods contains both **start index** and **end index** as parameters:
 
-* `substring(int start, int end)`
-* `replace(int start, int end, String str)` (skipped in OCA)
+* `substring(int start, int end)`  
+* `replace(int start, int end, String str)` (not included in OCA)
 * `delete(int start, int end)`
 
-The common character of **end index** in all the three methods is the **exclusiveness**, say the `char` in the **end index** is exclusive in the computation
+The common character of the **end index** in all the three methods is the **exclusiveness**, say the `char` in the **end index** is exclusive in the computation. In the `substring` method, the `end index` is more restrictive, say it must be `<=` the length of the relevant string. Whereas in the other two methods, the **end index** can be even greater than the length of the string because, at heart, from the aspect of source code of [java.lang.AbstractStringBuilder#delete](http://grepcode.com/file/repository.grepcode.com/java/root/jdk/openjdk/8-b132/java/lang/AbstractStringBuilder.java#AbstractStringBuilder.delete%28int%2Cint%29), if the `end` is greater then the length of the relevant string, `end` is  set to the length of the relevant string.  
 
 
