@@ -10,3 +10,8 @@
 
 At heart, from the perspective of source code, these methods don't modify the *instance variables*.
 
+### Method Comparison between `String` and `StringBuilder`
+| **`String`** | **`StringBuilder`** | Comment   |
+|--------------|---------------------|-----------|
+
+
