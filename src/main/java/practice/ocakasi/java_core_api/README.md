@@ -56,6 +56,6 @@ The common character of the **end index** in all the three methods is the **excl
 * `void clear()`
 * `boolean contains(Object o)`
 
-and `AbstractList<E>` implemented
+and `AbstractList<E>` overrode
 
 * `boolean equals(Object o)`
