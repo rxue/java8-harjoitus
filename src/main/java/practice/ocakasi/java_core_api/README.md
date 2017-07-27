@@ -44,7 +44,8 @@ As to `StringBuilder`, the following methods contains both **start index** and *
 The common character of the **end index** in all the three methods is the **exclusiveness**, say the `char` in the **end index** is exclusive in the computation. In the `substring` method, the `end index` is more restrictive, say it must be `<=` the length of the relevant string. Whereas in the other two methods, the **end index** can be even greater than the length of the string because, at heart, from the aspect of source code of [java.lang.AbstractStringBuilder#delete](http://grepcode.com/file/repository.grepcode.com/java/root/jdk/openjdk/8-b132/java/lang/AbstractStringBuilder.java#AbstractStringBuilder.delete%28int%2Cint%29) (line 731-732), if the `end` is greater than the length of the relevant string, `end` is  set to the length of the relevant string.  
 
 ## `ArrayList`
-`ArrayList` class is declared as `public class ArrayList<E> extends AbstractList<E> implements` **`List<E>`** `, RandomAccess, Clonable, Serializable`, where the `List` contains the following methods:
+`ArrayList` class is declared as `public class ArrayList<E> extends` **`AbstractList<E>`** implements` **`List<E>`** `, RandomAccess, Clonable, Serializable`, where the `List` contains the following methods:
+
 * `boolean add(E element)` 
 * `void add(int index, E element)`
 * `boolean remove(Object object)`
@@ -52,5 +53,9 @@ The common character of the **end index** in all the three methods is the **excl
 * `E set(int index, E newElement)`
 * `boolean isEmpty()`
 * `int size()`
+* `void clear()`
+* `boolean contains(Object o)`
 
+and `AbstractList<E>` implemented
 
+* `boolean equals(Object o)`
