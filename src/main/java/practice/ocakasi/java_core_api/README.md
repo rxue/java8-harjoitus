@@ -46,10 +46,12 @@ The common character of the **end index** in all the three methods is the **excl
 ## `ArrayList`
 `ArrayList` class is declared as `public class ArrayList<E> extends` **`AbstractList<E>`** implements` **`List<E>`** `, RandomAccess, Clonable, Serializable`, where the `List` contains the following methods:
 
-* `boolean add(E element)` 
-* `void add(int index, E element)`
-* `boolean remove(Object object)`
-* `E remove(int index)`
+* `add`
+  * `boolean add(E element)` 
+  * `void add(int index, E element)`
+* `remove`
+  * `boolean remove(Object object)`
+  * `E remove(int index)`
 * `E set(int index, E newElement)`
 * `boolean isEmpty()`
 * `int size()`
