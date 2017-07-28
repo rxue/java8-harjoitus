@@ -49,7 +49,7 @@ The common character of the **end index** in all the three methods is the **excl
 * `add`
   * `boolean add(E element)` 
   * `void add(int index, E element)`
-* `remove`
+* `remove` - selection of the overloading methods by Java compiler is tricky: *numeric promotion* over *autoboxing*
   * `boolean remove(Object object)`
   * `E remove(int index)`
 * `E set(int index, E newElement)`
