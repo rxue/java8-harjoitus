@@ -6,6 +6,9 @@ Common characters of `String` and primitive data type *wrapper classes*:
 * have `static` method `valueOf`
 * have *overridden* `toString` method
 
+### *String Pool*
+*String pool*, also known as *intern pool*, is a location in the *Java virtual machine (JVM)* that collect all the strings
+
 ## `String` VS `StringBuilder`
 ### Same Methods Among `String` and `StringBuilder` 
 4 methods in `String` and `StringBuilder` work exactly the same, they are:
