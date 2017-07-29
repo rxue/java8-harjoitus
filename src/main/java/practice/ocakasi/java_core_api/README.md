@@ -7,7 +7,7 @@ Common characters of `String` and primitive data type *wrapper classes*:
 * have *overridden* `toString` method
 
 ### *String Pool*
-*String pool*, also known as *intern pool*, is a location in the *Java virtual machine (JVM)* that collect all the strings
+*String pool*, also known as *intern pool*, is a location in the *Java virtual machine (JVM)* that collect all the *literal* strings
 
 ## `String` VS `StringBuilder`
 ### Same Methods Among `String` and `StringBuilder` 
