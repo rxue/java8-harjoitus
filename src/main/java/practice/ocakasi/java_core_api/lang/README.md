@@ -46,8 +46,3 @@ Refer to: https://github.com/rxue/java8-perusharjoitus/blob/master/src/main/java
 
 `int[] array = new int[10];` => `java.util.List array = new java.util.List[10];` is legal as well
 
-### Frequently Used *Static Methods* in `Arrays` *Class*
-* `toString` with many *overloading* methods
-* `sort`
-* `binarySearch`
-* `static <T> List<T> asList(T ...a)`
