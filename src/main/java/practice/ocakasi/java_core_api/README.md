@@ -9,6 +9,24 @@ Common characters of `String` and primitive data type *wrapper classes*:
 ### *String Pool*
 *String pool*, also known as *intern pool*, is a location in the *Java virtual machine (JVM)* that collect all the *literal* strings
 
+### Drill Down to Souce Code of [`String.substring(int start, int end)`](http://grepcode.com/file/repository.grepcode.com/java/root/jdk/openjdk/8-b132/java/lang/String.java#String.substring%28int%2Cint%29)
+```
+    public String More ...substring(int beginIndex, int endIndex) {
+        if (beginIndex < 0) {
+            throw new StringIndexOutOfBoundsException(beginIndex);
+        }
+        if (endIndex > value.length) {
+            throw new StringIndexOutOfBoundsException(endIndex);
+        }
+        int subLen = endIndex - beginIndex;
+        if (subLen < 0) {
+            throw new StringIndexOutOfBoundsException(subLen);
+        }
+        return ((beginIndex == 0) && (endIndex == value.length)) ? this
+                : new String(value, beginIndex, subLen);
+    }
+```
+
 ## `String` VS `StringBuilder`
 ### Same Methods Among `String` and `StringBuilder` 
 4 methods in `String` and `StringBuilder` work exactly the same, they are:
