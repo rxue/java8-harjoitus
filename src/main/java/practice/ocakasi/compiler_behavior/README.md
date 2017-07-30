@@ -11,11 +11,11 @@ Compiler's behavior as mentioned in Java books can be proved with the `javap` to
 	</tr>
 	<tr>
 		<td>
-<code><pre>
+<pre><code>
 0: sipush        201
 3: invokestatic  #16
 // Method java/lang/Integer.valueOf:(I)Ljava/lang/Integer;
-</pre></code>
+</code></pre>
 		</td>	
 		<td>
 <code><pre>
