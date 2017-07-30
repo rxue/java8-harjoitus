@@ -13,6 +13,7 @@
 * [*numeric promotion*](https://docs.oracle.com/javase/specs/jls/se8/html/jls-5.html#jls-5.6): a process by which, given an *arithmetic operator* and its argument expressions, the **arguments are converted to an inferred target type**.
   * *unary promotion*
   * *binary promotion*
+* *pass-by-value*: In the context of calling methods, the copy of the variable is made and the method receives that copy. Java is a *pass-by-value* language.
 # *Method Chaining*
 Static methods cannot be chained. On the other hand, in *builder design pattern*, *parameters* are passed to a builder object often through *method chaining*  
 
