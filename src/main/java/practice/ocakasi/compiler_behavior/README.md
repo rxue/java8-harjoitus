@@ -6,7 +6,7 @@ Compiler's behavior as mentioned in Java books can be proved with the `javap` to
 	<col width="50%">
   	<col width="50%">
 	<tr>
-		<th>`Integer autoboxedInteger = 201;`</th>		
+		<th><code>Integer autoboxedInteger = 201;</code></th>		
 		<th><pre>Integer integer = Integer.valueOf(201);</pre></th>
 	</tr>
 	<tr>
