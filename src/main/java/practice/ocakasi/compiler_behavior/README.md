@@ -1,14 +1,8 @@
-<style>
-code {
-  display: block;
-  white-space: pre-wrap   
-}
-</style>
 # Compiler's Behavior
 Compiler's behavior as mentioned in Java books can be proved with the `javap` tool from *JDK*
 ## Autoboxing
 ### [Example Autoboxing of `int`]()
-<table>
+<table style="code {display: block; white-space: pre-wrap}">
 	<col width="50%">
   	<col width="50%">
 	<tr>
