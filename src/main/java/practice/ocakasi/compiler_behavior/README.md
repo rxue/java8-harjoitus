@@ -11,16 +11,16 @@ Compiler's behavior as mentioned in Java books can be proved with the `javap` to
 	</tr>
 	<tr>
 		<td>
-<pre>
+<code><pre>
 0: sipush        201
 3: invokestatic  #16	// Method java/lang/Integer.valueOf:(I)Ljava/lang/Integer;
-</pre>
+</code></pre>
 		</td>	
 		<td>
-<pre>
+<code><pre>
 7: sipush        201
 10: invokestatic  #16	// Method java/lang/Integer.valueOf:(I)Ljava/lang/Integer;
-</pre>
+</code></pre>
 		</td>
 	</tr>
 </table>
