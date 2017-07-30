@@ -26,6 +26,15 @@ Common characters of `String` and primitive data type *wrapper classes*:
                 : new String(value, beginIndex, subLen);
     }
 ```
+=> 
+* `string.substring(0, string.length())` returns the same object the `string` *reference* variable references to
+* `beginIndex` has to belong to `[0, value.length]`
+* `endIndex` has to belong to `[beginIndex, value.length]`
+
+=> 
+  * `endIndex` >= `startIndex`
+  * `string.substring(string.length(), string.length())` returns an empty string without throwing any exception
+
 
 ## `String` VS `StringBuilder`
 ### Same Methods Among `String` and `StringBuilder` 
