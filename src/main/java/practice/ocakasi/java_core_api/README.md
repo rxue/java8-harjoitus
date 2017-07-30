@@ -35,6 +35,7 @@ Common characters of `String` and primitive data type *wrapper classes*:
   * `endIndex` >= `startIndex`
   * `string.substring(string.length(), string.length())` returns an empty string without throwing any exception
 
+Refer to: https://github.com/rxue/java8-perusharjoitus/blob/master/src/main/java/practice/ocakasi/java_core_api/lang/StringPuzzler.java
 
 ## `String` VS `StringBuilder`
 ### Same Methods Among `String` and `StringBuilder` 
