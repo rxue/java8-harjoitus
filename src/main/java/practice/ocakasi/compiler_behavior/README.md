@@ -13,13 +13,15 @@ Compiler's behavior as mentioned in Java books can be proved with the `javap` to
 		<td>
 <code><pre>
 0: sipush        201
-3: invokestatic  #16	// Method java/lang/Integer.valueOf:(I)Ljava/lang/Integer;
+3: invokestatic  #16
+// Method java/lang/Integer.valueOf:(I)Ljava/lang/Integer;
 </code></pre>
 		</td>	
 		<td>
 <code><pre>
 7: sipush        201
-10: invokestatic  #16	// Method java/lang/Integer.valueOf:(I)Ljava/lang/Integer;
+10: invokestatic  #16	
+// Method java/lang/Integer.valueOf:(I)Ljava/lang/Integer;
 </code></pre>
 		</td>
 	</tr>
