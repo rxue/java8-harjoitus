@@ -3,8 +3,8 @@ Compiler's behavior as mentioned in Java books can be proved with the `javap` to
 ## Autoboxing
 ### [Example Autoboxing of `int`]()
 <table>
-	<col width="50%">
-  	<col width="50%">
+	<col width="20">
+  	<col width="20">
 	<tr>
 		<th><code>Integer autoboxedInteger = 201;</code></th>		
 		<th><code>Integer integer = Integer.valueOf(201);</code></th>
