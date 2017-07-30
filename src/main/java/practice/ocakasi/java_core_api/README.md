@@ -18,7 +18,7 @@ Common characters of `String` and primitive data type *wrapper classes*:
 * `length`
 * `substring` - Returns a **new String** that contains a subsequence of characters currently contained in this character sequence
   * Both returns `String` object
-  * `substring(int start, int end)` - the `end` is the **exclusive** end index and `end` must be smaller or equal to the length of the relevant `String` object 
+  * `String substring(int start, int end)` - the `end` is the **exclusive** end index and `end` must be smaller or equal to the length of the relevant `String` object 
 
 At heart, from the perspective of source code, these methods don't modify the *instance variables*.
 
