@@ -11,7 +11,7 @@ Compiler's behavior as mentioned in Java books can be proved with the `javap` to
 	</tr>
 	<tr>
 		<td>
-<code style="background-color:yellow;display:block;white-space:pre-wrap;">
+<code style="background-color:yellow;">
 0: sipush        201
 3: invokestatic  #16	// Method java/lang/Integer.valueOf:(I)Ljava/lang/Integer;
 </code>
