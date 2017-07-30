@@ -2,8 +2,9 @@
 Compiler's behavior as mentioned in Java books can be proved with the `javap` tool from *JDK*
 ## Autoboxing
 ### [Example Autoboxing of `int`]()
-|`Integer autoboxedInteger = 201;`		|`Integer integer = Integer.valueOf(201);`	|
-|-----------------------------------------------|-----------------------------------------------|
+<table>
+	<th><pre>Integer autoboxedInteger = 201;</pre></th>		
+	<th><pre>Integer integer = Integer.valueOf(201);</pre></th>
 <tr>
 	<td>
 <pre>
@@ -18,6 +19,7 @@ Compiler's behavior as mentioned in Java books can be proved with the `javap` to
 </pre>
 	</td>
 </tr>
+</table>
 
 
 
