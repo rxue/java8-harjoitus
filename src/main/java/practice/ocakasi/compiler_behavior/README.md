@@ -4,10 +4,20 @@ Compiler's behavior as mentioned in Java books can be proved with the `javap` to
 ### [Example Autoboxing of `int`]()
 |`Integer autoboxedInteger = 201;`		|`Integer integer = Integer.valueOf(201);`	|
 |-----------------------------------------------|-----------------------------------------------|
-|<pre>
-`0: sipush        201
- 3: invokestatic  #16                 // Method java/lang/Integer.valueOf:(I)Ljava/lang/Integer;`</pre>	|<pre>`7: sipush        201
-10: invokestatic  #16                 // Method java/lang/Integer.valueOf:(I)Ljava/lang/Integer;`</pre>	|
+<tr>
+	<td>
+```
+0: sipush        201
+3: invokestatic  #16                 // Method java/lang/Integer.valueOf:(I)Ljava/lang/Integer;`
+```
+	</td>	
+	<td>
+```
+7: sipush        201
+10: invokestatic  #16                 // Method java/lang/Integer.valueOf:(I)Ljava/lang/Integer;
+```
+	</td>
+</tr>
 
 
 
