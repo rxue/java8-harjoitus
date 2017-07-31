@@ -32,7 +32,7 @@
 * **`int size()`** - NOTE! This is not length!
 * `void clear()`
 * `boolean contains(Object o)`
-* **`toArray`**
+* **`toArray`** - implemented by calling `Arrays.copyOf`, which is a *shallow copy*, meaning only the *references* get copied - there is no duplication of the objects themselves 
   * `Object[] toArray()` - Be wary that it returns an array of *Objects*
   * `<T> T[] toArray(T a)` - It is usually called by giving an empty array - `list.toArray(new String[0])`. The advantage of specifying a size of 0 for the parameter is that Java will create a new array of the proper size for the return value. If you like, you can suggest a larger array to be used instead. If the ArrayList fits in that array, it will be returned. Otherwise, a new one will be created.
 
