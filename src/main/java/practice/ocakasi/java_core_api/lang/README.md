@@ -39,7 +39,7 @@ Refer to: https://github.com/rxue/java8-perusharjoitus/blob/master/src/main/java
 
 ## *Arrays* as *First-Class Object*
 *Array* is *first-class object* in that:
-* *Array* is an *Object*
+* *Array* is an *Object* - for instance, `Object x = new int[10];` is perfectly legal
 	* can be initialized with `new` keyword
 	* `equals` of *array* is not overridden
 	* `equals` of *toString* is not overriden
