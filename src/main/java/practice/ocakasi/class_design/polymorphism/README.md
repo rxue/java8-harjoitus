@@ -6,5 +6,5 @@
 * The type of the object    determines **which properties exist** within the object in memory
 * The type of the reference determines **which members (methods and variables) are accessible** to the Java program
 ## *Virtual Methods*
-At heart, from the aspect of Java virtual machine *instuction set*, an accessible *Virtul method* call will be compiled to an `invokevirtual` *instruction*. The behavior `invokevirtual` instruction is determined at runtime, and is contingent on the *object* the pertinent *reference variable* references to, meaning the *overriding method* in the pertinent *object* will be invoked if it exists.  
+At heart, from the aspect of Java virtual machine *instuction set*, an accessible *virtul method* call will be compiled to an `invokevirtual` *instruction*. The behavior `invokevirtual` instruction is determined at runtime, and is contingent on the *object* the pertinent *reference variable* references to, meaning the *overriding method* in the pertinent *object* will be invoked if it exists.  
 
