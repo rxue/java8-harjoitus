@@ -6,6 +6,8 @@
     * Their values are different from the **value of the object**, meaning *references* do not hold the value of the object. 
     * Instead, a reference "points" to an object by storing the memory address where the object is located. In this sense, *reference* Resembles the *pointer* in C, but Java does not allow you to learn what the memory address is.  
     * An *object* can be accessed only via a *reference*
+* *Method*
+  * *Method signature*: the method name and the list of the input *parameters*
 * [*class members*](https://docs.oracle.com/javase/tutorial/java/javaOO/classvars.html)
 * [*JavaBeans*](http://download.oracle.com/otndocs/jcp/7224-javabeans-1.01-fr-spec-oth-JSpec/): a *software component model* for Java
   * *Property*: instance variable
