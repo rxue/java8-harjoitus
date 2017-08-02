@@ -1,4 +1,4 @@
-:## `static` Method
+## `static` Method
 You can think of *statics* as being a *class member* that **exists independently of any instance of that class**.
 
 `static` methods have two main purposes:
