@@ -1,6 +1,6 @@
 package practice.ocakasi.keyword_final;
 
-public class InitializeFinalStaticVariables {
+public class AssignFinalStaticVariables {
 	public static final String leftRope;
 	public static final String rightRope;
 	//public final String bench;
