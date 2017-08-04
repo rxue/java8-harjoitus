@@ -43,6 +43,6 @@ and `AbstractList<E>` overrode
 ### `ArrayList` Constructor
 * `ArrayList()`
 * `ArrayList(int initialCapacity)`
-* [`ArrayList(Collection<? extends E> c)`](http://grepcode.com/file/repository.grepcode.com/java/root/jdk/openjdk/8u40-b25/java/util/ArrayList.java#ArrayList.%3Cinit%3E%28java.util.Collection%29) - The first line in the source code is `elementData = c.toArray();`. So the trait of the *instance variable* `elementData` is contingent on `java.util.Collection.toArray()` => the *elements* of the given `Collection` instance is *shallow* copied into the *array instance variable* of this `ArrayList`, meaning 
+* [`ArrayList(Collection<? extends E> c)`](http://grepcode.com/file/repository.grepcode.com/java/root/jdk/openjdk/8u40-b25/java/util/ArrayList.java#ArrayList.%3Cinit%3E%28java.util.Collection%29) - The first line in the source code is `elementData = c.toArray();`. So the trait of the *instance variable* `elementData` is contingent on `java.util.Collection.toArray()` - a *shallow copy* operation, meaning 
   * the *array reference variable* of this `ArrayList` is independent from the *array reference* of the given `Collection`.
   * the caller of this ArrayList is free to modify the elements of this `ArrayList`, say `add` or `remove` operations of this `ArrayList` can always work properly 
