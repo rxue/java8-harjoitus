@@ -39,3 +39,8 @@
 and `AbstractList<E>` overrode
 
 * `boolean equals(Object o)`
+
+### `ArrayList` Constructor
+* `ArrayList()`
+* `ArrayList(int initialCapacity)`
+* [`ArrayList(Collection<? extends E> c)`](http://grepcode.com/file/repository.grepcode.com/java/root/jdk/openjdk/8u40-b25/java/util/ArrayList.java#ArrayList.%3Cinit%3E%28java.util.Collection%29) - the essense is that the *elements* of the given `Collection` instance is *shallow* copied into the *array instance variable* of this `ArrayList` 

@@ -5,6 +5,7 @@ public boolean equals(Object obj) {
   return (this == obj);
 }
 ```
+It checks *reference* equality.
 
 ## `String` VS `StringBuilder`
 ### Same Methods Among `String` and `StringBuilder` 
