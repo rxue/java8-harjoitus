@@ -43,4 +43,6 @@ and `AbstractList<E>` overrode
 ### `ArrayList` Constructor
 * `ArrayList()`
 * `ArrayList(int initialCapacity)`
-* [`ArrayList(Collection<? extends E> c)`](http://grepcode.com/file/repository.grepcode.com/java/root/jdk/openjdk/8u40-b25/java/util/ArrayList.java#ArrayList.%3Cinit%3E%28java.util.Collection%29) - the essense is that the *elements* of the given `Collection` instance is *shallow* copied into the *array instance variable* of this `ArrayList` 
+* [`ArrayList(Collection<? extends E> c)`](http://grepcode.com/file/repository.grepcode.com/java/root/jdk/openjdk/8u40-b25/java/util/ArrayList.java#ArrayList.%3Cinit%3E%28java.util.Collection%29) - the *elements* of the given `Collection` instance is *shallow* copied into the *array instance variable* of this `ArrayList`, meaning 
+  * the *array reference variable* of this `ArrayList` is independent from the *array reference* of the given `Collection`.
+  * the *size* of this ArrayList can change, say `add` or `remove` operations of this `ArrayList` can always work properly 
