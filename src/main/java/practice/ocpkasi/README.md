@@ -31,5 +31,5 @@ The *factory pattern*, sometimes referred to as the *factory method pattern*, is
 
 #### *Factory Pattern* Application in Java Core
 * [`java.time.ZonedDateTime`](http://grepcode.com/file/repository.grepcode.com/java/root/jdk/openjdk/8-b132/java/time/ZonedDateTime.java)
-  * refer to [`ZonedDateTime.of(int year, int month, int dayOfMonth, int hour, int minut, int second, int nanoOfSecond, ZoneId zone)`](https://docs.oracle.com/javase/8/docs/api/java/time/ZonedDateTime.html#of-int-int-int-int-int-int-int-java.time.ZoneId-)
+  * refer to the *overloading* of `static` method [`ZonedDateTime.of`](https://docs.oracle.com/javase/8/docs/api/java/time/ZonedDateTime.html#of-int-int-int-int-int-int-int-java.time.ZoneId-)
 
