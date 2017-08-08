@@ -1,6 +1,6 @@
 # Buzzwords
 * *marker interface*
-* *functional interface*: an interface that contains a single **abstract** method
+* *legacy code* is older code. It is usually code that is in a different style than you would write if you were writing the code today. 
 
 # Object Oriented Design Principles
 * *Coupling*: the degree to which one class knows about another class (Reference: Sun Certified Programmer for Java 6 Study Guide)
