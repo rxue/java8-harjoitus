@@ -24,5 +24,12 @@
 #### *Builder Pattern* Application in Java Core
 * [`java.lang.StringBuilder`](http://grepcode.com/file/repository.grepcode.com/java/root/jdk/openjdk/8-b132/java/lang/StringBuilder.java)
 
+### *Factory Pattern*
+The *factory pattern*, sometimes referred to as the *factory method pattern*, is a *creational pattern* based on the idea of using a factory class to produce instances of objects based on a set of input parameters. 
+* It is similar to the *builder pattern*, although it is focused on supporting class polymorphism
+* *Factory patterns* are often, although not always, implemented using **`static`** methods that return objects and do not require a pointer to an instance of the factory class
 
+#### *Factory Pattern* Application in Java Core
+* [`java.time.ZonedDateTime`](http://grepcode.com/file/repository.grepcode.com/java/root/jdk/openjdk/8-b132/java/time/ZonedDateTime.java)
+  * refer to [`ZonedDateTime.of(int year, int month, int dayOfMonth, int hour, int minut, int second, int nanoOfSecond, ZoneId zone)`](https://docs.oracle.com/javase/8/docs/api/java/time/ZonedDateTime.html#of-int-int-int-int-int-int-int-java.time.ZoneId-)
 
