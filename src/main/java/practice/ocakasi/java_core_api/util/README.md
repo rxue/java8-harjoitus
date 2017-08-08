@@ -1,24 +1,14 @@
-# *Array*
-## *Array* as a *First-Class Object*
-*Array* is *first-class object* in that:
-* *Array* is an *Object*
-	* can be initialized with `new` keyword
-	* `Object.equals` is not overridden
-	* `Object.toString` is not overriden
-
-`int[] array = new int[10];` => `java.util.List array = new java.util.List[10];` is legal as well
-
-### Mentioned *Static Methods* in `Arrays` *Class*
+## Mentioned *Static Methods* in `Arrays` *Class*
 * `toString` with many *overloading* methods
 * `sort`
 * `binarySearch`
 * `static <T> List<T> asList(T ...a)`
 
-# *Collections*
-## Mentioned *Static Methods* in `Collections` *Class*
+## *Collections*
+### Mentioned *Static Methods* in `Collections` *Class*
 * `sort`
 
-## `List` > `ArrayList`
+### `List` > `ArrayList`
 `ArrayList` class is declared as `public class ArrayList<E> extends` **`AbstractList<E>`** `implements` **`List<E>`** `, RandomAccess, Clonable, Serializable`, where the **`List`** contains the following methods:
 
 * `add`
@@ -40,7 +30,7 @@ and `AbstractList<E>` overrode
 
 * `boolean equals(Object o)`
 
-### `ArrayList` Constructor
+#### `ArrayList` Constructor
 * `ArrayList()`
 * `ArrayList(int initialCapacity)`
 * [`ArrayList(Collection<? extends E> c)`](http://grepcode.com/file/repository.grepcode.com/java/root/jdk/openjdk/8u40-b25/java/util/ArrayList.java#ArrayList.%3Cinit%3E%28java.util.Collection%29) - The first line in the source code is `elementData = c.toArray();`. So the trait of the *instance variable* `elementData` is contingent on `java.util.Collection.toArray()` - a *shallow copy* operation, meaning 
