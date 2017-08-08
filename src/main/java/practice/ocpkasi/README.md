@@ -26,7 +26,7 @@
 
 ### *Factory Pattern*
 The *factory pattern*, sometimes referred to as the *factory method pattern*, is a *creational pattern* based on the idea of using a factory class to produce instances of objects based on a set of input parameters. 
-* It is similar to the *builder pattern*, although it is focused on supporting class polymorphism
+* It is similar to the *builder pattern*, although it is focused on supporting class polymorphism => creates objects in which the precise type of the object may not be known until runtime
 * *Factory patterns* are often, although not always, implemented using **`static`** methods that return objects and do not require a pointer to an instance of the factory class
 * *loosely coupled*
 #### *Factory Pattern* Application in Java Core
