@@ -1,7 +1,7 @@
 ## *Type erasure*
 The process of removing the generics syntax from original code is referred to as *type erasure*. *Type erasure* allows your ode to be compatible with older versions of Java that do not contain generics.
 
-The `main` method in both [``]() and [``]() are compiled to Java bytecode instructions:
+The `main` method in both [`DemoRawType`](https://github.com/rxue/java8-perusharjoitus/blob/master/src/main/java/practice/ocpkasi/compiler_behavior/type_erasure/DemoRawType.java) and [`DemoTypeErasure`](https://github.com/rxue/java8-perusharjoitus/blob/master/src/main/java/practice/ocpkasi/compiler_behavior/type_erasure/DemoTypeErasure.java) are compiled to the same Java bytecode instructions:
 ```  
 public static void main(java.lang.String[]);
     Code:
@@ -20,3 +20,4 @@ public static void main(java.lang.String[]);
       27: astore_2
       28: return
 ```
+On the Java assembly instruction level, [`DemoRawType`](https://github.com/rxue/java8-perusharjoitus/blob/master/src/main/java/practice/ocpkasi/compiler_behavior/type_erasure/DemoRawType.java) and [`DemoTypeErasure`](https://github.com/rxue/java8-perusharjoitus/blob/master/src/main/java/practice/ocpkasi/compiler_behavior/type_erasure/DemoTypeErasure.java) are equivalent, meaning *type erasure* happened behind the scenes.
