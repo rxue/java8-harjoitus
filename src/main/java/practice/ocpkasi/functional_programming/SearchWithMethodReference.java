@@ -2,6 +2,7 @@ package practice.ocpkasi.functional_programming;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.function.Predicate;
 
 public class SearchWithMethodReference {
 
@@ -12,8 +13,16 @@ public class SearchWithMethodReference {
 		animals.add(new Animal("rabbit", true, false));
 		animals.add(new Animal("turtle", false, true));
 		print(animals, Animal::canHop); // pass class that does check
+		printWithPredicate(animals, Animal::canSwim);
 	}
 	private static void print(List<Animal> animals, CheckTrait checker) {
+		for (Animal animal : animals) {
+			if (checker.test(animal)) // the general check
+				System.out.print(animal + " ");
+		}
+		System.out.println();
+	}
+	private static void printWithPredicate(List<Animal> animals, Predicate<Animal> checker) {
 		for (Animal animal : animals) {
 			if (checker.test(animal)) // the general check
 				System.out.print(animal + " ");
