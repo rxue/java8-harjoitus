@@ -10,7 +10,7 @@ public class TestMemberAccessibility {
 		 * Class Gosling's inherited field canSwim is only visible in the Gosling class
 		 * => the following line does not compile!
 		 */
-		if (gosling.canSwim)
-			System.out.println("Gosling can swim");
+//		if (gosling.canSwim)
+//			System.out.println("Gosling can swim");
 	}
 }

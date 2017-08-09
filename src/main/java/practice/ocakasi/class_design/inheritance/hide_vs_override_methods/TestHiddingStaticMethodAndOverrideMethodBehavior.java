@@ -25,21 +25,23 @@ class Panda extends Bear {
 	public static void sleep() {
 		out.println("-- Static method call: Panda is sleeping (parent method is hidden)");
 	}
-	public void pandaDoDailyRountine() {
-		out.println();
-		eat();
-		sleep();
-		out.println("Panda is has done daily routine");
-	}
+//	public void pandaDoDailyRountine() {
+//		out.println();
+//		eat();
+//		sleep();
+//		out.println("Panda is has done daily routine");
+//	}
 }
 
 public class TestHiddingStaticMethodAndOverrideMethodBehavior {
 
 	public static void main(String[] args) {
+		Bear bear = new Bear();
+		bear.doDailyRoutine();
 		Panda panda = new Panda();
-		panda.pandaDoDailyRountine();
+		//panda.pandaDoDailyRountine();
 		panda.doDailyRoutine();
-		out.println("NOTE! static hidden method can not be annotated with @override");
+		//out.println("NOTE! static hidden method can not be annotated with @override");
 	}
 
 }

@@ -21,6 +21,5 @@ public class JavaBean {
 	}
 	public void setMale(boolean male) {
 		this.male = male;
-	}
-	
+	}	
 }

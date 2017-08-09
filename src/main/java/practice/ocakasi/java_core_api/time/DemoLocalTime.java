@@ -1,4 +1,4 @@
-package practice.ocakasi.java_core_api;
+package practice.ocakasi.java_core_api.time;
 
 import java.time.LocalTime;
 import java.time.format.DateTimeFormatter;

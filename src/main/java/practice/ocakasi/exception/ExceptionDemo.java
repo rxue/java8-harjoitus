@@ -7,7 +7,7 @@ class SpecialException extends Exception {
 	}
 }
 
-public class ExceptionTest {
+public class ExceptionDemo {
 
 	public static final void main(String[] args) {
 		try {
