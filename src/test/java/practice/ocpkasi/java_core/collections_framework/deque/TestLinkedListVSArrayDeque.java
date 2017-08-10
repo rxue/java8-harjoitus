@@ -4,24 +4,34 @@ import java.util.LinkedList;
 
 import java.util.ArrayDeque;
 import java.util.Deque;
+import java.util.NoSuchElementException;
 
-import org.junit.Test;
-import static org.junit.jupiter.api.Assertions.assertFalse;
-import static org.junit.jupiter.api.Assertions.assertThrows;
+import org.junit.jupiter.api.Test;
+import org.junit.jupiter.api.BeforeEach;
+
+import static org.junit.jupiter.api.Assertions.*;
 
 public class TestLinkedListVSArrayDeque {
+	private Deque<String> linkedList;
+	private Deque<String> arrayDeque;
 	
-	@Test
-	public void testInsertNullElementToLinkedList() {
-		Deque<String> deque = new LinkedList<>();
-        deque.add(null);
-		assertFalse(deque.isEmpty());
+	@BeforeEach
+	public void initEach() {
+		arrayDeque = new ArrayDeque<>(1);
+		linkedList = new LinkedList<>();
 	}
 	
 	@Test
-	public void testInsertNullElementToArrayDeque() {
-		Deque<String> deque = new ArrayDeque<>();
-		assertThrows(NullPointerException.class, () -> deque.add(null));
+	public void testAddNullElement() {
+        linkedList.add(null);
+        linkedList.offer(null);
+		assertEquals(2, linkedList.size());
+		assertThrows(NullPointerException.class, () -> arrayDeque.add(null));
+		assertThrows(NullPointerException.class, () -> arrayDeque.offer(null));
 	}
-
+	@Test
+	public void testRemoveFromEmptyDeque() {
+		assertThrows(NoSuchElementException.class, () -> arrayDeque.remove());
+        assertNull(arrayDeque.poll());	
+    }
 }
