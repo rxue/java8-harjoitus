@@ -23,15 +23,24 @@ public class TestLinkedListVSArrayDeque {
 	
 	@Test
 	public void testAddNullElement() {
+		assertThrows(NullPointerException.class, () -> arrayDeque.add(null));
+		assertThrows(NullPointerException.class, () -> arrayDeque.offer(null));
         linkedList.add(null);
         linkedList.offer(null);
 		assertEquals(2, linkedList.size());
-		assertThrows(NullPointerException.class, () -> arrayDeque.add(null));
-		assertThrows(NullPointerException.class, () -> arrayDeque.offer(null));
 	}
 	@Test
 	public void testRemoveFromEmptyDeque() {
 		assertThrows(NoSuchElementException.class, () -> arrayDeque.remove());
-        assertNull(arrayDeque.poll());	
+        assertNull(arrayDeque.poll());
+		assertThrows(NoSuchElementException.class, () -> linkedList.remove());
+		assertNull(linkedList.poll());
     }
+	@Test 
+	public void testGetNextElementFromEmptyDeque() {
+		assertThrows(NoSuchElementException.class, () -> arrayDeque.element());
+		assertNull(arrayDeque.peek());
+		assertThrows(NoSuchElementException.class, () -> linkedList.element());
+		assertNull(linkedList.peek());
+	}
 }
