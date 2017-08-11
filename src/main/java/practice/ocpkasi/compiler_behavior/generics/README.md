@@ -3,7 +3,7 @@
 
 ## *Generics*
 
-The `main` method in both [`DemoRawType`](https://github.com/rxue/java8-perusharjoitus/blob/master/src/main/java/practice/ocpkasi/compiler_behavior/generics/DemoRawType.java) and [`DemoGenericType`](https://github.com/rxue/java8-perusharjoitus/blob/master/src/main/java/practice/ocpkasi/compiler_behavior/generics/DemoGenericType.java) are compiled to the same Java bytecode instructions:
+The `main` method in both [`DemoRawTypeWithExplicitCast`](https://github.com/rxue/java8-perusharjoitus/blob/master/src/main/java/practice/ocpkasi/compiler_behavior/generics/DemoRawTypeWithExplicitCast.java) and [`DemoGenericType`](https://github.com/rxue/java8-perusharjoitus/blob/master/src/main/java/practice/ocpkasi/compiler_behavior/generics/DemoGenericType.java) are compiled to the same Java bytecode instructions:
 ```  
 public static void main(java.lang.String[]);
     Code:
@@ -22,11 +22,11 @@ public static void main(java.lang.String[]);
       27: astore_2
       28: return
 ```
-=> On the Java assembly instruction level, [`DemoRawType`](https://github.com/rxue/java8-perusharjoitus/blob/master/src/main/java/practice/ocpkasi/compiler_behavior/generics/DemoRawType.java) and [`DemoGenericType`](https://github.com/rxue/java8-perusharjoitus/blob/master/src/main/java/practice/ocpkasi/compiler_behavior/generics/DemoGenericType.java) are equivalent
+=> On the Java assembly instruction level, `DemoRawTypeWithExplicitCast` and `DemoGenericType` are equivalent
 
 and
 
-In `DemoRawType.java`, there is *explicit cast*, which corresponds to the instruction `24: checkcast  #31`; whereas in `DemoGenericType.java`, there is no *explicit cast* at all
+In `DemoRawTypeWithExplicitCast.java`, there is *explicit cast*, which corresponds to the instruction `24: checkcast  #31`; whereas in `DemoGenericType.java`, there is no *explicit cast* at all
 
 => 
 
