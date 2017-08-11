@@ -1,8 +1,8 @@
 package practice.creating_objects.static_factory_method;
 
-import static org.junit.Assert.*;
+import static org.junit.jupiter.api.Assertions.*;
 
-import org.junit.Test;
+import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.DisplayName;
 
 public class TestPrimitiveTypeWrapper {
