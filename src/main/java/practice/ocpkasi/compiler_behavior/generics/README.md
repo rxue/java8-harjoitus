@@ -1,5 +1,6 @@
 ## ~~*Type erasure*~~
 ~~The process of removing the generics syntax from original code is referred to as *type erasure*. *Type erasure* allows your ode to be compatible with older versions of Java that do not contain generics.~~
+
 ## *Generics*
 
 The `main` method in both [`DemoRawType`](https://github.com/rxue/java8-perusharjoitus/blob/master/src/main/java/practice/ocpkasi/compiler_behavior/generics/DemoRawType.java) and [`DemoGenericType`](https://github.com/rxue/java8-perusharjoitus/blob/master/src/main/java/practice/ocpkasi/compiler_behavior/generics/DemoGenericType.java) are compiled to the same Java bytecode instructions:
@@ -22,4 +23,9 @@ public static void main(java.lang.String[]);
       28: return
 ```
 => On the Java assembly instruction level, [`DemoRawType`](https://github.com/rxue/java8-perusharjoitus/blob/master/src/main/java/practice/ocpkasi/compiler_behavior/generics/DemoRawType.java) and [`DemoGenericType`](https://github.com/rxue/java8-perusharjoitus/blob/master/src/main/java/practice/ocpkasi/compiler_behavior/generics/DemoGenericType.java) are equivalent
-=> 
+
+and
+
+In `DemoRawType.java`, there is *explicit cast*, which corresponds to the instruction `24: checkcast  #31`; whereas in `DemoGenericType.java`, there is no *explicit cast* at all
+
+=> With *generic types*, Java (compiler) writes the cast for us. (reference: OCP Oracle Certified Professional Programmer II - Study Guide > Chapter 3 Generics and Collections > Working with Generics > Interacting With Legacy Code (Page 115))   
