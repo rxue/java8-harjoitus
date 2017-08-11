@@ -22,7 +22,7 @@ public class TestLinkedListVSArrayDeque {
 	}
 	
 	@Test
-	public void testAddNullElement() {
+	public void testAddNullElementToFront() {
 		assertThrows(NullPointerException.class, () -> arrayDeque.add(null));
 		assertThrows(NullPointerException.class, () -> arrayDeque.offer(null));
         linkedList.add(null);
@@ -30,17 +30,26 @@ public class TestLinkedListVSArrayDeque {
 		assertEquals(2, linkedList.size());
 	}
 	@Test
-	public void testRemoveFromEmptyDeque() {
+	public void testRemoveFirstElementFromEmptyDeque() {
 		assertThrows(NoSuchElementException.class, () -> arrayDeque.remove());
-        assertNull(arrayDeque.poll());
+		assertThrows(NoSuchElementException.class, () -> arrayDeque.pop());
+		assertNull(arrayDeque.poll());
 		assertThrows(NoSuchElementException.class, () -> linkedList.remove());
+		assertThrows(NoSuchElementException.class, () -> linkedList.pop());
 		assertNull(linkedList.poll());
     }
 	@Test 
-	public void testGetNextElementFromEmptyDeque() {
+	public void testGetFirstElementFromEmptyDeque() {
 		assertThrows(NoSuchElementException.class, () -> arrayDeque.element());
 		assertNull(arrayDeque.peek());
 		assertThrows(NoSuchElementException.class, () -> linkedList.element());
 		assertNull(linkedList.peek());
+	}
+	@Test
+	public void testArrayDequeAsStack() {
+		assertTrue(arrayDeque.isEmpty());
+		arrayDeque.push("hello");
+		arrayDeque.push("world");
+		assertEquals("world", arrayDeque.pop());
 	}
 }
