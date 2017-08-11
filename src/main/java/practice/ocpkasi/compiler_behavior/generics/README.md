@@ -31,3 +31,4 @@ In `DemoRawTypeWithExplicitCast.java`, there is *explicit cast*, which correspon
 => 
 
 * With *generic types*, Java (compiler) writes the (explicit) *cast* for us. <sup>(reference: OCP Oracle Certified Professional Programmer II - Study Guide > Chapter 3 Generics and Collections > Working with Generics > Interacting With Legacy Code (Page 115))</sup>
+* The reference type of elements in *legacy list* without *generic type* is `Object` <sup>(reference: [`DemoRawType`]() VS [`DemoRawTypeWithoutExplicitCast`])
