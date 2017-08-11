@@ -28,4 +28,7 @@ and
 
 In `DemoRawType.java`, there is *explicit cast*, which corresponds to the instruction `24: checkcast  #31`; whereas in `DemoGenericType.java`, there is no *explicit cast* at all
 
-=> With *generic types*, Java (compiler) writes the cast for us. <sup>(reference: OCP Oracle Certified Professional Programmer II - Study Guide > Chapter 3 Generics and Collections > Working with Generics > Interacting With Legacy Code (Page 115))</sup> 
+=> 
+
+* With *generic types*, Java (compiler) writes the (explicit) *cast* for us. <sup>(reference: OCP Oracle Certified Professional Programmer II - Study Guide > Chapter 3 Generics and Collections > Working with Generics > Interacting With Legacy Code (Page 115))</sup>
+* *Type erasure*  
