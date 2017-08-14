@@ -23,6 +23,7 @@
 * *tightly coupled*
 #### *Builder Pattern* Application in Java Core
 * [`java.lang.StringBuilder`](http://grepcode.com/file/repository.grepcode.com/java/root/jdk/openjdk/8-b132/java/lang/StringBuilder.java)
+* [`java.util.stream.Stream`](http://grepcode.com/file/repository.grepcode.com/java/root/jdk/openjdk/8-b132/java/util/stream/Stream.java)
 
 ### *Factory Pattern*
 The *factory pattern*, sometimes referred to as the *factory method pattern*, is a *creational pattern* based on the idea of using a factory class to produce instances of objects based on a set of input parameters. 
