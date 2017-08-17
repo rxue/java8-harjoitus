@@ -1,6 +1,9 @@
 package practice.ocpkasi.java_core.util.stream;
 
+import java.util.Arrays;
+import java.util.List;
 import java.util.TreeSet;
+import java.util.function.BinaryOperator;
 import java.util.function.Predicate;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
@@ -23,7 +26,16 @@ public class TestTerminalOperations {
 		logger.info("The stream is no longer valid after a terminal operation completes");
 		assertThrows(IllegalStateException.class, () -> stream.anyMatch(predicate));
 	}
-	
+	@Test
+	public void testReduce() {
+		List<String> list = Arrays.asList("w", "o", "l", "f");
+		BinaryOperator<String> op = (String concatenated, String x) -> concatenated += x;
+		String result = "";
+		for (String x : list)
+			result = op.apply(result, x);
+		String result2 = list.stream().reduce("", op);
+		assertEquals(result, result2);
+	}
 	@Test
 	public void testCollect() {
 		Stream<String> stream = Stream.of("f","l","o","w");
