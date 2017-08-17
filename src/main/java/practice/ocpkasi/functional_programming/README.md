@@ -6,7 +6,7 @@ The concept - **contains a single `abstract` method** - infers that a *functiona
 
 * [`java.util.Comparator`](https://docs.oracle.com/javase/8/docs/api/java/util/Comparator.html)
 
-### `BiConsumer<T>` VS `BinaryOperator<T>`
+### `BiConsumer<T,U>` VS `BinaryOperator<T>`
  
 
 
