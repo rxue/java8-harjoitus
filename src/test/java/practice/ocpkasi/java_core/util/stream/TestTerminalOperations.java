@@ -33,8 +33,7 @@ public class TestTerminalOperations {
 		String result = "";
 		for (String x : list)
 			result = op.apply(result, x);
-		String result2 = list.stream().reduce("", op);
-		assertEquals(result, result2);
+		assertEquals(result, list.stream().reduce("", String::concat));
 	}
 	@Test
 	public void testCollect() {
