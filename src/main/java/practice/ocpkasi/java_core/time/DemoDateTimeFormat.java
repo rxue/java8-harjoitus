@@ -15,19 +15,18 @@ public class DemoDateTimeFormat {
 		LocalTime time = LocalTime.of(11, 20, 10);
 		LocalDateTime dateTime = LocalDateTime.of(date, time);
 		DateTimeFormatter shortDateTime =
-				DateTimeFormatter.ofLocalizedDate(FormatStyle.SHORT);
+				DateTimeFormatter.ofLocalizedDateTime(FormatStyle.SHORT);
 		System.out.println(shortDateTime.format(dateTime)); // 1/20/20
 		System.out.println(dateTime.format(shortDateTime));
+		DateTimeFormatter shortDate =
+				DateTimeFormatter.ofLocalizedDate(FormatStyle.SHORT);
+		System.out.println(dateTime.format(shortDate));
+		DateTimeFormatter shortTime =
+				DateTimeFormatter.ofLocalizedTime(FormatStyle.SHORT);
+		System.out.println(time.format(shortTime));
 		System.out.println(shortDateTime.format(date)); // 1/20/20
-		//System.out.println(shortDateTime.format(time)); // UnsupportedTemporalTypeException
 		
-		LocalDateTime d = LocalDateTime.of(2015, 5, 10, 11, 22, 33);
-//		Period p = Period.of(1, 2, 3);
-//		d = d.minus(p);
-		DateTimeFormatter f = DateTimeFormatter.
-		ofLocalizedTime(FormatStyle.SHORT);
-		System.out.println(d.format(f));
-		System.out.println(f.format(d));
+		//System.out.println(shortDateTime.format(time)); // UnsupportedTemporalTypeException
 	}
 
 }
