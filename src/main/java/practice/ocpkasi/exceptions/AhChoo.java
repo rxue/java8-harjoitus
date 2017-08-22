@@ -1,4 +1,4 @@
-package practice.ocpkasi.exceptions_and_assertions;
+package practice.ocpkasi.exceptions;
 public class AhChoo {
 	static class SneezeException extends Exception { }
 	static class SniffleException extends SneezeException { }
