@@ -25,7 +25,7 @@ public class BinarySearchTree<E> extends AbstractBinaryTree<E> {
 	public void insert(E element) {
 		Node<E> currentNode = super.rootNode;
 		while (true) {
-			if (comparator.compare(currentNode.item, element) < 0) {
+			if (compare(currentNode.item, element) < 0) {
 				if (currentNode.leftChild != null)
 					currentNode = currentNode.leftChild;
 				else {
