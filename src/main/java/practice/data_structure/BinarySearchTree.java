@@ -16,6 +16,11 @@ public class BinarySearchTree<E> extends AbstractBinaryTree<E> {
 		super.rootNode = new Node<E>(null, rootElement, null);
 		this.comparator = comparator;
 	}
+	 @SuppressWarnings("unchecked")
+	 final int compare(Object k1, Object k2) {
+	        return comparator==null ? ((Comparable<? super E>)k1).compareTo((E)k2)
+	             : comparator.compare((E)k1, (E)k2);
+	 }
 	@Override
 	public void insert(E element) {
 		Node<E> currentNode = super.rootNode;
