@@ -7,8 +7,11 @@ The concept - **contains a single `abstract` method** - infers that a *functiona
 * [`java.util.Comparator`](https://docs.oracle.com/javase/8/docs/api/java/util/Comparator.html)
 
 ## *Method Reference*
+*Method reference* returns a ** *functional interface* **
 ### `::` Operator
-`::` operator tells Java to pass the parameters automatically into the pertinent method, i.e. the right side operand. 
+* `::` operator tells Java to pass the parameters automatically into the pertinent method, i.e. the right side operand.
+  => * `::` operator is like lambdas, and it is typically used for *deferred execution*
+
 ## `BiConsumer<T,U>` VS `BinaryOperator<T>`
  
 
