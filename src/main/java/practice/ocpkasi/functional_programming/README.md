@@ -6,7 +6,10 @@ The concept - **contains a single `abstract` method** - infers that a *functiona
 
 * [`java.util.Comparator`](https://docs.oracle.com/javase/8/docs/api/java/util/Comparator.html)
 
-### `BiConsumer<T,U>` VS `BinaryOperator<T>`
+## *Method Reference*
+### `::` Operator
+`::` operator tells Java to pass the parameters automatically into the pertinent method, i.e. the right side operand. 
+## `BiConsumer<T,U>` VS `BinaryOperator<T>`
  
 
 
