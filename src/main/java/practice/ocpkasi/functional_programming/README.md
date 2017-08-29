@@ -6,6 +6,12 @@ The concept - **contains a single `abstract` method** - infers that a *functiona
 
 * [`java.util.Comparator`](https://docs.oracle.com/javase/8/docs/api/java/util/Comparator.html)
 
+## *Lambdas*
+Lambda expressions can access:
+* *static variables*
+* *instance variables*
+* *effective final local variables*, meaning local variables being not final inside lambda causes compile errors
+
 ## *Method Reference*
 *Method reference* returns a **functional interface*
 ### `::` Operator
