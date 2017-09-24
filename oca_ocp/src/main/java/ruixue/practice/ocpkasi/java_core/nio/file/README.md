@@ -8,4 +8,7 @@ The essence of `Path`:
 	* the *path* of `Path` object might not exist physically, invoking mehtods of `Path` can still work
 	* the actual operations on *file system* can be executed with those *static methods* on *utility class* `java.nio.file.Files`
 	* methods of `Path`, which is not *syntactic operation* - `public Path toRealPath(LinkOption... options) throws IOException`
-* Unlike `java.io.File` class, `Path` contains support for *symbolic links* 
+* Unlike `java.io.File` class, `Path` contains support for *symbolic links*
+
+## `java.nio.file.Files`
+All the methods starting with `create` returns a `Path` 
