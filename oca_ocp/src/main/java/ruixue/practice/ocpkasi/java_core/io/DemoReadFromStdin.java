@@ -14,15 +14,17 @@ import java.io.InputStream;
 public class DemoReadFromStdin {
 
 	public static void demoWithInputStream() {
-		System.out.println("Test with InputStream of System.in");
+		System.out.println("Test with InputStream of System.in, press CTRL+D to input EOF");
 		InputStream is = System.in;
 		char[] bytes = new char[1024];
 		int i = 0;
+		int currentChar;
 		try {
-			while ((bytes[i++] = (char) is.read()) != -1) {
+			while ((currentChar = is.read()) != -1) {
+				bytes[i++] = (char)currentChar;
 				if (bytes[i-1] == '\n') {
 					System.out.println(bytes);
-					break;
+					
 				} 
 			}
 			
