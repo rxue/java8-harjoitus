@@ -7,8 +7,8 @@ import static org.junit.jupiter.api.Assertions.*;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
-public class TestStringConcatenation {
-	private static final Logger logger = LogManager.getLogger(TestStringConcatenation.class);
+public class TestString {
+	private static final Logger logger = LogManager.getLogger(TestString.class);
 	@Test
 	public void testStringConcatenation() {
 		String concatenatedWithPlusOperator = "hello" + " world";
@@ -18,5 +18,11 @@ public class TestStringConcatenation {
 		logger.info("This test demonstrated that the concatenated result with plus operator is put into string pool whereas that with concat() method is not pool");
 
 	}
+	@Test
+	public void testStaticFormat() {
+		String str = String.format("%s", "Rui");
+		assertEquals("Rui", str);
+	}
+	
 
 }
