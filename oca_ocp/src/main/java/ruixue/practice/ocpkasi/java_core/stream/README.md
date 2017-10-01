@@ -8,4 +8,8 @@ If you try to call `System.out.println(stream)`, you'll get something like `java
 Stream can be categorized to 2 types:
 
 * *serial stream*
-* *parallel stream* 
+* *parallel stream*
+  * achieved by 
+    * `Stream.parallel()` 
+    * `Collection.parallelStream()`
+  * By default, the number of threads available in a parallel stream is related to the number of available CPUs in your environment.
