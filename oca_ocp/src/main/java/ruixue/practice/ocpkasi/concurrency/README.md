@@ -1,6 +1,7 @@
 ## Buzzwords
 
 * *Scaling*: a property when we add more resources such as CPUs, the performance results gradually improve
+* *independent operations*:
 
 ## *Synchronized Collections* `!=` *Concurrent Collection*
 
