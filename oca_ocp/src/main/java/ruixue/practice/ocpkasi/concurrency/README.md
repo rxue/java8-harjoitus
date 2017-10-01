@@ -1,3 +1,9 @@
+## Buzzwords
+
+* *Scaling*: a property when we add more resources such as CPUs, the performance results gradually improve
+
+## *Synchronized Collections* `!=` *Concurrent Collection*
+
 ## `CyclicBarrier`
 *Barriers* are waiting for other *threads*.
 
