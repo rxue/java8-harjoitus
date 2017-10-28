@@ -1,3 +1,11 @@
+## `RuntimeException` aka *Unchecked Exception*
+### `UnsupportedOperationException`
+Typically used in:
+* [*stub*](https://books.google.fi/books?id=mxZBPSjSEYUC&pg=PA308&redir_esc=y#v=onepage&q&f=false)
+* *concreted methods* in *abstract class*, and these methods are usually mandatory to be overriden by extended concrete class. For instance, [`java.util.AbstractList`](http://grepcode.com/file/repository.grepcode.com/java/root/jdk/openjdk/8-b132/java/util/AbstractList.java)
+
+## *Checked Exception*
+
 ## *Multi-catch*
 Rules:
 * Java intends multi-catch to be used for exceptions that aren't related 
