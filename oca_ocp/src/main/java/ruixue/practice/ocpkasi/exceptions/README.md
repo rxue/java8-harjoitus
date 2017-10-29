@@ -13,9 +13,9 @@ Unique rules comparing with legacy `catch` block:
 * As with *multi-catch*, Java uses the common `Exception` superclass for the variable internally, *Multi-catch* is *effectively final*, meaning Java forbids reassign the exception variable in a *multi-catch* block
 
 ## *try-with-resource*
-
-### `AutoCloseable`
-Closeable is subclass of AutoCloseable: [`public interface Closeable extends AutoCloseable`](https://docs.oracle.com/javase/8/docs/api/java/io/Closeable.html)
+### `AutoCloseable` VS `Closeable`
+* Both types of resources are allowed to be initialized/opened in the try clause because, `Closeable` is subclass of `AutoCloseable`: [`public interface Closeable extends AutoCloseable`](https://docs.oracle.com/javase/8/docs/api/java/io/Closeable.html)
+* `close()` of `AutoCloseable` `throws Exception`, whereas `close()` of `Closeable` `throws IOException`
 
 ## *Suppressed Exceptions* (since Java 7)
 Cause: The *try-with-resource* since Java 7 can throw completely different exceptions at the same time:
