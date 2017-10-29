@@ -7,12 +7,12 @@ Typically used in:
 ## *Checked Exception*
 
 ## *Multi-catch*
-Rules:
+Unique rules comparing with legacy `catch` block:
 * Java intends multi-catch to be used for exceptions that aren't related 
 	* => One exception in *multi-catch* cannot be the subclass of any other excpetion in the same *multi-catch*. For instance, `catch(FileNotFound | IOException e){}` causes compilation error because, `FileNotFoundException extends IOExceptio`
-* *Mmulti-catch* is *effectively final* 
+* As with *multi-catch*, Java uses the common `Exception` superclass for the variable internally, *Multi-catch* is *effectively final*, meaning Java forbids reassign the exception variable in a *multi-catch* block
 
-## *try-with-resource* Exception
+## *try-with-resource*
 
 ### `AutoCloseable`
 Closeable is subclass of AutoCloseable: [`public interface Closeable extends AutoCloseable`](https://docs.oracle.com/javase/8/docs/api/java/io/Closeable.html)
