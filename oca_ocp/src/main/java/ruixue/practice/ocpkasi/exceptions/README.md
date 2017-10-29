@@ -15,7 +15,7 @@ Rules:
 ## *try-with-resource* Exception
 
 ### `AutoCloseable`
-Closeable is subclass of AutoCloseable: `public interface Closeable extends AutoCloseable`
+Closeable is subclass of AutoCloseable: [`public interface Closeable extends AutoCloseable`](https://docs.oracle.com/javase/8/docs/api/java/io/Closeable.html)
 
 ## *Suppressed Exceptions* (since Java 7)
 Cause: The *try-with-resource* since Java 7 can throw completely different exceptions at the same time:
