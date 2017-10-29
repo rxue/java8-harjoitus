@@ -12,6 +12,10 @@ Rules:
 	* => One exception in *multi-catch* cannot be the subclass of any other excpetion in the same *multi-catch*. For instance, `catch(FileNotFound | IOException e){}` causes compilation error because, `FileNotFoundException extends IOExceptio`
 * *Mmulti-catch* is *effectively final* 
 
+## *try-with-resource* Exception
+
+## `AutoCloseable`
+
 ## *Suppressed Exceptions* (since Java 7)
 Cause: The *try-with-resource* since Java 7 can throw completely different exceptions at the same time:
 * multiple open resource statements inside the `try` bracket
