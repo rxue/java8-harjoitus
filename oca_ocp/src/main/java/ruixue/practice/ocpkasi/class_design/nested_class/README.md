@@ -7,5 +7,6 @@
 
 ### Static Nested Classes
 * [`java.util.Arrays`-`ArrayList`](http://grepcode.com/file/repository.grepcode.com/java/root/jdk/openjdk/8-b132/java/util/Arrays.java#Arrays.ArrayList)
+* [`java.util.Collections`#`UnmodifiableList`](http://grepcode.com/file/repository.grepcode.com/java/root/jdk/openjdk/8-b132/java/util/Collections.java#Collections.UnmodifiableList)
 * [`java.util.LinkedList`](http://grepcode.com/file/repository.grepcode.com/java/root/jdk/openjdk/8-b132/java/util/LinkedList.java)
 * [`java.util.TreeMap`](http://grepcode.com/file/repository.grepcode.com/java/root/jdk/openjdk/8-b132/java/util/TreeMap.java)
