@@ -21,7 +21,10 @@
   * *Method Chaining*
   * *Method signature*: the method name and the list of the input *parameters*
 ### [*Class Members*](https://docs.oracle.com/javase/tutorial/java/javaOO/classvars.html)
-#### Class Methods
+#### *Class/Static Variables*
+* They stay in scope for the **entire life of the program**
+* Every instance of the class shares a class variable, which is in one fixed location in memory. 
+#### *Class/Static Methods*
 ##### *Method Chaining*
 Static methods cannot be chained. On the other hand, in *builder design pattern*, *parameters* are passed to a builder object often through *method chaining*  
 ### *Instance Members*
