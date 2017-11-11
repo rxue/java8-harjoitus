@@ -6,9 +6,6 @@
     * Their values are different from the **value of the object**, meaning *references* do not hold the value of the object. 
     * Instead, a reference "points" to an object by storing the memory address where the object is located. In this sense, *reference* Resembles the *pointer* in C, but Java does not allow you to learn what the memory address is.  
     * An *object* can be accessed only via a *reference*
-* *Method*
-  * *Method signature*: the method name and the list of the input *parameters*
-* [*class members*](https://docs.oracle.com/javase/tutorial/java/javaOO/classvars.html)
 * [*JavaBeans*](http://download.oracle.com/otndocs/jcp/7224-javabeans-1.01-fr-spec-oth-JSpec/): a *software component model* for Java
   * *Property*: instance variable
 * [*constant expression*](http://docs.oracle.com/javase/specs/jls/se8/html/jls-15.html#jls-15.28)
@@ -19,4 +16,9 @@
 * *Covariant return types*: In the context of method overriding, if the method returns a type, it must be the same or a **subclass** of the method in the parent class 
 # *Method Chaining*
 Static methods cannot be chained. On the other hand, in *builder design pattern*, *parameters* are passed to a builder object often through *method chaining*  
-
+## Members
+* *Variable*
+* *Method*
+  * *Method signature*: the method name and the list of the input *parameters*
+### [*Class Members*](https://docs.oracle.com/javase/tutorial/java/javaOO/classvars.html)
+### *Instance Members*
