@@ -9,6 +9,7 @@ When declaring a generic class, you must specify a name for the *formal type par
 ### *Bounds*
 #### *Wildcard Generic Type* (Generic wildcard) i.e. `?`
 You can use generic wildcards in three ways:
+
 |Type of bound                     |Syntax           |Example                                                            |
 |----------------------------------|-----------------|-------------------------------------------------------------------|
 |Unbounded wildcard                |`?`              |`List<?> l = new ArrayList<String>();`                             |      
