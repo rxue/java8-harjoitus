@@ -16,3 +16,4 @@ You can use generic wildcards in three ways:
 |Wildcard with an upper bound with |`? extends` type |`List<? extends Exception> l = new ArrayList<RuntimeException>();` |
 |Wildcard with a lower bound with  |`? super` type   |`List<? super Exception> l = new ArrayList<Object>();`             |
 
+As a conclusion, it is **used only when declaring a reference variable**
