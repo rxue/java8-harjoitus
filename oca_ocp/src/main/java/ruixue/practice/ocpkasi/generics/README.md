@@ -9,8 +9,11 @@ When declaring a generic class, you must specify a name for the *formal type par
 ### *Bounds*
 #### *Wildcard Generic Type* (Generic wildcard) i.e. `?`
 You can use generic wildcards in three ways:
-Type of bound                     |Syntax           |Example
-Unbounded wildcard                |`?`              |`List<?> l = new ArrayList<String>();`
-Wildcard with an upper bound with |`? extends` type |`List<? extends Exception> l = new ArrayList<RuntimeException>();`
-Wildcard with a lower bound with  |`? super` type   |`List<? super Exception> l = new ArrayList<Object>();`
+Type of bound                     |Syntax           |Example                                                            |
+------------------------------------------------------------------------------------------------------------------------|
+Unbounded wildcard                |`?`              |`List<?> l = new ArrayList<String>();`                             |      
+------------------------------------------------------------------------------------------------------------------------|
+Wildcard with an upper bound with |`? extends` type |`List<? extends Exception> l = new ArrayList<RuntimeException>();` |
+------------------------------------------------------------------------------------------------------------------------|
+Wildcard with a lower bound with  |`? super` type   |`List<? super Exception> l = new ArrayList<Object>();`             |
 
