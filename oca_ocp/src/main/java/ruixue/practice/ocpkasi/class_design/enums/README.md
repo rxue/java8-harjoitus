@@ -1,2 +1,4 @@
-## `enum`
+## Rules of Using `enum`
+* All enums implicitly extend `java.lang.Enum`<sup>[Enum Types](https://docs.oracle.com/javase/tutorial/java/javaOO/enum.html)</sup> => You cannot *extends* an enum.
+
 The basic idea behind Java’s `enum` types is simple: they are classes that export one instance for each enumeration constant via a `public static final` field. Enum types are *effectively final*, by virtue of having *private constructors*. Because **clients can neither create instances of an enum type nor extend it**, there can be no instances but the declared enum constants. In other words, enum types are *instance-controlled* (page 6). They are a generalization of *singletons* (Item 3), which are essentially single-element enums. <sup>[Effective Java (2nd Edition) >> Chapter 6 Enums and Annotations >> item 30: Use enums instead of int constants]</sup>
