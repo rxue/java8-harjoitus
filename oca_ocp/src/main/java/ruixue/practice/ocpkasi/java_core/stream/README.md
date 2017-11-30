@@ -13,3 +13,11 @@ Stream can be categorized to 2 types:
     * `Stream.parallel()` 
     * `Collection.parallelStream()`
   * By default, the number of threads available in a parallel stream is related to the number of available CPUs in your environment.
+
+### Common methods in `Stream` and `Optional`
+
+* empty
+* filter
+* flatMap
+* map
+* of  
