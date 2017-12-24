@@ -6,6 +6,18 @@ import java.nio.file.Path;
 import java.nio.file.Paths;
 
 public class DemoPathMethods {
+	public static void demoNormalize() {
+		Path p = Paths.get(".");
+		System.out.println(p);
+		System.out.println(". is normalized to: " + p.normalize());
+		System.out.println("But its name count is still " + p.normalize().getNameCount());
+	}
+	public static void demoResolve() {
+		Path p = Paths.get("/x");
+		Path p2 = Paths.get("y");
+		Path result = p.resolve(p2);
+		System.out.println(result);
+	}
 
 	public static void main(String[] args) {
 		Path p = Paths.get(".");
@@ -16,5 +28,10 @@ public class DemoPathMethods {
 		//URI u = p.toUri();
 		p.resolve(Paths.get("y"));
 		System.out.println(p.toAbsolutePath());
+		p = Paths.get("testxxxxx");
+		System.out.println(p.toAbsolutePath());
+		demoNormalize();
+		demoResolve();
 	}
+	
 }
