@@ -5,7 +5,7 @@
 * *Independent operations*
 * *Stateful operations*
 
-### About `InterruptedException`<sup>Java Concurrency in Practice > 5.4. Blocking and Interruptible Methods</sup>
+### `InterruptedException`<sup>Java Concurrency in Practice > 5.4. Blocking and Interruptible Methods</sup>
 When a method can throw `InterruptedException`, it is telling you that it is a *blocking* method, and further that if it is *interrupted*, it will take an effort to stop *blocking* early 
 
 
