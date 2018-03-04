@@ -11,6 +11,11 @@ When a method can throw `InterruptedException`, it is telling you that it is a *
 
 ## `Runnable` VS `Callable`
 
+## `ExecutorService`
+The `ExecutorService` provides a method called `shutdownNow()`, which attempts to stop all running tasks and discards any that have not been started yet. Note that `shutdownNow()` **attempts** to stop all running tasks. It is possible to create a thread that will never terminate, so any attempt to *interrupt* it may be ignored.<sup>Reference: OCP Oracle Certified Professional Java SE 8 Programmer II: Study Guide > Chapter 7 Concurrency > Creating Threads with the `ExecutorService` > Shutting Down a Thread Executor</sup>
+
+[DemoExecutorServiceShutdownNow](https://github.com/rxue/java8-perusharjoitus/blob/master/oca_ocp/src/main/java/ruixue/practice/ocpkasi/concurrency/DemoExecutorServiceShutdownNow.java) will hang during *run time* if the *shut down* is implemented with *interrupt* of *thread*. Demo is tested with *OpenJDK* and indeed hangs during *run time*.  
+
 ## *Synchronized Collections* `!=` *Concurrent Collection*
 
 ## `CyclicBarrier`
