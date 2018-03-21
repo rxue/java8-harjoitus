@@ -14,5 +14,7 @@ Relevant methods with default implementation:
 * `public synchronized void mark(int marklimit) {}`
 * `public synchronized void reset() throws IOException {throws new IOException("mark/reset not supported");}`
 
+So among the *sub-class*es of `InputStream`, if these 3 methods are not overridden, **marking operation** is not supported. `FileInputStream` is a typical case.  
+
 
 
