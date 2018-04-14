@@ -6,10 +6,14 @@ import java.nio.file.Paths;
 
 import org.junit.jupiter.api.Test;
 
-
+/**
+ * 
+ * @author dingding
+ *
+ */
 public class TestPathEquals {
 	@Test
-	public void testTrue() {
+	public void testTrueWithNonexistentPath() {
 		String fileName = "not_exists";
 		Path p1 = Paths.get(fileName);
 		Path p2 = Paths.get(fileName);
