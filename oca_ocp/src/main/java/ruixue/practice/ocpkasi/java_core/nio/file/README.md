@@ -18,4 +18,4 @@ All the methods starting with `create` returns a `Path`:
 Unlike out earlier NIO.2 methods, **the `walk()` method will not traverse symbolic links by default.** In the source code, the traversal is implemented with [`FileTreeWalker`](http://grepcode.com/file/repository.grepcode.com/java/root/jdk/openjdk/8-b132/java/nio/file/FileTreeWalker.java#FileTreeWalker.%3Cinit%3E%28java.util.Collection%2Cint%29), from whose constructor, we can see that the symbolic link is not followed by default.  
 
 ## *Legecy I/O* VS *NIO.2*
-* Neither API provides a single method to delete a directory tree<sup>OCA/OCP Java SE 8 Programmer Practice Tests</sup>
+* Neither API provides a single method to delete a directory tree<sup>OCA/OCP Java SE 8 Programmer Practice Tests > Chapter 19 > 16.</sup>
