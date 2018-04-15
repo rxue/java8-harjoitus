@@ -10,6 +10,13 @@ The essence of `Path`:
 	* methods of `Path`, which is not *syntactic operation* - `public Path toRealPath(LinkOption... options) throws IOException`
 * Unlike `java.io.File` class, `Path` contains support for *symbolic links*
 
+### `Path relativize(Path p)`
+As the word *relativize* indicate literally, the base `Path` object and the given `Path` p has to be of the same type, say either both *absolute* or *relative*, otherwise a *runtime* `IllegelArgumentException` would be thrown. Refer to the source code [sun.nio.fs.UnixPath.relativize()](http://grepcode.com/file/repository.grepcode.com/java/root/jdk/openjdk/7-b147/sun/nio/fs/UnixPath.java#UnixPath.relativize%28java.nio.file.Path%29), where there is:
+```
+if (this.isAbsolute() != other.isAbsolute())
+  throw new IllegalArgumentException("'other' is different type of Path")
+```
+
 ## `java.nio.file.Files`
 All the methods starting with `create` returns a `Path`:
 
