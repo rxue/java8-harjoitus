@@ -12,3 +12,8 @@ The essence of `Path`:
 
 ## `java.nio.file.Files`
 All the methods starting with `create` returns a `Path` 
+
+### Walking a Directory
+#### Avoiding *cycle* - Circular Paths
+Unlike out earlier NIO.2 methods, **the `walk()` method will not traverse symbolic links by default.**
+
