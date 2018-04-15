@@ -17,6 +17,8 @@ if (this.isAbsolute() != other.isAbsolute())
   throw new IllegalArgumentException("'other' is different type of Path")
 ```
 
+`p1.relativize(p2)` can be explained as: **starting from `p1`, how to get to `p2`**
+
 ## `java.nio.file.Files`
 All the methods starting with `create` returns a `Path`:
 
