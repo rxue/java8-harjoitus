@@ -1,6 +1,8 @@
 package ruixue.practice.ocpkasi.java_core.nio.file;
 
 import java.io.IOException;
+import java.nio.file.FileSystem;
+import java.nio.file.FileSystems;
 import java.nio.file.Files;
 import java.nio.file.LinkOption;
 import java.nio.file.Path;
@@ -44,6 +46,14 @@ public class TestPathMethods {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
+	}
+	@Test
+	public void testGetName_platformDependent() {
+		FileSystem currentSystem = FileSystems.getDefault(); 
+		Path p = Paths.get("/x/y");
+		assertEquals(Paths.get("x"), p.getName(0));
+		if (currentSystem.toString().contains("Unix"))
+			assertEquals(Paths.get("E:"), Paths.get("E:", "x", "y"));
 	}
 	
 }
