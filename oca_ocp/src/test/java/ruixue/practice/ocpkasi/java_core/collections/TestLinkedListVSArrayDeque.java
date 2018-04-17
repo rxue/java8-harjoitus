@@ -1,4 +1,4 @@
-package ruixue.practice.ocpkasi.java_core.collections_framework.deque;
+package ruixue.practice.ocpkasi.java_core.collections;
 
 import java.util.LinkedList;
 
@@ -21,14 +21,6 @@ public class TestLinkedListVSArrayDeque {
 		linkedList = new LinkedList<>();
 	}
 	
-	@Test
-	public void testAddNullElementToFront() {
-		assertThrows(NullPointerException.class, () -> arrayDeque.add(null));
-		assertThrows(NullPointerException.class, () -> arrayDeque.offer(null));
-        linkedList.add(null);
-        linkedList.offer(null);
-		assertEquals(2, linkedList.size());
-	}
 	@Test
 	public void testRemoveFirstElementFromEmptyDeque() {
 		assertThrows(NoSuchElementException.class, () -> arrayDeque.remove());
