@@ -24,7 +24,7 @@ As the names of the two interfaces imply, they can be considered as the two coun
 
 The action of a `Consumer` is to *accept* something and then consume it.  Therefore, the abstract method is defined as `void accept(T t)`, where the parameter `t` is the element to consume and, as `t` is consumed, there is no sense to return anything, and thus the return type is `void`. The same goes with `BiConsumer`.
   
-The action of a `Supplier` is to supply something to another party. Therefore, the abstract method is defined as `T get()`, where the name `get` was probably inspired by the *JavaBeans* naming convention, say the method is obviously a *getter* as it returns `T`
+The counterpart of *producer* is `Supplier`. The action of a `Supplier` is to produce/supply something to another party. Therefore, the abstract method is defined as `T get()`, where the name `get` was probably inspired by the *JavaBeans* naming convention, say the method is obviously a *getter* as it returns `T`
  
 ## `BiConsumer<T,U>` VS `BinaryOperator<T>`
  
