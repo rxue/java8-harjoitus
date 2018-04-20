@@ -23,7 +23,8 @@ public class DemoIntFunction {
 	public static void main(String[] args) {
 		Person a = new Person("Jim", Gender.MALE);
 		Person b = new Person("Tiina", Gender.FEMALE);
-		Person[] persons = Stream.of(a, b).toArray(size -> new Person[size]);
+		Stream<Person> s = Stream.of(a, b);
+		Person[] persons = s.toArray(size -> new Person[size]);
 		for (Person p : persons) {
 			System.out.println(p);
 		}
