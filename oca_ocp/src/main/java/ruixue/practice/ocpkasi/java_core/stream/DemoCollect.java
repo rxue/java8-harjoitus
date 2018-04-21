@@ -17,7 +17,7 @@ public class DemoCollect {
 		};
 		BiConsumer<ArrayList<String>, String> accumulator = 
 			(container, e) -> {
-				System.out.println("Accumulator ArrayList: " + System.identityHashCode(container) + ", element to add: " + e);
+				System.out.println("Accumulator ArrayList: @" + System.identityHashCode(container) + ", element to add: " + e);
 				container.add(e);
 			};
 		BiConsumer<ArrayList<String>, ArrayList<String>> combiner;
@@ -26,7 +26,7 @@ public class DemoCollect {
 			System.out.println("Demo with Parallel Stream:");
 			combiner = 
 				(ArrayList<String> arrayList, ArrayList<String> c) -> {
-					System.out.println("Result ArrayList: " + System.identityHashCode(arrayList)+ ", size: " + arrayList.size() + ", element to add: " + c);
+					System.out.println("Result ArrayList: @" + System.identityHashCode(arrayList)+ ", size: " + arrayList.size() + ", element to add: " + c);
 					arrayList.addAll(c);
 				};
 				ArrayList<String> filteredResult = list.parallelStream().filter(e -> e.length() > 1)
