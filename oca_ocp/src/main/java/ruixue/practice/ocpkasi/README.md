@@ -35,3 +35,7 @@ The *factory pattern*, sometimes referred to as the *factory method pattern*, is
 * ~~[`java.time.ZonedDateTime`](http://grepcode.com/file/repository.grepcode.com/java/root/jdk/openjdk/8-b132/java/time/ZonedDateTime.java)~~
   * ~~refer to the *overloading* of `static` method [`ZonedDateTime.of`](https://docs.oracle.com/javase/8/docs/api/java/time/ZonedDateTime.html#of-int-int-int-int-int-int-int-java.time.ZoneId-)~~
 
+# Summary
+## Synthetic Comparisons
+### *Anonymous Inner Class* VS *Lambda Expresson*
+*Anonymous inner class* and *lambda expresson* are similar in that as to the accessibility of *local variable*, both do not have access unless those variables are *final* or *effectively final*. 
