@@ -10,7 +10,7 @@ import static org.junit.jupiter.api.Assertions.*;
 
 public class TestCollectorsToMap {
 	@Test
-	public void testToMapWithIllegalStateException() {
+	public void testToMapWithCollision() {
 		Stream<String> stream = Stream.of("one", "two", "three");
 		Collector<String, ?, Map<Integer,String>> collector = Collectors.toMap(String::length, s->s);
 		assertThrows(IllegalStateException.class, () -> stream.collect(collector));
