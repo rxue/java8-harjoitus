@@ -14,6 +14,11 @@ Stream can be categorized to 2 types:
     * `Collection.parallelStream()`
   * By default, the number of threads available in a parallel stream is related to the number of available CPUs in your environment.
 
+### *Stream* Operations
+#### *Intermediate Operations*
+##### Interpretation of `Stream<T> sorted()` and `Stream<T> sorted(Comparator<? super T> comparator)`
+The past tense probably indicates that after this *sorting* operation, the returned *stream* must be sorted already, which reflects the fact that a *stateful operation* may need to process the entire input before producing a result<sup>[Package java.util.stream](https://docs.oracle.com/javase/8/docs/api/java/util/stream/package-summary.html)</sup> 
+
 ### Common methods in `Stream` and `Optional`
 
 * empty
