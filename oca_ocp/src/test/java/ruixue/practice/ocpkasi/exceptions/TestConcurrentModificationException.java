@@ -10,10 +10,8 @@ import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.junit.jupiter.api.Test;
 
-import ruixue.practice.ocpkasi.java_core.string.TestStringConcatenation;
-
 public class TestConcurrentModificationException {
-	private static final Logger logger = LogManager.getLogger(TestStringConcatenation.class);
+	private static final Logger logger = LogManager.getLogger(TestConcurrentModificationException.class);
 	@Test
 	public void testConcurrentModificationException() {
 		List<String> list = new ArrayList<>();

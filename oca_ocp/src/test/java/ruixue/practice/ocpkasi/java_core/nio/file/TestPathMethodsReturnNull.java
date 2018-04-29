@@ -16,6 +16,8 @@ public class TestPathMethodsReturnNull {
 	public void testGetParentOfRoot() {
 		Path p = Paths.get("/");
 		assertNull(p.getParent());
+		p = Paths.get("E://");
+		assertNull(p.getParent());
 	}
 
 }

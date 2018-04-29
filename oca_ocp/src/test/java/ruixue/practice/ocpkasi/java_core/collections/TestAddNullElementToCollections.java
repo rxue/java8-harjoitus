@@ -20,6 +20,7 @@ public class TestAddNullElementToCollections {
 	@Test
 	public void testToArrayDeque() {
 		ArrayDeque<String> arrayDeque = new ArrayDeque<>();
+		assertThrows(NullPointerException.class, () -> arrayDeque.add(null));
 		assertThrows(NullPointerException.class, () -> arrayDeque.offer(null));
 	}
 	

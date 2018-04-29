@@ -1,6 +1,7 @@
 package ruixue.practice.ocpkasi.java_core.nio.file;
 
 import java.net.URI;
+import java.nio.file.FileSystems;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
@@ -18,8 +19,24 @@ public class DemoPathMethods {
 		Path result = p.resolve(p2);
 		System.out.println(result);
 	}
+	public static void demoGetParent() {
+		System.out.println(Paths.get("/root").getParent());
+		System.out.println(Paths.get("E:root").getParent());
+	}
+	public static void demoGetRoot() {
+		System.out.println(Paths.get("/root").getRoot());
+		System.out.println(Paths.get("E://root").getRoot());
+	}
+	
+	public static void demoGetName() {
+		System.out.println(Paths.get("/root").getName(0));
+		System.out.println(Paths.get("/root/one").getName(1));
+	}
 
 	public static void main(String[] args) {
+		demoGetParent();
+		demoGetRoot();
+		demoGetName();
 		Path p = Paths.get(".");
 		System.out.println(p);
 		System.out.println("Absolute path is: " + p.toAbsolutePath());
@@ -32,6 +49,7 @@ public class DemoPathMethods {
 		System.out.println(p.toAbsolutePath());
 		demoNormalize();
 		demoResolve();
+		System.out.println(FileSystems.getDefault());
 	}
 	
 }
