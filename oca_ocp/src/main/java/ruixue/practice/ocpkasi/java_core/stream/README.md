@@ -17,7 +17,7 @@ Stream can be categorized to 2 types:
 ### *Stream* Operations
 #### *Intermediate Operations*
 ##### Interpretation of `Stream<T> sorted()` and `Stream<T> sorted(Comparator<? super T> comparator)`
-The *sorting* operation is named as *sorted*, which is in past tense. The past tense probably indicates that after this *sorting* operation the returned *stream* must be sorted already, or say `sorted` is a *stateful operation*, which may need to process the entire input before producing a result.   
+The *sorting* operation is named as *sorted*, which is in past tense. The past tense probably indicates that after this *sorting* operation the returned *stream* must be sorted already, which reflects the fact that a *stateful operation*, which may need to process the entire input before producing a result.   
 
 ### Common methods in `Stream` and `Optional`
 
