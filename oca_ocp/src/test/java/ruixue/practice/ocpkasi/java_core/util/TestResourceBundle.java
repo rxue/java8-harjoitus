@@ -1,5 +1,6 @@
 package ruixue.practice.ocpkasi.java_core.util;
 
+import java.util.ListResourceBundle;
 import java.util.Locale;
 import java.util.PropertyResourceBundle;
 import java.util.ResourceBundle;
@@ -15,5 +16,10 @@ public class TestResourceBundle {
 		assertTrue(rb instanceof PropertyResourceBundle);
 		assertEquals(rb.getString("color"), "black");
 		
+	}
+	@Test
+	public void testListResourceBundle() {
+		ResourceBundle rb = ResourceBundle.getBundle("ruixue.practice.ocpkasi.java_core.util.ClassResource");
+		assertTrue(rb instanceof ListResourceBundle);
 	}
 }
