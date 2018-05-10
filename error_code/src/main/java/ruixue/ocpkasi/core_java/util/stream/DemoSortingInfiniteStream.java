@@ -1,4 +1,4 @@
-package rxue.error.ocpkasi.java_core.stream;
+package ruixue.ocpkasi.core_java.util.stream;
 
 import java.util.stream.Stream;
 
