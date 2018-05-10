@@ -7,4 +7,4 @@
   * operations on `Stream` pipeline are usually chained as a *Stream* is *immutable*
 * on *builder* object, which can produce an *immutable object* eventually, e.g. `StringBuilder`
 
-However, it is always a bad idea to invoke *static methods* in the *method chaining*
+However, it is illogical to invoke *static methods* in the middle of *method chaining*
