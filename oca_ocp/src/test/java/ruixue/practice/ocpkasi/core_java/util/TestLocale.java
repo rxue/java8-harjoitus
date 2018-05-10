@@ -1,4 +1,4 @@
-package ruixue.practice.ocpkasi.java_core.util;
+package ruixue.practice.ocpkasi.core_java.util;
 
 import java.util.Locale;
 

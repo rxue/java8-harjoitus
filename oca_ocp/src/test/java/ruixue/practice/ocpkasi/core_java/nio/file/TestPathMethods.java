@@ -1,4 +1,4 @@
-package ruixue.practice.ocpkasi.java_core.nio.file;
+package ruixue.practice.ocpkasi.core_java.nio.file;
 
 import java.io.IOException;
 import java.nio.file.FileSystem;

@@ -1,4 +1,4 @@
-package ruixue.practice.ocpkasi.java_core.util.stream;
+package ruixue.practice.ocpkasi.core_java.util.stream;
 
 import java.util.OptionalDouble;
 import java.util.stream.IntStream;

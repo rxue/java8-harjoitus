@@ -1,4 +1,4 @@
-package ruixue.practice.ocpkasi.java_core.string;
+package ruixue.practice.ocpkasi.core_java.string;
 
 import org.junit.jupiter.api.Test;
 
