@@ -25,6 +25,4 @@
 * They stay in scope for the **entire life of the program**
 * Every instance of the class shares a class variable, which is in one fixed location in memory. 
 #### *Class/Static Methods*
-##### *Method Chaining*
-Static methods cannot be chained. On the other hand, in *builder design pattern*, *parameters* are passed to a builder object often through *method chaining*  
 ### *Instance Members*
