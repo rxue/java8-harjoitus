@@ -1,4 +1,4 @@
-package ruixue.practice.ocpkasi.java_core.sql;
+package ruixue.practice.ocpkasi.core_java.sql;
 
 import java.sql.Connection;
 import java.sql.DriverManager;

@@ -1,4 +1,4 @@
-package ruixue.practice.ocpkasi.java_core.time;
+package ruixue.practice.ocpkasi.core_java.time;
 
 import java.time.LocalDate;
 import java.time.LocalDateTime;

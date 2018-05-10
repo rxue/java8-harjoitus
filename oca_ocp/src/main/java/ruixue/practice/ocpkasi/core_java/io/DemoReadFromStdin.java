@@ -1,4 +1,4 @@
-package ruixue.practice.ocpkasi.java_core.io;
+package ruixue.practice.ocpkasi.core_java.io;
 
 import java.io.Console;
 import java.io.IOException;

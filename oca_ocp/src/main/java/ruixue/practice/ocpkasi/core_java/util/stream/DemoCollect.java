@@ -1,4 +1,4 @@
-package ruixue.practice.ocpkasi.java_core.stream;
+package ruixue.practice.ocpkasi.core_java.util.stream;
 
 import java.util.ArrayList;
 import java.util.Arrays;

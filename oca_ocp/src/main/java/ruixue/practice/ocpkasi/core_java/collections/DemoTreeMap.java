@@ -1,4 +1,4 @@
-package ruixue.practice.ocpkasi.java_core.collections;
+package ruixue.practice.ocpkasi.core_java.collections;
 
 import java.util.TreeMap;
 
