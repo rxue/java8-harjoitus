@@ -8,3 +8,17 @@
 * on *builder* object, which can produce an *immutable object* eventually, e.g. `StringBuilder`
 
 However, it is illogical to invoke *static methods* in the middle of *method chaining*
+
+## *Design Patterns*
+### *Behavioral* Patterns
+#### Object Behavioral
+##### *Strategy*
+###### Application of Strategy Pattern
+####### Strategy Pattern in `java.time.temporal`
+* *Context*: `ChronoUnit`
+* *Strategy*: `Temporal`
+* *Concrete Strategy*:
+  * `LocalDate`
+  * `LocalTime`
+  * `LocalDateTime`
+  * `ZonedDateTime`
