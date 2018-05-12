@@ -10,15 +10,14 @@
 However, it is illogical to invoke *static methods* in the middle of *method chaining*
 
 ## *Design Patterns*
-### *Behavioral* Patterns
-#### Object Behavioral
-##### *Strategy*
-###### Application of Strategy Pattern
-####### Strategy Pattern in `java.time.temporal`
-* *Context*: `ChronoUnit`
-* *Strategy*: `Temporal`
-* *Concrete Strategy*:
-  * `LocalDate`
-  * `LocalTime`
-  * `LocalDateTime`
-  * `ZonedDateTime`
+### *Behavioral* Patterns > Object Behavioral > *Strategy*
+#### Application of Strategy Pattern
+##### Strategy Pattern in `java.time.temporal`
+In *OpenJDK-8*, the implementation of `<R extends Temporal> ChronoUnit.addTo(Temporal temporal, long amount)` and `long ChronoUnit.addTo(Temporal temproal1Inclusive, Temporal temporal2Exclusive)` applied the *strategy pattern*:
+  * *Context*: `ChronoUnit`
+  * *Strategy*: `Temporal`
+  * *Concrete Strategy*:
+    * `LocalDate`
+    * `LocalTime`
+    * `LocalDateTime`
+    * `ZonedDateTime`
