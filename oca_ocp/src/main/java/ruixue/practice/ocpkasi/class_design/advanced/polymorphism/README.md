@@ -1,13 +1,15 @@
 ## [*Polymorphism*](https://docs.oracle.com/javase/tutorial/java/IandI/polymorphism.html)
 *Polymorphism* is the property of an object to take on different forms
+
 ### *Object Type* VS *Reference Type*
 #### Relevant rules:
 * The type of the object    determines **which properties exist** within the object in memory
 * The type of the reference determines **which members (methods and variables) are accessible** to the Java program
+
 ### *virtual Method Invocation*
 The *Java virtual machine (JVM)* calls the appropriate method for the object that is referred to in each variable. It does not call the method that is defined by the *reference type* but the *object type*. This behavior is referred to as *virtual method invocation* and demonstrate an aspect of the important *polymorphism* features in Java. 
 
-All non-final, non-static, and non-private Java methods are considered as *virtual methods*, since any of them can be ***overridden*** at runtime
+All regular (non-final, non-private) non-static methods are considered as *virtual methods*, since any of them can be ***overridden*** at runtime. Note that as the name, *virtual method invocation*, indicates, **only the instance methods work in the way mentioned above**.
 
 ## *Casting* Objects
 ### Basic Rules of *Casting* Objects
