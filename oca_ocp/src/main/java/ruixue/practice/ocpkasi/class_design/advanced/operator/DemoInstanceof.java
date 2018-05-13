@@ -10,7 +10,7 @@ class HeavyAnimal {}
 class Hippo extends HeavyAnimal {}
 class Elephant extends HeavyAnimal {}
 
-public class InstanceofDemo {
+public class DemoInstanceof {
 
 	public static void main(String[] args) {
 		Hippo hippo = new Hippo();
