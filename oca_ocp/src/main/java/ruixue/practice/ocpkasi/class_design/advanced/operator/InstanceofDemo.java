@@ -1,4 +1,7 @@
-package ruixue.practice.ocpkasi.class_design;
+package ruixue.practice.ocpkasi.class_design.advanced.operator;
+
+import java.util.Collection;
+
 interface Animal {}
 class Mammal implements Animal {}
 abstract class AbstractHuman {}
@@ -16,7 +19,7 @@ public class InstanceofDemo {
 		Animal mammal = new Mammal();
 		System.out.println("mammal (reference type is Animal interface) instanceof HeavyAnimal: " + (mammal instanceof HeavyAnimal));
 		AbstractHuman robot = new Robot();
-		//System.out.println("robot (reference type is abstract AbstractHuman) instanceof HeavyAnimal: " + (robot instanceof HeavyAnimal)); //Does not compile
+		System.out.println("Robot is instance of Collection is " + (robot instanceof Collection)); //Does not compile
 
 	}
 
