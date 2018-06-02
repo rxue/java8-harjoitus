@@ -9,8 +9,9 @@ Implementation of both methods return `null` if this queue is empty, e.g. ArrayD
 ## `String` has a common method as `Collection` - `isEmpty()`
 
 ## Summary
-### Collections Not Accepting `null` elements - `ArrayDeque` and Collections with *Tree* Structure, say `TreeMap` and `TreeSet`
+### Collections Not Accepting `null` Elements - `ArrayDeque`, Collections with *Tree* Structure, say `TreeMap` and `TreeSet`, and `ConcurrentHashMap`
 `ArrayDeque`, as an implementation of `java.util.Deque`, can not contain `null` elements because, `null` is used as a special return value in `peek` and `pool` operations on `ArrayDeque` to refer to no available element. Moreover, the [documentation of `Deque` interface](https://docs.oracle.com/javase/8/docs/api/java/util/Deque.html) strongly encourages to prohibit the insertion of `null` element.
 
 Collections such as `TreeMap` and `TreeSet` can not contain `null` elements because the implementation of `TreeMap` and `TreeSet` has a generic speical sorted *tree* structure - *binary search tree*. The *sorted* property of *binary search tree* in `TreeMap`, as an example, are implemented by means of either `Comparator` or *natural ordering*, meaning the elements of `TreeMap` has to be *instances* of *Comparable*. The *compare* methods of `Comparator` and `Comparable` have a common contract, say there is no sense to compare an element with `null`. Sample code reference: [TestAddNullElementToCollections](https://github.com/rxue/java8-perusharjoitus/blob/master/oca_ocp/src/test/java/ruixue/practice/ocpkasi/core_java/collections/TestAddNullElementToCollections.java) 
 
+Like `HashTable`, but unlike `HashMap`, the `ConcurrentHashMap` does not allow `null` to used as *key* nor *value*
