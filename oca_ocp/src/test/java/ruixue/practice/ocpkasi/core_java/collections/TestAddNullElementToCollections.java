@@ -1,9 +1,9 @@
 package ruixue.practice.ocpkasi.core_java.collections;
 
 import java.util.ArrayDeque;
-import java.util.HashMap;
 import java.util.LinkedList;
 import java.util.TreeMap;
+import java.util.concurrent.ConcurrentHashMap;
 
 import org.junit.jupiter.api.Test;
 
@@ -14,19 +14,25 @@ public class TestAddNullElementToCollections {
 	public void testToTreeMap() {
 		TreeMap<String,String> treeMap = new TreeMap<>();
 		assertThrows(NullPointerException.class, () -> treeMap.put(null, "null value"));
-		LinkedList<String> l = new LinkedList<>();
 	}
 
 	@Test
-	public void testToArrayDeque() {
+	public void testAddNullToArrayDeque() {
 		ArrayDeque<String> arrayDeque = new ArrayDeque<>();
 		assertThrows(NullPointerException.class, () -> arrayDeque.add(null));
 		assertThrows(NullPointerException.class, () -> arrayDeque.offer(null));
 	}
 	
 	@Test
-	public void testToLinkedList() {
+	public void testAddNullToLinkedList() {
 		LinkedList<String> list = new LinkedList<>();
 		assertTrue(list.offer(null));
+	}
+	
+	@Test
+	public void testAddNullToConcurrentHashMap() {
+		ConcurrentHashMap<String,String> concurrentHashMap = new ConcurrentHashMap<>();
+		assertThrows(NullPointerException.class, () -> concurrentHashMap.put(null, "value of a null key"));
+		assertThrows(NullPointerException.class, () -> concurrentHashMap.put("key of a null value", null));
 	}
 }
