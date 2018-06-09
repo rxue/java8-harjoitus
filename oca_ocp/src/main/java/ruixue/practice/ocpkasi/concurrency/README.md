@@ -25,4 +25,6 @@ The `ExecutorService` provides a method called `shutdownNow()`, which attempts t
 "Everyone meet at McDonald's at 6:00; once you get there, stay there until everyone shows up, and then we'll figure out what we're doing next"
 
 ### Rule of Using *CyclicBarrier*
-Make sure that you set the number of available threads to be at least as large as your *CyclicBarrier* limit value. Otherwise the barrier would never be reached as the only threads avaiable in the pool are stuck waiting for the barrier to be complete.    
+Make sure that you set the number of available threads to be at least as large as your *CyclicBarrier* limit value. Otherwise the barrier would never be reached as the only threads avaiable in the pool are stuck waiting for the barrier to be complete. 
+
+In the *codebase*, the `CyclicBarrier` object is shared among *tasks* and, the relationship between `CyclicBarrier` *instance* and the *tasks* routine is *aggregation*. The `CyclicBarrier` *instance* can be passed to multiple *tasks* through *constructor* or *setters*, and inside the *task* routine the `await` method of the `CyclicBarrier` instance has to be invoked once.
