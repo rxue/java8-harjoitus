@@ -12,7 +12,7 @@ When a method can throw `InterruptedException`, it is telling you that it is a *
 ## `Runnable` VS `Callable`
 |                           |`Runnable`                       |`Callable`                 |
 |---------------------------|---------------------------------|---------------------------|
-|                           |*is functional interface*        |is *functional interface*  |
+|                           |<td colspan=2>*is functional interface*</td>                 |
 |method name                |`run()`                          |`call()`                   |
 |method return value        |`void`                           |`T`                        |
 |*applicable design pattern*|*command* and *command processor*|*active object*            |
