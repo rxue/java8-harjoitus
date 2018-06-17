@@ -10,11 +10,13 @@ When a method can throw `InterruptedException`, it is telling you that it is a *
 
 
 ## `Runnable` VS `Callable`
-|           |`Runnable`             |`Callable`               |
-|-----------|-----------------------|-------------------------|
-|           |*functional interface* |*functional interface*   |
-|-----------|-----------------------|-------------------------|
-|method name|`run()`                |`call()`                 | 
+|                           |`Runnable`                       |`Callable`                 |
+|---------------------------|---------------------------------|---------------------------|
+|                           |*is functional interface*        |is *functional interface*  |
+|method name                |`run()`                          |`call()`                   |
+|method return value        |`void`                           |`T`                        |
+|*applicable design pattern*|*command* and *command processor*|*active object*            |
+ 
 
 ## `ExecutorService`
 The `ExecutorService` provides a method called `shutdownNow()`, which attempts to stop all running tasks and discards any that have not been started yet. Note that `shutdownNow()` **attempts** to stop all running tasks. It is possible to create a thread that will never terminate, so any attempt to *interrupt* it may be ignored.<sup>Reference: OCP Oracle Certified Professional Java SE 8 Programmer II: Study Guide > Chapter 7 Concurrency > Creating Threads with the `ExecutorService` > Shutting Down a Thread Executor</sup>
