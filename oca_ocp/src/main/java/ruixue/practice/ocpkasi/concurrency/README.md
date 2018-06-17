@@ -20,14 +20,17 @@ When a method can throw `InterruptedException`, it is telling you that it is a *
 
 ## `ExecutorService`
 ### `shutDown()` VS `shutDownNow()`
-|                                               |`shutDown()`                           |`shutDownNow()`
-|-----------------------------------------------|---------------------------------------|---------------
-|return type                                    |`void`                                 |`List<Runnable>`
-|how **previously submitted tasks** are handled |previously submitted tasks are executed|
-|how **actively executing tasks** are handled   |                                       |**attempts** to stop all actively executing tasks
-|blocking or not                                |not waiting                            |not waiting
+|                                               |`shutDown()`                               |`shutDownNow()`
+|-----------------------------------------------|-------------------------------------------|---------------
+|return type                                    |`void`                                     |`List<Runnable>`
+|how **previously submitted tasks** are handled |previously submitted tasks are **executed**|previously submitted tasks are **not executed**
+|how **actively executing tasks** are handled   |                                           |**attempts** to stop all actively executing tasks
+|blocking or not                                |not waiting                                |not waiting
 
-The `ExecutorService` provides a method called `shutdownNow()`, which attempts to stop all running tasks and discards any that have not been started yet. Note that `shutdownNow()` **attempts** to stop all running tasks. It is possible to create a thread that will never terminate, so any attempt to *interrupt* it may be ignored.<sup>Reference: OCP Oracle Certified Professional Java SE 8 Programmer II: Study Guide > Chapter 7 Concurrency > Creating Threads with the `ExecutorService` > Shutting Down a Thread Executor</sup>
+### `awaitTermination()`
+Used after *shut down* to wait until termination of all running tasks
+
+ <sup>Reference: OCP Oracle Certified Professional Java SE 8 Programmer II: Study Guide > Chapter 7 Concurrency > Creating Threads with the `ExecutorService` > Shutting Down a Thread Executor</sup>
 
 [DemoExecutorServiceShutdownNow](https://github.com/rxue/java8-perusharjoitus/blob/master/oca_ocp/src/main/java/ruixue/practice/ocpkasi/concurrency/DemoExecutorServiceShutdownNow.java) will hang during *run time* if the *shut down* is implemented with *interrupt* of *thread*. Demo is tested with *OpenJDK* and indeed hangs during *run time*.  
 
