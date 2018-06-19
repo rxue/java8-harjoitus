@@ -16,7 +16,7 @@ public class DemoThreadStateBlocked {
 		Thread t1 = new Thread(() -> s.synchCall(null));
 		Thread t2 = new Thread(() -> s.synchCall(t1));
 		t2.start();
-		for (long i = 0; i < 10000; i++);
+		for (long i = 0; i < Integer.MAX_VALUE/10; i++);
 		t1.start();
 	}
 
