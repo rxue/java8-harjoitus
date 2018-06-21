@@ -9,13 +9,18 @@
 In Java, when a method can throw `InterruptedException`, it is telling you that it is a *blocking* method, and further that if it is *interrupted*, it will take an effort to stop *blocking* early.
 
 #### *Blocking Methods*
+##### Blocking methods in `java.lang`
+Blocking methods in `java.lang` were implemented with `native` method call.
+**Class/interface name**|**Modifier** |**Blocking method**|**Return type**
+------------------------|-------------|-------------------|----------------------
+`Object`                |`final`      |`wait()`           |`void`
+`Thread`                |             |<u>`sleep()`</u>   |`void`
 
+##### Blocking methods in `java.util.concurrent`
+Blocking methods in `java.util.concurrent` are implemented with the aforementioned blocking methods in `java.lang` and, the `InterruptedException` *propagate*s upwards.
 
-**Class/interface name**|**Modifier** |**Blocking method**                    |**Return type**
-------------------------|-------------|---------------------------------------|----------------------
-`Object`                |`final`      |`wait()`                               |`void`
-`Thread`                |             |_`sleep()`_                              |`void`
-`CyclicBarrier`         |`await()`    |                                            |`int`
+**Class/interface name**|**Blocking method**                                  |**Return type**
+`CyclicBarrier`         |`await()`                                            |`int`
 `ExecutorService`       |`invokeAll(Collection<? extends Callable<T>> tasks)` |`<T> List<Future<T>>`
 `ExecutorService`       |`awaitTermination(long timeout, TimeUnit unit)`      |`boolean`
 `ExecutorService`       |`invokeAny(Collection<? extends Callable<T>> tasks)` |`<T> T`
