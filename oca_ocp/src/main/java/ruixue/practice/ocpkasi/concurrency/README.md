@@ -9,9 +9,19 @@
 In Java, when a method can throw `InterruptedException`, it is telling you that it is a *blocking* method, and further that if it is *interrupted*, it will take an effort to stop *blocking* early.
 
 #### *Blocking Methods*
-**Class name**   |**Blocking method**                                  |**Return type**
------------------|-----------------------------------------------------|----------------------
-`ExecutorService`|`invokeAll(Collection<? extends Callable<T>> tasks)` |`<T> List<Future<T>>`
+
+
+**Class/interface name**|**Modifier** |**Blocking method**                    |**Return type**
+------------------------|-------------|---------------------------------------|----------------------
+`Object`                |`final`      |`wait()`                               |`void`
+`Thread`                |             |_`sleep()`_                              |`void`
+`CyclicBarrier`         |`await()`    |                                            |`int`
+`ExecutorService`       |`invokeAll(Collection<? extends Callable<T>> tasks)` |`<T> List<Future<T>>`
+`ExecutorService`       |`awaitTermination(long timeout, TimeUnit unit)`      |`boolean`
+`ExecutorService`       |`invokeAny(Collection<? extends Callable<T>> tasks)` |`<T> T`
+`Future<V>`             |`get()`                                              |`V`
+
+
 
 ## `Runnable` VS `Callable`
 |                           |`Runnable`                       |`Callable<V>`                 
