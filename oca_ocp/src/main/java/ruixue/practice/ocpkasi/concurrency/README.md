@@ -23,8 +23,8 @@ Blocking methods in `java.util.concurrent` are implemented with the aforemention
 **Class/interface name**|**Blocking method**                                  |**Return type**
 ------------------------|-----------------------------------------------------|---------------------
 `CyclicBarrier`         |`await()`                                            |`int`
-`ExecutorService`       |`invokeAll(Collection<? extends Callable<T>> tasks)` |`<T> List<Future<T>>`
 `ExecutorService`       |`awaitTermination(long timeout, TimeUnit unit)`      |`boolean`
+`ExecutorService`       |`invokeAll(Collection<? extends Callable<T>> tasks)` |`<T> List<Future<T>>`
 `ExecutorService`       |`invokeAny(Collection<? extends Callable<T>> tasks)` |`<T> T`
 `Future<V>`             |`get()`                                              |`V`
 
