@@ -6,8 +6,12 @@
 * *Stateful operations*
 
 ### `InterruptedException`<sup>Java Concurrency in Practice > 5.4. Blocking and Interruptible Methods</sup>
-When a method can throw `InterruptedException`, it is telling you that it is a *blocking* method, and further that if it is *interrupted*, it will take an effort to stop *blocking* early 
+In Java, when a method can throw `InterruptedException`, it is telling you that it is a *blocking* method, and further that if it is *interrupted*, it will take an effort to stop *blocking* early.
 
+#### *Blocking Methods*
+**Class name**   |**Blocking method**                                  |**Return type**
+-----------------|-----------------------------------------------------|----------------------
+`ExecutorService`|`invokeAll(Collection<? extends Callable<T>> tasks)` |`<T> List<Future<T>>`
 
 ## `Runnable` VS `Callable`
 |                           |`Runnable`                       |`Callable<V>`                 
