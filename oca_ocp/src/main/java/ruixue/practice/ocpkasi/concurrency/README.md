@@ -15,7 +15,7 @@ Blocking methods in `java.lang` were implemented with `native` method call.
 **Class/interface name**|**Modifier** |**Blocking method**|**Return type**
 ------------------------|-------------|-------------------|----------------------
 `Object`                |`final`      |`wait()`           |`void`
-`Thread`                |             |<u>`sleep()`</u>   |`void`
+`Thread`                |             |<u>sleep()</u>     |`void`
 
 ##### Blocking methods in `java.util.concurrent`
 Blocking methods in `java.util.concurrent` are implemented with the aforementioned blocking methods in `java.lang` and, the `InterruptedException` *propagate*s upwards.
