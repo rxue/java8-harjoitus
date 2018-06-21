@@ -11,6 +11,7 @@ In Java, when a method can throw `InterruptedException`, it is telling you that 
 #### *Blocking Methods*
 ##### Blocking methods in `java.lang`
 Blocking methods in `java.lang` were implemented with `native` method call.
+
 **Class/interface name**|**Modifier** |**Blocking method**|**Return type**
 ------------------------|-------------|-------------------|----------------------
 `Object`                |`final`      |`wait()`           |`void`
@@ -20,6 +21,7 @@ Blocking methods in `java.lang` were implemented with `native` method call.
 Blocking methods in `java.util.concurrent` are implemented with the aforementioned blocking methods in `java.lang` and, the `InterruptedException` *propagate*s upwards.
 
 **Class/interface name**|**Blocking method**                                  |**Return type**
+------------------------|-----------------------------------------------------|---------------------
 `CyclicBarrier`         |`await()`                                            |`int`
 `ExecutorService`       |`invokeAll(Collection<? extends Callable<T>> tasks)` |`<T> List<Future<T>>`
 `ExecutorService`       |`awaitTermination(long timeout, TimeUnit unit)`      |`boolean`
