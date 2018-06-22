@@ -9,16 +9,15 @@
 In Java, when a method can throw `InterruptedException`, it is telling you that it is a *blocking* method, and further that if it is *interrupted*, it will take an effort to stop *blocking* early.
 
 #### *Blocking Methods*
-##### Blocking methods in `java.lang`
-Blocking methods in `java.lang` were implemented with `native` method call.
+There are **two `native`** ***blocking methods*** on the *application level* in core Java's package `java.lang`. 
 
-**Class/interface name**|**Modifier** |**Blocking method**|**Return type**
-------------------------|-------------|-------------------|----------------------
-`Object`                |`final`      |`wait()`           |`void`
-`Thread`                |`static`     |`sleep()`          |`void`
+**Class name**|**Modifier** |**Blocking method**|**Return type**
+--------------|-------------|-------------------|----------------------
+`Object`      |`final`      |`wait()`           |`void`
+`Thread`      |`static`     |`sleep()`          |`void`
 
 ##### Blocking methods in `java.util.concurrent`
-Blocking methods in `java.util.concurrent` are implemented with the aforementioned blocking methods in `java.lang` and, the `InterruptedException` *propagate*s upwards.
+Blocking methods in `java.util.concurrent` are implemented with the aforementioned `native` *blocking methods*, from where the `InterruptedException` is *propagate*d.
 
 **Class/interface name**|**Blocking method**                                  |**Return type**
 ------------------------|-----------------------------------------------------|---------------------
