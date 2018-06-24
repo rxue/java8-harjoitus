@@ -24,9 +24,10 @@ Blocking methods in `java.util.concurrent` are implemented with the aforemention
 
 **Class/interface name**|**Blocking method**                                  
 ------------------------|-----------------------------------------------------
+`BlockingDeque<E>`      |<ul><li>`void putFirst(E e)`</li><li>`void putLast(E e)`</li><li>`boolean offerFirst(E e, long timeout, TimeUnit unit)`</li><li>`boolean offerLast(E e, long timeout, TimeUnit unit)`</li><li>`E takeFirst()`</li><li>`E takeLast()`</li><li>`E pollFirst(long timeout, TimeUnit unit)`</li><li>`E pollLast(long timeout, TimeUnit unit)`</li></ul>
 `BlockingQueue`         |<ul><li>`void put(E e)`</li><li>`boolean offer(E e, long timeout, TimeUnit unit)`</li><li>`E take()`</li><li>`E poll(long timeout, TimeUnit unit)`</li></ul>
 `CyclicBarrier`         |`int await()`                      
-`ExecutorService`       |<ul><li>`awaitTermination(long timeout, TimeUnit unit)`</li><li>`invokeAll(Collection<? extends Callable<T>> tasks)`</li><li>`invokeAny(Collection<? extends Callable<T>> tasks)`<li></ul>
+`ExecutorService`       |<ul><li>`awaitTermination(long timeout, TimeUnit unit)`</li><li>`invokeAll(Collection<? extends Callable<T>> tasks)`</li><li>`invokeAny(Collection<? extends Callable<T>> tasks)`</li></ul>
 `Future<V>`             |`get()`                                            
 
 
