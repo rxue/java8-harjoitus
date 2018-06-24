@@ -22,14 +22,12 @@ There are **two `native`** ***blocking methods*** on the *application level* in 
 ##### Blocking methods in `java.util.concurrent`
 Blocking methods in `java.util.concurrent` are implemented with the aforementioned `native` *blocking methods*, from where the `InterruptedException` is *propagate*d.
 
-**Class/interface name**|**Blocking method**                                  |**Return type**
-------------------------|-----------------------------------------------------|---------------------
-`BlockingQueue`         |<ul><li>`void put(E e)`</li><li>`boolean offer(E e, long timeout, TimeUnit unit)`</li><li>`E take()`</li></ul>|
-`CyclicBarrier`         |`await()`                                            |`int`
-`ExecutorService`       |`awaitTermination(long timeout, TimeUnit unit)`      |`boolean`
-`ExecutorService`       |`invokeAll(Collection<? extends Callable<T>> tasks)` |`<T> List<Future<T>>`
-`ExecutorService`       |`invokeAny(Collection<? extends Callable<T>> tasks)` |`<T> T`
-`Future<V>`             |`get()`                                              |`V`
+**Class/interface name**|**Blocking method**                                  
+------------------------|-----------------------------------------------------
+`BlockingQueue`         |<ul><li>`void put(E e)`</li><li>`boolean offer(E e, long timeout, TimeUnit unit)`</li><li>`E take()`</li><li>`E poll(long timeout, TimeUnit unit)`</li></ul>|
+`CyclicBarrier`         |`int await()`                      
+`ExecutorService`       |<ul><li>`awaitTermination(long timeout, TimeUnit unit)`</li><li>`invokeAll(Collection<? extends Callable<T>> tasks)`</li><li>`invokeAny(Collection<? extends Callable<T>> tasks)`<li></ul>
+`Future<V>`             |`get()`                                            
 
 
 
