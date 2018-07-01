@@ -5,7 +5,7 @@
 * [*Mutual Exclusion*](https://www.youtube.com/watch?v=n0Zbtt4C1XU&t=84s)
   * avoid *Race Condition*
 * [*Resource Starvation*](https://www.youtube.com/watch?v=2klwq4GeVtw&t=460s) has nothing to deal with lock
-  * [*Livelock*](https://www.youtube.com/watch?v=v4Tp8dxGA2U&t=155s) is a situation in which **two or more processes continuously** change their states in response to changes in other processes without doing any useful work. ** *Livelock* is a special case of *resource starvation* ** in that the set of processes or threads are *starved* due to the *livelock*, and thus never get the *resources* they intend to get
+  * [*Livelock*](https://www.youtube.com/watch?v=v4Tp8dxGA2U&t=155s) is a situation in which **two or more processes continuously** change their states in response to changes in other processes without doing any useful work. **Livelock is a special case of resource starvation** in that the set of processes or threads are *starved* due to the *livelock*, and thus never get the *resources* they intend to get
 
 ### *Iterator*
 #### *Fail-fast* Iterator VS *Weakly Consistent* Iterator
