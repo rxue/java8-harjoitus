@@ -24,8 +24,10 @@ public class TestFailFastIterator {
 		list.add("world");
 		list.add("jesus");
 		assertThrows(ConcurrentModificationException.class, () -> {
-			for (String current : list)
+			for (String current : list) {
 				list.add(current);
+				System.out.println("This text displays, meaning the root cause of ConcurrentModificationException is the Iterator rather than the modification on the collection");
+			}
 		});
 		logger.info("Exception came from the line, where the for loop is!");
 	}
