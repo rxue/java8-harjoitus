@@ -1,7 +1,9 @@
-## Concurrency Buzzwords
+# Concurrency
 
+## Concurrency Buzzwords
 * *Scaling*: a property when we add more resources such as CPUs, the performance results gradually improve
-### *Race Condition*
+* [*Mutual Exclusion*](https://www.youtube.com/watch?v=n0Zbtt4C1XU&t=84s)
+ * avoid *Race Condition*
 
 ### *Locking*
 #### *Dead Lock*
