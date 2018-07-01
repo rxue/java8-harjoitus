@@ -4,7 +4,7 @@
 * *Scaling*: a property when we add more resources such as CPUs, the performance results gradually improve
 * [*Mutual Exclusion*](https://www.youtube.com/watch?v=n0Zbtt4C1XU&t=84s)
   * avoid *Race Condition*
-* *Resource Starvation*
+* [*Resource Starvation*](https://www.youtube.com/watch?v=2klwq4GeVtw&t=460s)
   * *Livelock*
 
 ### *Iterator*
