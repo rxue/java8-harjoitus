@@ -4,8 +4,8 @@
 * *Scaling*: a property when we add more resources such as CPUs, the performance results gradually improve
 * [*Mutual Exclusion*](https://www.youtube.com/watch?v=n0Zbtt4C1XU&t=84s)
   * avoid *Race Condition*
-* [*Resource Starvation*](https://www.youtube.com/watch?v=2klwq4GeVtw&t=460s)
-  * *Livelock*
+* [*Resource Starvation*](https://www.youtube.com/watch?v=2klwq4GeVtw&t=460s) has nothing to deal with lock
+  * *Livelock* is a special case of *resource starvation* in that the set of processes or threads are *starved* due to the *livelock*, and thus never get the *resources* they intend to get
 
 ### *Iterator*
 #### *Fail-fast* Iterator VS *Weakly Consistent* Iterator
