@@ -3,6 +3,12 @@
 * *Scaling*: a property when we add more resources such as CPUs, the performance results gradually improve
 ### *Race Condition*
 
+### *Locking*
+#### *Dead Lock*
+#### *Live Lock*
+
+### *Iterator*
+#### *Fail-fast* Iterator VS *Weakly Consistent* Iterator
 
 ### *Independent Operations* VS *Stateful Operations*
 * *Independent operations*
@@ -29,8 +35,6 @@ Blocking methods in `java.util.concurrent` are implemented with the aforemention
 `CyclicBarrier`         |`int await()`                      
 `ExecutorService`       |<ul><li>`awaitTermination(long timeout, TimeUnit unit)`</li><li>`invokeAll(Collection<? extends Callable<T>> tasks)`</li><li>`invokeAny(Collection<? extends Callable<T>> tasks)`</li></ul>
 `Future<V>`             |`get()`                                            
-
-
 
 ## `Runnable` VS `Callable`
 |                           |`Runnable`                       |`Callable<V>`                 
