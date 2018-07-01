@@ -4,6 +4,7 @@ import static org.junit.jupiter.api.Assertions.assertThrows;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.ConcurrentModificationException;
 import java.util.Iterator;
 import java.util.List;
@@ -61,6 +62,22 @@ public class TestFailFastIterator {
 			if (i == 1) assertEquals(changedString, current);
 			i++;
 		}
+	}
+	
+	@Test
+	public void testAddOnSynchronizedCollectionInForEachLoop() {
+		List<String> list = new ArrayList<>();
+		list.add("hello");
+		list.add("world");
+		list.add("jesus");
+		List<String> sList = Collections.synchronizedList(list);
+		assertThrows(ConcurrentModificationException.class, () -> {
+			for (String current : sList) {
+				sList.add(current);
+				System.out.println("This text displays, meaning the root cause of ConcurrentModificationException is the Iterator rather than the modification on the collection");
+			}
+		});
+		logger.info("Exception came from the line, where the for loop is!");
 	}
 
 }
