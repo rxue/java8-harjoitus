@@ -5,6 +5,7 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 
 import java.util.ArrayList;
 import java.util.ConcurrentModificationException;
+import java.util.Iterator;
 import java.util.List;
 
 import org.apache.logging.log4j.LogManager;
@@ -18,7 +19,7 @@ public class TestFailFastIterator {
 	 * If a thread modifies a collection directly while it is iterating over the collection with a fail-fast iterator, the iterator will throw this exception
 	 */
 	@Test
-	public void testAddOnArrayListDuringIteration() {
+	public void testAddOnArrayListInForEachLoop() {
 		List<String> list = new ArrayList<>();
 		list.add("hello");
 		list.add("world");
@@ -30,6 +31,19 @@ public class TestFailFastIterator {
 			}
 		});
 		logger.info("Exception came from the line, where the for loop is!");
+	}
+	@Test
+	public void testAddOnArrayListDuringIteration() {
+		List<String> list = new ArrayList<>();
+		list.add("hello");
+		list.add("world");
+		Iterator<String> it = list.iterator();
+		it.next();
+		list.add("new element");
+		assertThrows(ConcurrentModificationException.class, () -> {
+			it.next();
+		});
+		logger.info("adding element to ArrayList during iteration of an Iterator causes state change of the ArrayList");
 	}
 	
 	/**
