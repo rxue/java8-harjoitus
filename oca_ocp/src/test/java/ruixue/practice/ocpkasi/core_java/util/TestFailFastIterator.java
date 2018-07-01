@@ -33,7 +33,7 @@ public class TestFailFastIterator {
 	}
 	
 	/**
-	 * Modification of data is on the existing fail-fast iterator 
+	 * The update of data is on the existing fail-fast iterator of ArrayList is allowed. However, it is not recommended 
 	 */
 	@Test
 	public void testSetOnArrayListDuringIteration() {
