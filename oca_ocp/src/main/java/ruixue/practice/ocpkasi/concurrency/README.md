@@ -38,6 +38,11 @@ Blocking methods in `java.util.concurrent` are implemented with the aforemention
 `ExecutorService`       |<ul><li>`awaitTermination(long timeout, TimeUnit unit)`</li><li>`invokeAll(Collection<? extends Callable<T>> tasks)`</li><li>`invokeAny(Collection<? extends Callable<T>> tasks)`</li></ul>
 `Future<V>`             |`get()`                                            
 
+NB! From the list above, we can see that the **blocking methods can be timed**.
+
+#### *Concurrent Collections* in `java.util.concurrent`
+NB! Operations on *concurrent collections* are not necessarily *blocking*. Among the *concurrent collections* in Java SE, only *blocking queues*, `BlockingQueue` and its sub-interface `BlockingDeque`, contain *blocking methods*.   
+
 ## `Runnable` VS `Callable`
 |                           |`Runnable`                       |`Callable<V>`                 
 |---------------------------|---------------------------------|--------------------------
