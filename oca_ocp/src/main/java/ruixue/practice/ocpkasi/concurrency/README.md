@@ -18,7 +18,7 @@
 In Java, when a method can throw `InterruptedException`, it is telling you that it is a *blocking* method, and further that if it is *interrupted*, it will take an effort to stop *blocking* early.
 
 #### *Blocking Methods*
-There are **two** ***blocking methods*** on the *application level* **implemented with `native` method call** in core Java's package `java.lang`. 
+There are **two** ***blocking methods*** on the *application level* **implemented with `native` method call** in core Java's package `java.lang`. There are 3 *overloaded* `wait` methods in the `Object` class.  
 
 **Class name**|**Modifier** |**Blocking method**            |**Return type**
 --------------|-------------|-------------------------------|----------------------
