@@ -20,10 +20,12 @@ In Java, when a method can throw `InterruptedException`, it is telling you that 
 #### *Blocking Methods*
 There are **two** ***blocking methods*** on the *application level* **implemented with `native` method call** in core Java's package `java.lang`. 
 
-**Class name**|**Modifier** |**Blocking method**|**Return type**
---------------|-------------|-------------------|----------------------
-`Object`      |`final`      |`wait()`           |`void`
-`Thread`      |`static`     |`sleep()`          |`void`
+**Class name**|**Modifier** |**Blocking method**            |**Return type**
+--------------|-------------|-------------------------------|----------------------
+`Object`      |`final`      |`wait()`                       |`void`
+              |             |`wait(long timeout)`           |
+              |             |`wait(long timeout, int nanos)`|
+`Thread`      |`static`     |`sleep()`                      |`void`
 
 ##### Blocking methods in `java.util.concurrent`
 Blocking methods in `java.util.concurrent` are implemented with the aforementioned `native` *blocking methods*, from where the `InterruptedException` is *propagate*d.
