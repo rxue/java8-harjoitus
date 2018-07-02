@@ -23,8 +23,8 @@ There are **two** ***blocking methods*** on the *application level* **implemente
 **Class name**|**Modifier** |**Blocking method**            |**Return type**
 --------------|-------------|-------------------------------|----------------------
 `Object`      |`final`      |`wait()`                       |`void`
-              |             |`wait(long timeout)`           |
-              |             |`wait(long timeout, int nanos)`|
+`Object`      |`final`      |`wait(long timeout)`           |`void`
+`Object`      |`final`      |`wait(long timeout, int nanos)`|`void`
 `Thread`      |`static`     |`sleep()`                      |`void`
 
 ##### Blocking methods in `java.util.concurrent`
