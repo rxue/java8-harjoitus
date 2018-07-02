@@ -68,6 +68,12 @@ Used after *shut down* to wait until termination of all running tasks
 
 [DemoExecutorServiceShutdownNow](https://github.com/rxue/java8-perusharjoitus/blob/master/oca_ocp/src/main/java/ruixue/practice/ocpkasi/concurrency/DemoExecutorServiceShutdownNow.java) will hang during *run time* if the *shut down* is implemented with *interrupt* of *thread*. Demo is tested with *OpenJDK* and indeed hangs during *run time*.  
 
+### `ScheduledExecutorService`
+#### `scheduleAtFixedRate()` VS *cron* Jobs in Linux
+`scheduleAtFixedRate()` resembles the *cron* jobs in *Linux* in the sense that both can result in the same action at the same time. Both `scheduleAtFixedRate()` and *cron* has a common case: a scheduled task is executed, then after the given fixed interval, i.e. the `FixedRate` of `scheduleAtFixedRate()`, this same task is executed again regardless of the state of the previous task, say the same previous task might still be running.      
+
+However, `scheduleAtFixedRate()` has an *initialDelay* parameter, which differs from the *cron* jobs.  
+
 ## *Synchronized Collections* `!=` *Concurrent Collection*
 
 ## `CyclicBarrier`
