@@ -41,7 +41,7 @@ Blocking methods in `java.util.concurrent` are implemented with the aforemention
 NB! From the list above, we can see that the **blocking methods can be timed**.
 
 #### *Concurrent Collections* in `java.util.concurrent`
-NB! Operations on *concurrent collections* are not necessarily *blocking*. Among the *concurrent collections* in Java SE, only *blocking queues*, `BlockingQueue` and its sub-interface `BlockingDeque`, contain *blocking methods*.   
+NB! Operations on *concurrent collections* are not necessarily *blocking*. Among the *concurrent collections* in Java SE, only *blocking queues*, `BlockingQueue` and its sub-interface `BlockingDeque`, contain *blocking methods* and **timed blocking methods**.   
 
 ## `Runnable` VS `Callable`
 |                           |`Runnable`                       |`Callable<V>`                 
