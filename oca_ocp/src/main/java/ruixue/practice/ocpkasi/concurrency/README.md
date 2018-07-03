@@ -62,7 +62,7 @@ NB! Operations on *concurrent collections* are not necessarily *blocking*. Among
 |blocking or not                                |not waiting                                |not waiting
 
 ### `awaitTermination()`
-Used after *shut down* to wait until termination of all running tasks
+Used after *shut down*, i.e. `shutdown()` and `shutdownNow()`, to wait until termination of all running tasks
 
  <sup>Reference: OCP Oracle Certified Professional Java SE 8 Programmer II: Study Guide > Chapter 7 Concurrency > Creating Threads with the `ExecutorService` > Shutting Down a Thread Executor</sup>
 
