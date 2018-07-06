@@ -53,6 +53,9 @@ NB! Operations on *concurrent collections* are not necessarily *blocking*. Among
  
 
 ## `ExecutorService`
+### `ExecutorService` VS `Executor`
+In comparison with `Executor`, *tasks* executed by `ExecutorService` are controllable as the submission of *tasks* return a `Future` or a `List<Future>`.  
+
 ### `shutdown()` VS `shutdownNow()`
 |Comparison on the term                         |`shutdown()`                               |`shutdownNow()`
 |-----------------------------------------------|-------------------------------------------|---------------
