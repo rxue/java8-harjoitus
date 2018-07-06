@@ -53,8 +53,8 @@ NB! Operations on *concurrent collections* are not necessarily *blocking*. Among
  
 
 ## `ExecutorService`
-### `shutDown()` VS `shutDownNow()`
-|                                               |`shutDown()`                               |`shutDownNow()`
+### `shutdown()` VS `shutdownNow()`
+|Comparison on the term                         |`shutdown()`                               |`shutdownNow()`
 |-----------------------------------------------|-------------------------------------------|---------------
 |return type                                    |`void`                                     |`List<Runnable>`
 |how **previously submitted tasks** are handled |previously submitted tasks are **executed**|previously submitted tasks are **not executed**
