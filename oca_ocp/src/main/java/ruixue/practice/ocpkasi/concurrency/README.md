@@ -54,7 +54,10 @@ NB! Operations on *concurrent collections* are not necessarily *blocking*. Among
 
 ## `ExecutorService`
 ### `ExecutorService` VS `Executor`
-In comparison with `Executor`, *tasks* executed by `ExecutorService` are controllable as the submission of *tasks* return a `Future` or a `List<Future>`.  
+In comparison with `Executor`, *tasks* executed by `ExecutorService` are controllable as all the submissions of *tasks* return a `Future` or a `List<Future>`.  
+
+#### `void Executor.execute(Runnable task)` VS `Future<?> submit(Runnable task)`
+People might wonder why therke is still `submit` method for submitting `Runnable` when there is `execute` method already in the super-interface `Executor`. The key point of the answer to this question is the as the aforementioned, submission of *tasks* by `ExecutorService` returns a `Future<?>`, by means of which the submitted tasks are controllable. Refer to [TestExecutorServiceSubmit](https://github.com/rxue/java8-perusharjoitus/blob/master/oca_ocp/src/test/java/ruixue/practice/ocpkasi/concurrency/TestExecutorServiceSubmit.java) 
 
 ### `shutdown()` VS `shutdownNow()`
 |Comparison on the term                         |`shutdown()`                               |`shutdownNow()`
