@@ -20,6 +20,8 @@ The reason for `LinkedList` to allow `null` elements is probably because its imp
 #### Collections with *sorted* structure never do not allow insertion of `null` elements
 In Java, objects can be sorted with `Comparator`. If no `Comparator` is provided, [*natural ordering*](https://docs.oracle.com/javase/8/docs/api/java/lang/Comparable.html), meaning objects will be sorted on base of their own implementations of [`Comparable`](https://docs.oracle.com/javase/8/docs/api/java/lang/Comparable.html)  will be applied.    
 
+> Virtually all of the *value classes* in the *Java* platform *libraries* implement `Comparable`
+
 * Sub-class of `SortedMap` - *`TreeMap`* - cannot contain `null` elements. 
 
  `TreeSet`, and `ConcurrentHashMap`
