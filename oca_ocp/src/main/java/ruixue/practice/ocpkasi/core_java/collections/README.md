@@ -11,6 +11,7 @@ Implementation of both methods return `null` if this queue is empty, e.g. `Array
 ## Summary
 ### Collections Not Accepting `null` Elements
 > [`Queue` impelementations generally do not allow insertion of `null` elements](https://docs.oracle.com/javase/8/docs/api/java/util/Queue.html)
+
 For instance, *`ArrayDeque`*, as an implementation of `java.util.Deque` - sub-interface of `java.util.Queue`, cannot contain `null` elements because, `null` is used as a special return value in the `peek` and `poll` operations on `ArrayDeque` to refer to no available element. Moreover, the [documentation of `Deque` interface](https://docs.oracle.com/javase/8/docs/api/java/util/Deque.html) strongly encourages to prohibit the insertion of `null` element.
 * Sub-class of `SortedMap` - *`TreeMap`* - cannot contain `null` elements. 
 
