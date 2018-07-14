@@ -10,11 +10,15 @@ Implementation of both methods return `null` if this queue is empty, e.g. `Array
 
 ## Summary
 ### Collections Not Accepting `null` Elements
-> [`Queue` impelementations generally do not allow insertion of `null` elements, such as `LinkedList`, do not prohibit insertion of `null`. Even in the implementations that permit it, `null` should not be inserted into a `Queue`, as `null` is also used as a special return value by the `poll` method to indicate that the *queue* contains no elements.](https://docs.oracle.com/javase/8/docs/api/java/util/Queue.html)
+#### `Queue` implementations generally do not allow insertion of `null` elements
+> [`Queue` implementations generally do not allow insertion of `null` elements, such as `LinkedList`, do not prohibit insertion of `null`. Even in the implementations that permit it, `null` should not be inserted into a `Queue`, as `null` is also used as a special return value by the `poll` method to indicate that the *queue* contains no elements.](https://docs.oracle.com/javase/8/docs/api/java/util/Queue.html)
 
-For instance, *`ArrayDeque`*, as an implementation of `java.util.Deque` - sub-interface of `java.util.Queue`, cannot contain `null` elements because, `null` is used as a special return value in the `peek` and `poll` operations on `ArrayDeque` to refer to no available element. Moreover, the [documentation of `Deque` interface](https://docs.oracle.com/javase/8/docs/api/java/util/Deque.html) strongly encourages to prohibit the insertion of `null` element.
+**Example:** *`ArrayDeque`*, as an implementation of `java.util.Deque` => `java.util.Queue`, cannot contain `null` elements because, `null` is used as a special return value in the `peek` and `poll` operations on `ArrayDeque` to refer to no available element.
+
+The reason for `LinkedList` to allow `null` elements is probably because its implementation focuses on `List` other than `Deque`
 
 #### Collections with *sorted* structure never do not allow insertion of `null` elements
+In Java, objects can be sorted with `Comparator`. If no `Comparator` is provided, [*natural ordering*](https://docs.oracle.com/javase/8/docs/api/java/lang/Comparable.html), meaning objects will be sorted on base of their own implementations of [`Comparable`](https://docs.oracle.com/javase/8/docs/api/java/lang/Comparable.html)  will be applied.    
 
 * Sub-class of `SortedMap` - *`TreeMap`* - cannot contain `null` elements. 
 
