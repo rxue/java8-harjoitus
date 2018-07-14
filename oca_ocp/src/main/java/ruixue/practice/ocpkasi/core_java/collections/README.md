@@ -13,18 +13,26 @@ Implementation of both methods return `null` if this queue is empty, e.g. `Array
 #### `Queue` implementations generally do not allow insertion of `null` elements
 > [`Queue` implementations generally do not allow insertion of `null` elements, such as `LinkedList`, do not prohibit insertion of `null`. Even in the implementations that permit it, `null` should not be inserted into a `Queue`, as `null` is also used as a special return value by the `poll` method to indicate that the *queue* contains no elements.](https://docs.oracle.com/javase/8/docs/api/java/util/Queue.html)
 
-**Example:** *`ArrayDeque`*, as an implementation of `java.util.Deque` => `java.util.Queue`, cannot contain `null` elements because, `null` is used as a special return value in the `peek` and `poll` operations on `ArrayDeque` to refer to no available element.
+*`ArrayDeque`*, as an implementation of `java.util.Deque` => `java.util.Queue`, cannot contain `null` elements because, `null` is used as a special return value in the `peek` and `poll` operations on `ArrayDeque` to refer to no available element.
 
 The reason for `LinkedList` to allow `null` elements is probably because its implementation focuses on `List` other than `Deque`
 
 #### Collections with *sorted* structure never do not allow insertion of `null` elements
-In Java, objects can be sorted with `Comparator`. If no `Comparator` is provided, [*natural ordering*](https://docs.oracle.com/javase/8/docs/api/java/lang/Comparable.html), meaning objects will be sorted on base of their own implementations of `int compareTo(T o)` method (*natural ordering method*) in the [`Comparable`](https://docs.oracle.com/javase/8/docs/api/java/lang/Comparable.html) interface, will be applied.    
+In Java, objects can be sorted with `Comparator`. If no `Comparator` is provided, [*natural ordering*](https://docs.oracle.com/javase/8/docs/api/java/lang/Comparable.html), meaning objects are *cast* to `Comparable` and then sorted, will be applied.    
 
-> Virtually all of the *value classes* in the *Java* platform *libraries* implement `Comparable`<sup>Effective Java > Item 12</sup>
+The implementation of `SortedMap` (e.g. `TreeMap`), as the name indicates, has to ensure that the *keys* of the `Set` are sorted on base of *Natural ordering* when the `Comparator` is not provided. =>
 
-* Sub-class of `SortedMap` - *`TreeMap`* - cannot contain `null` elements. 
+* A tuple whose key is not sub-classes of *Comparable*, will not be allowed to be put into the `SortedMap`. Code demo reference: [TestAddNonComparableElementToSortedCollections](https://github.com/rxue/java8-perusharjoitus/blob/master/error_code/src/test/java/ruixue/practice/ocpkasi/core_java/collections/TestAddNonComparableElementToSortedCollections.java)
 
- `TreeSet`, and `ConcurrentHashMap`
+* `null` can never be a key of a `SortedMap` due to the reflexive contract of `int compareTo(T o)` implementation in the `Comparable` *interface*:
+
+> [The implementor must ensure sgn(x.compareTo(y)) == -sgn(y.compareTo(x)) for all x and y](https://docs.oracle.com/javase/8/docs/api/java/lang/Comparable.html#compareTo-T-)
+
+
+
+
+
+`ConcurrentHashMap`
 
 
 Collections such as `TreeMap` and `TreeSet` can not contain `null` elements because the implementation of `TreeMap` and `TreeSet` has a generic speical sorted *tree* structure - *binary search tree*. The *sorted* property of *binary search tree* in `TreeMap`, as an example, are implemented by means of either `Comparator` or *natural ordering*, meaning the elements of `TreeMap` has to be *instances* of *Comparable*. The *compare* methods of `Comparator` and `Comparable` have a common contract, say there is no sense to compare an element with `null`. Sample code reference: [TestAddNullElementToCollections](https://github.com/rxue/java8-perusharjoitus/blob/master/oca_ocp/src/test/java/ruixue/practice/ocpkasi/core_java/collections/TestAddNullElementToCollections.java) 
