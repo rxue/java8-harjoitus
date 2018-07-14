@@ -27,4 +27,7 @@ The implementation of `SortedMap` (e.g. `TreeMap`), as the name indicates, has t
 * `null` can never be a key of a `SortedMap` due to the reflexive contract of `int compareTo(T o)` implementation in the `Comparable` *interface*: 
 
 > [The implementor must ensure sgn(x.compareTo(y)) == -sgn(y.compareTo(x)) for all x and y](https://docs.oracle.com/javase/8/docs/api/java/lang/Comparable.html#compareTo-T-)
+
 Code demo reference: [TestAddNullElementToCollections](https://github.com/rxue/java8-perusharjoitus/blob/master/error_code/src/test/java/ruixue/practice/ocpkasi/core_java/collections/TestAddNullElementToCollections.java)
+
+The same goes with `SortedSet`, for instance `TreeSet`, as `Set` are usually implemented by means of `Map`
