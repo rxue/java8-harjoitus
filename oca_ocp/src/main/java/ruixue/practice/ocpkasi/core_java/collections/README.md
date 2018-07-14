@@ -24,17 +24,7 @@ The implementation of `SortedMap` (e.g. `TreeMap`), as the name indicates, has t
 
 * A tuple whose key is not sub-classes of *Comparable*, will not be allowed to be put into the `SortedMap`. Code demo reference: [TestAddNonComparableElementToSortedCollections](https://github.com/rxue/java8-perusharjoitus/blob/master/error_code/src/test/java/ruixue/practice/ocpkasi/core_java/collections/TestAddNonComparableElementToSortedCollections.java)
 
-* `null` can never be a key of a `SortedMap` due to the reflexive contract of `int compareTo(T o)` implementation in the `Comparable` *interface*:
+* `null` can never be a key of a `SortedMap` due to the reflexive contract of `int compareTo(T o)` implementation in the `Comparable` *interface*: 
 
 > [The implementor must ensure sgn(x.compareTo(y)) == -sgn(y.compareTo(x)) for all x and y](https://docs.oracle.com/javase/8/docs/api/java/lang/Comparable.html#compareTo-T-)
-
-
-
-
-
-`ConcurrentHashMap`
-
-
-Collections such as `TreeMap` and `TreeSet` can not contain `null` elements because the implementation of `TreeMap` and `TreeSet` has a generic speical sorted *tree* structure - *binary search tree*. The *sorted* property of *binary search tree* in `TreeMap`, as an example, are implemented by means of either `Comparator` or *natural ordering*, meaning the elements of `TreeMap` has to be *instances* of *Comparable*. The *compare* methods of `Comparator` and `Comparable` have a common contract, say there is no sense to compare an element with `null`. Sample code reference: [TestAddNullElementToCollections](https://github.com/rxue/java8-perusharjoitus/blob/master/oca_ocp/src/test/java/ruixue/practice/ocpkasi/core_java/collections/TestAddNullElementToCollections.java) 
-
-Like `HashTable`, but unlike `HashMap`, the `ConcurrentHashMap` does not allow `null` to used as *key* nor *value*
+Code demo reference: [TestAddNullElementToCollections](https://github.com/rxue/java8-perusharjoitus/blob/master/error_code/src/test/java/ruixue/practice/ocpkasi/core_java/collections/TestAddNullElementToCollections.java)
