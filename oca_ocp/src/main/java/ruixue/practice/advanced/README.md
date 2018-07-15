@@ -1,3 +1,7 @@
+## Java Language
+### *Polymorphism*
+In *Java*, *polymorphism* is also called *dynamic binding*, or *late binding* or *run-time binding*, where the term *binding* refers to *method-call binding*.
+ 
 ## Technique
 ### *Static Factory Methods*
 ### *Method Chaining*
