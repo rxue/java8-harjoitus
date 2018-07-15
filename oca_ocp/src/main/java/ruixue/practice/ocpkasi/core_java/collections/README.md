@@ -9,6 +9,7 @@ Implementation of both methods return `null` if this queue is empty, e.g. `Array
 ## `String` has a common method as `Collection` - `isEmpty()`
 
 ## Summary
+### [`ConcurrentModificationException` in non-concurrent *foreach loop*](https://www.youtube.com/watch?v=b8YX45ymAeE)
 ### Collections Not Accepting `null` Elements
 #### `Queue` implementations generally do not allow insertion of `null` elements
 > [`Queue` implementations generally do not allow insertion of `null` elements, such as `LinkedList`, do not prohibit insertion of `null`. Even in the implementations that permit it, `null` should not be inserted into a `Queue`, as `null` is also used as a special return value by the `poll` method to indicate that the *queue* contains no elements.](https://docs.oracle.com/javase/8/docs/api/java/util/Queue.html)
