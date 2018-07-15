@@ -1,4 +1,4 @@
-package ruixue.practice.ocpkasi.core_java.util;
+package ruixue.practice.ocpkasi.core_java.collections;
 
 import static org.junit.jupiter.api.Assertions.assertThrows;
 import static org.junit.jupiter.api.Assertions.assertEquals;
@@ -8,13 +8,9 @@ import java.util.Collections;
 import java.util.ConcurrentModificationException;
 import java.util.Iterator;
 import java.util.List;
-
-import org.apache.logging.log4j.LogManager;
-import org.apache.logging.log4j.Logger;
 import org.junit.jupiter.api.Test;
 
 public class TestFailFastIterator {
-	private static final Logger logger = LogManager.getLogger(TestFailFastIterator.class);
 	
 	/**
 	 * If a thread modifies a collection directly while it is iterating over the collection with a fail-fast iterator, the iterator will throw this exception
@@ -31,7 +27,6 @@ public class TestFailFastIterator {
 				System.out.println("This text displays, meaning the root cause of ConcurrentModificationException is the Iterator rather than the modification on the collection");
 			}
 		});
-		logger.info("Exception came from the line, where the for loop is!");
 	}
 	@Test
 	public void testAddOnArrayListDuringIteration() {
@@ -44,7 +39,6 @@ public class TestFailFastIterator {
 		assertThrows(ConcurrentModificationException.class, () -> {
 			it.next();
 		});
-		logger.info("adding element to ArrayList during iteration of an Iterator causes state change of the ArrayList");
 	}
 	
 	/**
@@ -77,7 +71,6 @@ public class TestFailFastIterator {
 				System.out.println("This text displays, meaning the root cause of ConcurrentModificationException is the Iterator rather than the modification on the collection");
 			}
 		});
-		logger.info("Exception came from the line, where the for loop is!");
 	}
 
 }
