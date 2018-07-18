@@ -16,10 +16,9 @@ However, it is illogical to invoke *static methods* in the middle of *method cha
 ## *Design Patterns*
 ### *Structural* Patterns > *Adapter*
 #### *Object Adapter* in `java.io`
-`InputStreamReader` is the *adapter* of *adaptee* - `InputStream` - in relation to `Reader` as the *target*. In other words, `InputStreamReader` is the only `Reader` with a *constructor* accepting `InputStream` as a parameter. 
+`InputStreamReader` is the *adapter* of *adaptee* - `InputStream` - in relation to `Reader` as the *target*. In other words, `InputStreamReader` is the only `Reader` with a *constructor* accepting `InputStream` as a *parameter*. 
 ![object_adapter_java io inputstreamreader](https://user-images.githubusercontent.com/3033388/42907376-3fc5e60e-8ae6-11e8-84b1-91f8c15f7fc1.jpg)
-
-
+Similarly, in the aspect of `Writer`, `OutputStreamWriter` is the only `Writer` with a *Constructor* accepting `OutputStream` as a *parameter*.
 
 ### *Behavioral* Patterns > Object Behavioral > *Strategy*
 #### Application of Strategy Pattern
