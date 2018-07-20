@@ -9,7 +9,7 @@
 ### Marking the `InputStream`
 Reference: [java.io.InputStream](http://grepcode.com/file/repository.grepcode.com/java/root/jdk/openjdk/8u40-b25/java/io/InputStream.java)
 
-Relevant methods with default implementation:
+Relevant *hook methods* default implementation:
 * `public boolean markSupported() {return false}`
 * `public synchronized void mark(int marklimit) {}`
 * `public synchronized void reset() throws IOException {throws new IOException("mark/reset not supported");}`
