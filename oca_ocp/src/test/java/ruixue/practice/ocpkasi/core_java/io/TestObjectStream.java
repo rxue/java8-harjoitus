@@ -1,6 +1,5 @@
 package ruixue.practice.ocpkasi.core_java.io;
 
-import java.io.ByteArrayOutputStream;
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileOutputStream;
