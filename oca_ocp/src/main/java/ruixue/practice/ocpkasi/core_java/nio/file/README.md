@@ -26,6 +26,7 @@ if (this.isAbsolute() != other.isAbsolute())
 ### File Operations: Counterparts of Linux Shell Commands
 Shell Command | `static` utility methods on `Files`
 --------------|-------------------------------------------------------------------------------------------------
+`mv`          |`move(Path source, Path target, CopyOption... options)`
 `stat`        |`<A extends BasicFileAttributes> readAttributes(Path path, Class<A> type, LinkOption... options)` 
 
 All the methods starting with `create` returns a `Path`:
