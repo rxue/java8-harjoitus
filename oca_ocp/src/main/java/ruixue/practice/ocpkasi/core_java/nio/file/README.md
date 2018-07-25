@@ -23,6 +23,11 @@ if (this.isAbsolute() != other.isAbsolute())
 
 
 ## `java.nio.file.Files`
+### File Operations: Counterparts of Linux Shell Commands
+Shell Command | `static` utility methods on `Files`
+--------------|-------------------------------------------------------------------------------------------------
+`stat`        |`<A extends BasicFileAttributes> readAttributes(Path path, Class<A> type, LinkOption... options)` 
+
 All the methods starting with `create` returns a `Path`:
 
 ### Walking a Directory
