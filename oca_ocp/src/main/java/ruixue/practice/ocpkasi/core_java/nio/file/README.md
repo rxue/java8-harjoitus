@@ -26,7 +26,7 @@ if (this.isAbsolute() != other.isAbsolute())
 ### File Operations: Counterparts of Linux Shell Commands
 Shell Command | `static` utility methods on `Files`
 --------------|-------------------------------------------------------------------------------------------------
-`cp`          |<ul><li>`long copy(Path source, Path target, CopyOption... options)`</li><<li>`long copy(InputStream source, Path target, CopyOption... options)`</li><li>`long copy(Path source, OutputStream target, CopyOption... options)`</li></ul>
+`cp`          |<ul><li>`long copy(Path source, Path target, CopyOption... options)`</li><li>`long copy(InputStream source, Path target, CopyOption... options)`</li><li>`long copy(Path source, OutputStream target, CopyOption... options)`</li></ul>
 `mv`          |`Path move(Path source, Path target, CopyOption... options)`
 `stat`        |`<A extends BasicFileAttributes> readAttributes(Path path, Class<A> type, LinkOption... options)` 
 
