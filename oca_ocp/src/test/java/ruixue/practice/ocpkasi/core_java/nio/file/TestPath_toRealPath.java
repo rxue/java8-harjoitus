@@ -3,6 +3,7 @@ package ruixue.practice.ocpkasi.core_java.nio.file;
 import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.LinkOption;
+import java.nio.file.NoSuchFileException;
 import java.nio.file.Path;
 import java.nio.file.Paths;
 
@@ -56,7 +57,7 @@ public class TestPath_toRealPath {
 		try {
 			nonexistentPath.toRealPath();
 		} catch (IOException e) {
-			assertTrue(e instanceof IOException);
+			assertTrue(e instanceof NoSuchFileException);
 		}
 	}
 //	@Test
