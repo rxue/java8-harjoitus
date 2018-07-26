@@ -24,7 +24,7 @@ if (this.isAbsolute() != other.isAbsolute())
 ### `Path toRealPath(LinkOption... options)` - The Only Non-syntactic, **real**, Operation that `throws IOException`
 `Path toRealPath(LinkOption... options)` is the only concrete operation on a `Path` *object*. There are the following key point on this method:
 * `toRealPath` **follows symbolic link** by default
-  ** In order not to follow link, it should be called with `LinkOption.NOFOLLOW_LINKS` as *argument*, i.e. `toRealPath(LinkOption.NOFOLLOW_LINKS)`
+  * In order not to follow link, it should be called with `LinkOption.NOFOLLOW_LINKS` as *argument*, i.e. `toRealPath(LinkOption.NOFOLLOW_LINKS)`
 * `toRealPath` only works on existing file => if the given `Path` does not exist in the file system, `IOException` will be thrown instead of `FileNotFoundException`
 
 ## `java.nio.file.Files`
