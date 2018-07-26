@@ -10,17 +10,22 @@ The essence of `Path`:
 	* methods of `Path`, which is not *syntactic operation* - `public Path toRealPath(LinkOption... options) throws IOException`
 * Unlike `java.io.File` class, `Path` contains support for *symbolic links*
 
-### `Path relativize(Path p)`
+### *Syntactic Operations*
+#### `Path relativize(Path p)`
 `p1.relativize(p2)` can be explained as: **starting from `p1`, how to get to `p2`**
 
-#### `Path relativize(Path p)` throws a *runtime* `IllegalArgumentException`
+##### `Path relativize(Path p)` throws a *runtime* `IllegalArgumentException`
 As the word *relativize* indicate literally, the base `Path` object and the given `Path` p has to be of the same type, say either both *absolute* or *relative*, otherwise a *runtime* `IllegelArgumentException` would be thrown. Refer to the source code [sun.nio.fs.UnixPath.relativize()](http://grepcode.com/file/repository.grepcode.com/java/root/jdk/openjdk/7-b147/sun/nio/fs/UnixPath.java#UnixPath.relativize%28java.nio.file.Path%29), where there is:
 ```
 if (this.isAbsolute() != other.isAbsolute())
   throw new IllegalArgumentException("'other' is different type of Path")
 ```
 
-
+### `Path toRealPath(LinkOption... options)` - The Only Non-syntactic, **real**, Operation that `throws IOException`
+`Path toRealPath(LinkOption... options)` is the only concrete operation on a `Path` *object*. There are the following key point on this method:
+* `toRealPath` **follows symbolic link** by default
+  ** In order not to follow link, it should be called with `LinkOption.NOFOLLOW_LINKS` as *argument*, i.e. `toRealPath(LinkOption.NOFOLLOW_LINKS)`
+* `toRealPath` only works on existing file => if the given `Path` does not exist in the file system, `IOException` will be thrown instead of `FileNotFoundException`
 
 ## `java.nio.file.Files`
 ### File Operations: Counterparts of Linux Shell Commands
