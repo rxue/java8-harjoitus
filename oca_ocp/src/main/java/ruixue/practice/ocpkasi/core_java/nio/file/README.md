@@ -12,7 +12,7 @@ The essence of `Path`:
 
 ### *Syntactic Operations*
 #### `Path relativize(Path p)`
-`p1.relativize(p2)` can be explained as: **starting from `p1`, how to get to `p2`**
+`p0.relativize(p1)` can be explained as: **starting from `p0`, how to rich `p1`**
 
 ##### `Path relativize(Path p)` throws a *runtime* `IllegalArgumentException`
 As the word *relativize* indicate literally, the base `Path` object and the given `Path` p has to be of the same type, say either both *absolute* or *relative*, otherwise a *runtime* `IllegelArgumentException` would be thrown. Refer to the source code [sun.nio.fs.UnixPath.relativize()](http://grepcode.com/file/repository.grepcode.com/java/root/jdk/openjdk/7-b147/sun/nio/fs/UnixPath.java#UnixPath.relativize%28java.nio.file.Path%29), where there is:
