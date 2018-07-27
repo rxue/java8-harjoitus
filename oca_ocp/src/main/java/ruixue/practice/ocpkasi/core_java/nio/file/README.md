@@ -20,6 +20,17 @@ As the word *relativize* indicate literally, the base `Path` object and the give
 if (this.isAbsolute() != other.isAbsolute())
   throw new IllegalArgumentException("'other' is different type of Path")
 ```
+#### Operations to Get a `Path` Component
+
+* `getRoot()`
+* `getParent()`
+* `getFileName()`
+
+Their return values have 2 common characters among these three methods:
+* return type is `Path`
+* return `null` to indicate no such componenet in the given `Path` object
+
+
 
 ### `Path toRealPath(LinkOption... options)` - The Only Non-syntactic, **real**, Operation that `throws IOException`
 `Path toRealPath(LinkOption... options)` is the only concrete operation on a `Path` *object*. There are the following key point on this method:
