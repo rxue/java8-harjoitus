@@ -48,7 +48,7 @@ Shell Command | `static` utility methods on `Files`
 ### `<A extends BasicFileAttributes> readAttributes(Path path, Class<A> type, LinkOption... options)` 
 The corresponding Linux Shell command of this method is `stat` 
 
-#### Reading Single File Attribute - `isRegularFile()`,`isDirectory()`,`isSymbolicLink()`
+#### Reading a Single Attribute of a File - `isRegularFile()`,`isDirectory()`,`isSymbolicLink()`
 This section is under the section `<A extends BasicFileAttributes> readAttributes(Path path, Class<A> type, LinkOption... options)` due to the fact that these methods are implemented by calling `readAttributes` 
 
 
