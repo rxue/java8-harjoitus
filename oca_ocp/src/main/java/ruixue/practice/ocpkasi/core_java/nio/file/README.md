@@ -26,7 +26,7 @@ if (this.isAbsolute() != other.isAbsolute())
 * `getParent()`
 * `getFileName()`
 
-Their return values have 2 common characters among these three methods:
+Their return values have 2 common features among these three methods:
 * return type is `Path`
 * return `null` to indicate no such componenet in the given `Path` object
 
@@ -44,7 +44,13 @@ Shell Command | `static` utility methods on `Files`
 --------------|-------------------------------------------------------------------------------------------------
 `cp`          |<ul><li>`long copy(Path source, Path target, CopyOption... options)`</li><li>`long copy(InputStream source, Path target, CopyOption... options)`</li><li>`long copy(Path source, OutputStream target, CopyOption... options)`</li></ul>
 `mv`          |`Path move(Path source, Path target, CopyOption... options)`
-`stat`        |`<A extends BasicFileAttributes> readAttributes(Path path, Class<A> type, LinkOption... options)` 
+
+### `<A extends BasicFileAttributes> readAttributes(Path path, Class<A> type, LinkOption... options)` 
+The corresponding Linux Shell command of this method is `stat` 
+
+#### Reading Single File Attribute - `isRegularFile()`,`isDirectory()`,`isSymbolicLink()`
+This section is under the section `<A extends BasicFileAttributes> readAttributes(Path path, Class<A> type, LinkOption... options)` due to the fact that these methods are implemented by calling `readAttributes` 
+
 
 All the methods starting with `create` returns a `Path`:
 
