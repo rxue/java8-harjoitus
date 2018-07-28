@@ -39,8 +39,11 @@ Their return values have 2 common features among these three methods:
 * `toRealPath` only works on existing file => if the given `Path` does not exist in the file system, `IOException` will be thrown instead of `FileNotFoundException`
 
 ## `java.nio.file.Files`
+`java.nio.file.Files` provides basic operations on files such as create, delete etc., which are in legacy `java.io`. On the other hands, it provides more basic operations, which are not in legacy `java.io`, such as copy, move etc.
 
-#### `copy` method VS `cp`
+#### Copy Files
+
+
 Cases 		 		|`cp`	|`copy`
 --------------------------------|-------|----------------------------
 target file exits		|OK	|`FileAlreadyExistsException`
@@ -82,3 +85,6 @@ Unlike out earlier NIO.2 methods, **the `walk()` method will not traverse symbol
 
 ## *Legecy I/O* VS *NIO.2*
 * Neither API provides a single method to delete a directory tree<sup>OCA/OCP Java SE 8 Programmer Practice Tests > Chapter 19 > 16.</sup>
+
+### Summary of `java.nio.file.Files`
+* Most basic operations on file by using `Files` *throws IOException* except for those test operations reading a single attribute on a given file such as `isDirectory`, `isRegularFile`, `isSymbolicLink` 
