@@ -49,8 +49,22 @@ Shell Command | `static` utility methods on `Files`
 The corresponding Linux Shell command of this method is `stat` 
 
 #### Reading a Single Attribute of a File - `isRegularFile()`,`isDirectory()`,`isSymbolicLink()`
-This section is under the section `<A extends BasicFileAttributes> readAttributes(Path path, Class<A> type, LinkOption... options)` due to the fact that these methods are implemented by calling `readAttributes` 
+This section is under the section `<A extends BasicFileAttributes> readAttributes(Path path, Class<A> type, LinkOption... options)` due to the fact that **these methods are implemented by calling `readAttributes`**. However, these methods for reading a single attribute differ from the original `readAttributes` in that: 
 
+* They are test operations **returning `boolean`** 
+* **They don't throw IOException** because the `IOException` thrown by `readAttributes` are swallowed, in which case the function will return `false`
+
+```
+public static boolean isSymbolicLink(Path path) {
+        try {
+            return readAttributes(path,
+                                  BasicFileAttributes.class,
+                                  LinkOption.NOFOLLOW_LINKS).isSymbolicLink();
+        } catch (IOException ioe) {
+            return false;
+        }
+    }
+```
 
 All the methods starting with `create` returns a `Path`:
 
