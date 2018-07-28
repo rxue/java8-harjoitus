@@ -87,9 +87,15 @@ Shell Command | `static` utility methods on `Files`
 `cp`          |`copy(srcPath, targetPath, CopyOption.REPLACE_EXISTING)`
 `mv`          |`Path move(Path source, Path target, CopyOption... options)`
 
-### Walking a Directory
+### *Traversal* of Directory
+There are 2 directory traversal methods:
+* `public static Stream<Path> walk(Path start, int maxDepth, FileVisitOption... options) throws IOException` 
+* `public static Stream<Path> find(Path start, int maxDepth, BiPredicate<Path,BasicFileAttributes> matcher, FileVisitOption... options) throws IOException` 
+
+**The only difference between these two methods is the *matcher* argument in `find`**. The *matcher* also decided the implementation difference, say the *matcher* is used as a *filter* in the `find`
+
 #### Avoiding *cycle* - Circular Paths
-Unlike out earlier NIO.2 methods, **the `walk()` method will not traverse symbolic links by default.** In the source code, the traversal is implemented with [`FileTreeWalker`](http://grepcode.com/file/repository.grepcode.com/java/root/jdk/openjdk/8-b132/java/nio/file/FileTreeWalker.java#FileTreeWalker.%3Cinit%3E%28java.util.Collection%2Cint%29), from whose constructor, we can see that the symbolic link is not followed by default.  
+Unlike the earlier NIO.2 methods, **the traversal methods will not traverse *symbolic links* by default.** so that *cycle* is avoided. Traversal of *symbolic link* can be toggled by giving the optional argument, `FileVisitOption.FOLLOW_LINKS` 
 
 ## *Legecy I/O* VS *NIO.2*
 * Neither API provides a single method to delete a directory tree<sup>OCA/OCP Java SE 8 Programmer Practice Tests > Chapter 19 > 16.</sup>
