@@ -43,7 +43,14 @@ Their return values have 2 common features among these three methods:
 Shell Command | `static` utility methods on `Files`
 --------------|-------------------------------------------------------------------------------------------------
 `cp`          |<ul><li>`long copy(Path source, Path target, CopyOption... options)`</li><li>`long copy(InputStream source, Path target, CopyOption... options)`</li><li>`long copy(Path source, OutputStream target, CopyOption... options)`</li></ul>
+`cp `
 `mv`          |`Path move(Path source, Path target, CopyOption... options)`
+
+#### `copy` method VS `cp`
+Cases 		 |`cp`	|`copy`
+-----------------|------|----------------------------
+target file exits|OK	|`FileAlreadyExistsException`
+
 
 ### `<A extends BasicFileAttributes> readAttributes(Path path, Class<A> type, LinkOption... options)` 
 The corresponding Linux Shell command of this method is `stat` 
