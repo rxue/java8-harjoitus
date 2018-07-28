@@ -53,7 +53,13 @@ source is a non-empty directory	|`cp -r`|`DirectoryNotEmptyException`
 ### `<A extends BasicFileAttributes> readAttributes(Path path, Class<A> type, LinkOption... options)` 
 The corresponding Linux Shell command of this method is `stat` 
 
-#### Reading a Single Attribute of a File - `isRegularFile()`,`isDirectory()`,`isSymbolicLink()`
+#### Reading a Single Attribute of a File - `exists`,`isDirectory`,`isRegularFile`,`isSymbolicLink`
+There are the following test operations in `Files` utility class:
+* `boolean exists(Path path, LinkOption... options)`
+* `boolean isDirectory(Path path, LinkOption... options)`
+* `boolean isRegularFile(Path path, LinkOption... options)`
+* `boolean isSymbolicLink(Path path)`
+
 This section is under the section `<A extends BasicFileAttributes> readAttributes(Path path, Class<A> type, LinkOption... options)` due to the fact that **these methods are implemented by calling `readAttributes`**. However, these methods for reading a single attribute differ from the original `readAttributes` in that: 
 
 * They are test operations **returning `boolean`** 
