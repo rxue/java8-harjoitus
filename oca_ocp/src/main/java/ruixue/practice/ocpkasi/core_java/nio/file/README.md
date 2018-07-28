@@ -47,9 +47,10 @@ Shell Command | `static` utility methods on `Files`
 `mv`          |`Path move(Path source, Path target, CopyOption... options)`
 
 #### `copy` method VS `cp`
-Cases 		 |`cp`	|`copy`
------------------|------|----------------------------
-target file exits|OK	|`FileAlreadyExistsException`
+Cases 		 		|`cp`	|`copy`
+--------------------------------|-------|----------------------------
+target file exits		|OK	|`FileAlreadyExistsException`
+source is a non-empty directory	|`cp -r`|`DirectoryNotEmptyException` 
 
 
 ### `<A extends BasicFileAttributes> readAttributes(Path path, Class<A> type, LinkOption... options)` 
