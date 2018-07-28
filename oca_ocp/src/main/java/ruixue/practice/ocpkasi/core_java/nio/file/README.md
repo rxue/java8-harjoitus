@@ -53,17 +53,19 @@ source is a non-empty directory	|`cp -r`|`DirectoryNotEmptyException`
 ### `<A extends BasicFileAttributes> readAttributes(Path path, Class<A> type, LinkOption... options)` 
 The corresponding Linux Shell command of this method is `stat` 
 
-#### Reading a Single Attribute of a File - `exists`,`isDirectory`,`isRegularFile`,`isSymbolicLink`
+#### Reading a Single Attribute of a File - `exists`,`isDirectory`,`isRegularFile`,`isSymbolicLink`,`isHidden`,`isReadable`
 There are the following test operations in `Files` utility class:
 * `boolean exists(Path path, LinkOption... options)`
 * `boolean isDirectory(Path path, LinkOption... options)`
 * `boolean isRegularFile(Path path, LinkOption... options)`
 * `boolean isSymbolicLink(Path path)`
+* `boolean isHidden(Path path) throws IOException`
+* `boolean isReadable(Path path, LinkOption... options)`
 
-This section is under the section `<A extends BasicFileAttributes> readAttributes(Path path, Class<A> type, LinkOption... options)` due to the fact that **these methods are implemented by calling `readAttributes`**. However, these methods for reading a single attribute differ from the original `readAttributes` in that: 
+This section is under the section `<A extends BasicFileAttributes> readAttributes(Path path, Class<A> type, LinkOption... options)` due to the fact that **most of these methods are implemented by calling `readAttributes`**. These methods have the follow common features:
 
 * They are test operations **returning `boolean`** 
-* **They don't throw IOException** because the `IOException` thrown by `readAttributes` are swallowed, in which case the function will return `false`
+* **They don't throw IOException** because the `IOException` thrown by `readAttributes` are swallowed, in which case the function will return `false` except for `isHidden(Path path) throws IOException`
 
 ```
 public static boolean isSymbolicLink(Path path) {
