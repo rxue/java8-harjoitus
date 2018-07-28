@@ -39,12 +39,6 @@ Their return values have 2 common features among these three methods:
 * `toRealPath` only works on existing file => if the given `Path` does not exist in the file system, `IOException` will be thrown instead of `FileNotFoundException`
 
 ## `java.nio.file.Files`
-### File Operations: Counterparts of Linux Shell Commands
-Shell Command | `static` utility methods on `Files`
---------------|-------------------------------------------------------------------------------------------------
-`cp`          |<ul><li>`long copy(Path source, Path target, CopyOption... options)`</li><li>`long copy(InputStream source, Path target, CopyOption... options)`</li><li>`long copy(Path source, OutputStream target, CopyOption... options)`</li></ul>
-`cp `
-`mv`          |`Path move(Path source, Path target, CopyOption... options)`
 
 #### `copy` method VS `cp`
 Cases 		 		|`cp`	|`copy`
@@ -75,6 +69,12 @@ public static boolean isSymbolicLink(Path path) {
 ```
 
 All the methods starting with `create` returns a `Path`:
+
+### Counterparts of Linux Shell Commands 
+Shell Command | `static` utility methods on `Files`
+--------------|-------------------------------------------------------------------------------------------------
+`cp`          |`copy(srcPath, targetPath, CopyOption.REPLACE_EXISTING)`
+`mv`          |`Path move(Path source, Path target, CopyOption... options)`
 
 ### Walking a Directory
 #### Avoiding *cycle* - Circular Paths
