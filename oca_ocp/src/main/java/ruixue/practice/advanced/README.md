@@ -3,6 +3,9 @@
 In *Java*, *polymorphism* is also called *dynamic binding*, or *late binding* or *run-time binding*, where the term *binding* refers to *method-call binding*.
  
 ## Technique
+### *Immutable Object*
+[An *immutable object* is not necessarily a *value object*](https://www.youtube.com/watch?v=KwP7Ay9Z-hc&t=1480s). The legacy `java.io.File`is a typical example, in which the `long length()` get the actual length of the file in the *file system*.
+
 ### *Static Factory Methods*
 ### *Method Chaining*
 *Method Chaining* is a technique calling multiple methods in one *statement*. It is typically used in the context of operations related to *immutable object* directly or indirectly, due to the fact that most of the methods on an *immutable object* usually returns a new object. In *core Java*, there are some frequently seen use cases:
