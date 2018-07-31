@@ -86,6 +86,7 @@ Shell Command | `static` utility methods on `Files`
 --------------|-------------------------------------------------------------------------------------------------
 `cp`          |`copy(srcPath, targetPath, CopyOption.REPLACE_EXISTING)`
 `mv`          |`Path move(Path source, Path target, CopyOption... options)`
+`ls`          |`Stream<path> list(Path dir)`
 
 ### *Traversal* of Directory
 There are 2 directory traversal methods:
