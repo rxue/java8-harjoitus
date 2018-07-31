@@ -15,9 +15,15 @@ public class FilesListTest {
 	public void testListNonrecursively() {
 		Path symbolicLink = Paths.get("link");
 		Path target = Paths.get("src");
-		try (Stream<Path> listResult = Files.list(symbolicLink)){
+		try {
 			Files.createSymbolicLink(symbolicLink, target);
-			assertEquals(0, listResult.count());
+		} catch (IOException e1) {
+			// TODO Auto-generated catch block
+			e1.printStackTrace();
+			return;
+		}
+		try (Stream<Path> listResult = Files.list(symbolicLink)){	
+			assertEquals(2, listResult.count());
 			Files.delete(symbolicLink);
 		} catch (IOException e) {
 			// TODO Auto-generated catch block
