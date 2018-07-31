@@ -81,12 +81,11 @@ public static boolean isSymbolicLink(Path path) {
 
 All the methods starting with `create` returns a `Path`:
 
-### Counterparts of Linux Shell Commands 
-Shell Command | `static` utility methods on `Files`
---------------|-------------------------------------------------------------------------------------------------
-`cp`          |`copy(srcPath, targetPath, CopyOption.REPLACE_EXISTING)`
-`mv`          |`Path move(Path source, Path target, CopyOption... options)`
-`ls`          |`Stream<path> list(Path dir)`
+### `list(Path dir)` 
+Key features:
+* the given directory can be a *symbolic link*
+* not recursive
+
 
 ### *Traversal* of Directory
 There are 2 directory traversal methods:
@@ -103,3 +102,10 @@ Unlike the earlier NIO.2 methods, **the traversal methods will not traverse *sym
 
 ### Summary of `java.nio.file.Files`
 * Most basic operations on file by using `Files` *throws IOException* except for those test operations reading a single attribute on a given file such as `isDirectory`, `isRegularFile`, `isSymbolicLink` 
+
+#### Counterparts of Linux Shell Commands 
+Shell Command | `static` utility methods on `Files`
+--------------|-------------------------------------------------------------------------------------------------
+`cp`          |`copy(srcPath, targetPath, CopyOption.REPLACE_EXISTING)`
+`mv`          |`Path move(Path source, Path target, CopyOption... options)`
+`ls`          |`Stream<path> list(Path dir)`
