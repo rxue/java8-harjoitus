@@ -12,12 +12,11 @@ import org.junit.jupiter.api.Test;
 
 public class FilesListTest {
 	@Test
-	public void testListNoFollowSymbolicLink() {
+	public void testListNonrecursively() {
 		Path symbolicLink = Paths.get("link");
 		Path target = Paths.get("src");
-		try {
+		try (Stream<Path> listResult = Files.list(symbolicLink)){
 			Files.createSymbolicLink(symbolicLink, target);
-			Stream<Path> listResult = Files.list(symbolicLink);
 			assertEquals(0, listResult.count());
 			Files.delete(symbolicLink);
 		} catch (IOException e) {
