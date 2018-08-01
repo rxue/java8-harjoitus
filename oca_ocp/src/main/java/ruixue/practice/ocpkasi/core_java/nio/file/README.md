@@ -41,6 +41,7 @@ Their return values have 2 common features among these three methods:
 ## `java.nio.file.Files`
 `java.nio.file.Files` provides basic operations on files such as create, delete etc., which are in legacy `java.io`. On the other hands, it provides more basic operations, which are not in legacy `java.io`, such as copy, move etc.
 
+### *File Operations*
 #### Copy Files
 
 
@@ -48,10 +49,6 @@ Cases 		 		|`cp`	|`copy`
 --------------------------------|-------|----------------------------
 target file exits		|OK	|`FileAlreadyExistsException`
 source is a non-empty directory	|`cp -r`|`DirectoryNotEmptyException` 
-
-
-### `<A extends BasicFileAttributes> readAttributes(Path path, Class<A> type, LinkOption... options)` 
-The corresponding Linux Shell command of this method is `stat` 
 
 #### Reading a Single Attribute of a File - `exists`,`isDirectory`,`isRegularFile`,`isSymbolicLink`,`isHidden`,`isReadable`
 There are the following test operations in `Files` utility class:
@@ -86,8 +83,8 @@ Key features:
 * the given directory can be a *symbolic link*
 * not recursive
 
-
-### *Traversal* of Directory
+### *Directory Operations*
+#### *Traversal* of Directory
 There are 2 directory traversal methods:
 * `public static Stream<Path> walk(Path start, int maxDepth, FileVisitOption... options) throws IOException` 
 * `public static Stream<Path> find(Path start, int maxDepth, BiPredicate<Path,BasicFileAttributes> matcher, FileVisitOption... options) throws IOException` 
@@ -96,6 +93,10 @@ There are 2 directory traversal methods:
 
 #### Avoiding *cycle* - Circular Paths
 Unlike the earlier NIO.2 methods, **the traversal methods will not traverse *symbolic links* by default.** so that *cycle* is avoided. Traversal of *symbolic link* can be toggled by giving the optional argument, `FileVisitOption.FOLLOW_LINKS` 
+
+### *Operations on File Attributes*
+#### `<A extends BasicFileAttributes> readAttributes(Path path, Class<A> type, LinkOption... options)` 
+The corresponding Linux Shell command of this method is `stat` 
 
 ## *Legecy I/O* VS *NIO.2*
 * Neither API provides a single method to delete a directory tree<sup>OCA/OCP Java SE 8 Programmer Practice Tests > Chapter 19 > 16.</sup>
