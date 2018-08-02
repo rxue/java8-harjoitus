@@ -16,7 +16,7 @@ public class Files_MoveTest {
 	
 	@Test
 	public void testOverwriteExistingFile() {
-		Path source = Paths.get("file_to_move");
+		Path source = Paths.get("file_to_overwrite");
 		Path target = Paths.get("target_file");
 		try {
 			Files.createFile(source);
