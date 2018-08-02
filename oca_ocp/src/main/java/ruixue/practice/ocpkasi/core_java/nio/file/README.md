@@ -43,12 +43,13 @@ Their return values have 2 common features among these three methods:
 
 ### *File Operations*
 #### Copy Files
-
-
 Cases 		 		|`cp`	|`copy`
 --------------------------------|-------|----------------------------
 target file exits		|OK	|`FileAlreadyExistsException`
 source is a non-empty directory	|`cp -r`|`DirectoryNotEmptyException` 
+
+#### **Rename** Files - `static Path move(Path source, Path target, CopyOption... options)`
+Note that the `move method` does not correspond to the `mv` shell command but a **rename** operation in that the *target* `Path` is never a destination directory, to which the source `Path` is moved to.
 
 #### Reading a Single Attribute of a File - `exists`,`isDirectory`,`isRegularFile`,`isSymbolicLink`,`isHidden`,`isReadable`
 There are the following test operations in `Files` utility class:
@@ -78,12 +79,13 @@ public static boolean isSymbolicLink(Path path) {
 
 All the methods starting with `create` returns a `Path`:
 
-### `list(Path dir)` 
+
+
+### *Directory Operations*
+#### `list(Path dir)` 
 Key features:
 * the given directory can be a *symbolic link*
 * not recursive
-
-### *Directory Operations*
 #### *Traversal* of Directory
 There are 2 directory traversal methods:
 * `public static Stream<Path> walk(Path start, int maxDepth, FileVisitOption... options) throws IOException` 
@@ -105,8 +107,8 @@ The corresponding Linux Shell command of this method is `stat`
 * Most basic operations on file by using `Files` *throws IOException* except for those test operations reading a single attribute on a given file such as `isDirectory`, `isRegularFile`, `isSymbolicLink` 
 
 #### Counterparts of Linux Shell Commands 
-Shell Command | `static` utility methods on `Files`
---------------|-------------------------------------------------------------------------------------------------
-`cp`          |`copy(srcPath, targetPath, CopyOption.REPLACE_EXISTING)`
-`mv`          |`Path move(Path source, Path target, CopyOption... options)`
-`ls`          |`Stream<path> list(Path dir)`
+Shell Command                     | `static` utility methods on `Files`
+----------------------------------|-------------------------------------------------------------------------------------------------
+`cp`                              |`copy(srcPath, targetPath, CopyOption.REPLACE_EXISTING)`
+`mv sourceFile targetNonEmptyDir` |~~`move(sourcePath, targetNonEmptyDir)`
+`ls`                              |`Stream<path> list(Path dir)`
