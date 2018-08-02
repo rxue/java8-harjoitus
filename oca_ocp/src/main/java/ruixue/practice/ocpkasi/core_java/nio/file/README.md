@@ -110,5 +110,5 @@ The corresponding Linux Shell command of this method is `stat`
 Shell Command                     | `static` utility methods on `Files`
 ----------------------------------|-------------------------------------------------------------------------------------------------
 `cp`                              |`copy(srcPath, targetPath, CopyOption.REPLACE_EXISTING)`
-`mv sourceFile targetNonEmptyDir` |~~`move(sourcePath, targetNonEmptyDir)`
+`mv sourceFile targetNonEmptyDir` |~~move(sourcePath, targetNonEmptyDir)
 `ls`                              |`Stream<path> list(Path dir)`
