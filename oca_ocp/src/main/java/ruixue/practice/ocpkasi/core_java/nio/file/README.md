@@ -49,7 +49,7 @@ target file exits		|OK	|`FileAlreadyExistsException`
 source is a non-empty directory	|`cp -r`|`DirectoryNotEmptyException` 
 
 #### **Rename** Files - `static Path move(Path source, Path target, CopyOption... options)`
-Note that the `move method` does not correspond to the `mv` shell command but a **rename** operation in that the *target* `Path` is never a destination directory, to which the source `Path` is moved to.
+Note that the `move method` does not correspond to the `mv` shell command but a **rename** operation in that the *static* `move` method is **not able to move a file to a target directory**.
 
 #### Reading a Single Attribute of a File - `exists`,`isDirectory`,`isRegularFile`,`isSymbolicLink`,`isHidden`,`isReadable`
 There are the following test operations in `Files` utility class:
