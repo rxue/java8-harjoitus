@@ -108,9 +108,9 @@ public static boolean isSymbolicLink(Path path) {
 * Most basic operations on file by using `Files` *throws IOException* except for those test operations reading a single attribute on a given file such as `isDirectory`, `isRegularFile`, `isSymbolicLink` 
 
 #### Counterparts of Linux Shell Commands 
-Shell Command                     |Class  |Methods
-----------------------------------|-------|-----------------------------------------------------------------------
-`basename`                        |`Path` |`public Path getFileName()`
-`cp`                              |`Files`|`public static copy(srcPath, targetPath, CopyOption.REPLACE_EXISTING)`
-`mv sourceFile targetNonEmptyDir` |`Files`|~~`public static Path move(sourcePath, targetNonEmptyDir)`~~
-`ls`                              |`Files`|`public static Stream<path> list(Path dir)`
+Shell Command                 |Class  |Methods
+------------------------------|-------|-----------------------------------------------------------------------
+`basename`                    |`Path` |`public Path getFileName()`
+`cp`                          |`Files`|`public static copy(srcPath, targetPath, CopyOption.REPLACE_EXISTING)`
+`mv srcFile targetNonEmptyDir`|`Files`|~~`public static Path move(sourcePath, targetNonEmptyDir)`~~
+`ls`                          |`Files`|`public static Stream<path> list(Path dir)`
