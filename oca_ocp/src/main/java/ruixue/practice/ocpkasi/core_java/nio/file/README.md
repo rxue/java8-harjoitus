@@ -51,6 +51,30 @@ source is a non-empty directory	|`cp -r`|`DirectoryNotEmptyException`
 #### **Rename** Files - `static Path move(Path source, Path target, CopyOption... options)`
 Note that the `move method` does not correspond to the `mv` shell command but a **rename** operation in that the *static* `move` method is **not able to move a file to a target directory**.
 
+All the methods starting with `create` returns a `Path`:
+
+
+
+### *Directory Operations*
+#### `list(Path dir)` 
+Key features:
+* the given directory can be a *symbolic link*
+* not recursive
+#### *Traversal* of Directory
+There are 2 directory traversal methods:
+* `public static Stream<Path> walk(Path start, int maxDepth, FileVisitOption... options) throws IOException` 
+* `public static Stream<Path> find(Path start, int maxDepth, BiPredicate<Path,BasicFileAttributes> matcher, FileVisitOption... options) throws IOException` 
+
+**The only difference between these two methods is the *matcher* argument in `find`**. The *matcher* also decided the implementation difference, say the *matcher* is used as a *filter* in the `find`
+![soure code: walk diff find](https://user-images.githubusercontent.com/3033388/43643286-7dd41a2a-9733-11e8-8d95-3b3d8714348c.gif)
+
+#### Avoiding *cycle* - Circular Paths
+Unlike the earlier NIO.2 methods, **the traversal methods will not traverse *symbolic links* by default.** so that *cycle* is avoided. Traversal of *symbolic link* can be toggled by giving the optional argument, `FileVisitOption.FOLLOW_LINKS` 
+
+### *Operations on File Attributes*
+#### `<A extends BasicFileAttributes> readAttributes(Path path, Class<A> type, LinkOption... options)` 
+The corresponding Linux Shell command of this method is `stat` 
+
 #### Reading a Single Attribute of a File - `exists`,`isDirectory`,`isRegularFile`,`isSymbolicLink`,`isHidden`,`isReadable`
 There are the following test operations in `Files` utility class:
 * `boolean exists(Path path, LinkOption... options)`
@@ -76,30 +100,6 @@ public static boolean isSymbolicLink(Path path) {
         }
     }
 ```
-
-All the methods starting with `create` returns a `Path`:
-
-
-
-### *Directory Operations*
-#### `list(Path dir)` 
-Key features:
-* the given directory can be a *symbolic link*
-* not recursive
-#### *Traversal* of Directory
-There are 2 directory traversal methods:
-* `public static Stream<Path> walk(Path start, int maxDepth, FileVisitOption... options) throws IOException` 
-* `public static Stream<Path> find(Path start, int maxDepth, BiPredicate<Path,BasicFileAttributes> matcher, FileVisitOption... options) throws IOException` 
-
-**The only difference between these two methods is the *matcher* argument in `find`**. The *matcher* also decided the implementation difference, say the *matcher* is used as a *filter* in the `find`
-![soure code: walk diff find](https://user-images.githubusercontent.com/3033388/43643286-7dd41a2a-9733-11e8-8d95-3b3d8714348c.gif)
-
-#### Avoiding *cycle* - Circular Paths
-Unlike the earlier NIO.2 methods, **the traversal methods will not traverse *symbolic links* by default.** so that *cycle* is avoided. Traversal of *symbolic link* can be toggled by giving the optional argument, `FileVisitOption.FOLLOW_LINKS` 
-
-### *Operations on File Attributes*
-#### `<A extends BasicFileAttributes> readAttributes(Path path, Class<A> type, LinkOption... options)` 
-The corresponding Linux Shell command of this method is `stat` 
 
 ## *Legecy I/O* VS *NIO.2*
 * Neither API provides a single method to delete a directory tree<sup>OCA/OCP Java SE 8 Programmer Practice Tests > Chapter 19 > 16.</sup>
