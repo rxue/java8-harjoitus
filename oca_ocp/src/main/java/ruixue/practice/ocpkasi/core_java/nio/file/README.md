@@ -92,6 +92,7 @@ There are 2 directory traversal methods:
 * `public static Stream<Path> find(Path start, int maxDepth, BiPredicate<Path,BasicFileAttributes> matcher, FileVisitOption... options) throws IOException` 
 
 **The only difference between these two methods is the *matcher* argument in `find`**. The *matcher* also decided the implementation difference, say the *matcher* is used as a *filter* in the `find`
+![soure code: walk diff find](https://user-images.githubusercontent.com/3033388/43643286-7dd41a2a-9733-11e8-8d95-3b3d8714348c.gif)
 
 #### Avoiding *cycle* - Circular Paths
 Unlike the earlier NIO.2 methods, **the traversal methods will not traverse *symbolic links* by default.** so that *cycle* is avoided. Traversal of *symbolic link* can be toggled by giving the optional argument, `FileVisitOption.FOLLOW_LINKS` 
