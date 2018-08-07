@@ -24,4 +24,5 @@ Method Name         | return type
 `relative(int row)` |`boolean`
 `beforeFirst()`     |`void`
 `afterLast()`       |`void`
+
 All these methods would `throw SQLException` if the type of the `ResultSet` is `TYPE_FORWARD_ONLY`  
