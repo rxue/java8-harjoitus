@@ -14,4 +14,13 @@ The type of `ResultSet` can be defined in two dimensions:
   * `ResultSet.CONCUR_READ_ONLY` - the *default value* in case no `ResultSet.CONCUR_`... is given when creating the `statement`
   * `ResultSet.CONCUR_UPDATABLE`
     
- 
+#### Operations Working merely on *Scrollable* `ResultSet`
+Method Name         | return type 
+--------------------|------------
+`absolute(int row)` |`boolean`
+`first()`           |`boolean`
+`last()`            |`boolean`
+`previous()`        |`boolean`
+`relative(int row)` |`boolean`
+`beforeFirst()`     |`void`
+`afterLast()`       |`void`
