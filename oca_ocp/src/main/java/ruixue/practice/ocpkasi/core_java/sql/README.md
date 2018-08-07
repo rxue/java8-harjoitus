@@ -7,11 +7,11 @@ About automatic *close* resources:
 ### `ResultSet`
 The type of `ResultSet` can be defined in two dimensions:
 * *scrollable*, in relation to which there are the following *constant* `int` defining the scrollability:
-  * `ResultSet.TYPE_FORWARD_ONLY` - the *default value* in case no `ResultSet.TYPE_`... is given when creating the `statement`
+  * `ResultSet.TYPE_FORWARD_ONLY` - the *default value* in a `ResultSet` in case no `ResultSet.TYPE_`... is given when creating the `statement`
   * `ResultSet.TYPE_SCROLL_INSENSITIVE`
   * `ResultSet.TYPE_SCROLL_SENSITIVE`
 * *updatable*, in relation to which there are the following *constant* `int` defining the updatability: 
-  * `ResultSet.CONCUR_READ_ONLY` - the *default value* in case no `ResultSet.CONCUR_`... is given when creating the `statement`
+  * `ResultSet.CONCUR_READ_ONLY` - the *default value* in a `ResultSet` in case no `ResultSet.CONCUR_`... is given when creating the `statement`
   * `ResultSet.CONCUR_UPDATABLE`
     
 #### Operations Working merely on *Scrollable* `ResultSet`
