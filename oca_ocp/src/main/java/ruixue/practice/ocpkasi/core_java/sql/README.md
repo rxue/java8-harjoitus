@@ -7,8 +7,12 @@ About automatic *close* resources:
 #### How to get `Connection`
 There are two different ways of getting a *JDBC* `Connection`:
 
-* Legacy way: through *service access API* in the context of *service provider framework*<sup>Reference: Effective Java > Chapter 2: Creating and Destroying Objects > Item 1: Consider static factory methods instead of constructors</sup>, i.e. the *static factory method* `DriverManager.getConnection(String url)` or its *overloaded* version like `DriverManager.getConnection(String url, String user, String password)`
-* through `DataSource` since *JDBC 2.0* 
+* legacy way: through *service access API* in the context of *service provider framework*<sup>Reference: Effective Java > Chapter 2: Creating and Destroying Objects > Item 1: Consider static factory methods instead of constructors</sup>, i.e. the *static factory method* `DriverManager.getConnection(String url)` or its *overloaded* version like `DriverManager.getConnection(String url, String user, String password)` etc.
+* through `DataSource` since *JDBC 2.0*
+
+#### [The format of `Connection` URL](https://docs.oracle.com/cd/B28359_01/java.111/b31224/urls.htm#BEIJFHHB)
+`jdbc:vendorName:[driverType:][user/password:][@]address`
+In Oracle database, the `driverType` might be `oci`, `thin`, `kprb` etc.
   
 ### `ResultSet`
 The type of `ResultSet` can be defined in two dimensions:
