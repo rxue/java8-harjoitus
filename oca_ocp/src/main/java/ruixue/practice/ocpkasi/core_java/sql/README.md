@@ -11,7 +11,10 @@ There are two different ways of getting a *JDBC* `Connection`:
 * through `DataSource` since *JDBC 2.0*
 
 #### [The format of `Connection` URL](https://docs.oracle.com/cd/B28359_01/java.111/b31224/urls.htm#BEIJFHHB)
-`jdbc:vendorName:[driverType:][user/password:][@]address`
+`jdbc:vendorName:[driverType:][user/password:][@][address/]databaseName`
+
+From the format above, the part in square brackets means optional => only the **`vendorName`** and the **`databaseName`** at the end are **mandatory**
+
 In Oracle database, the `driverType` might be `oci`, `thin`, `kprb` etc.
   
 ### `ResultSet`
