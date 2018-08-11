@@ -3,7 +3,13 @@ About automatic *close* resources:
 * Closing a `Connection` also closes the `Statement` and `ResultSet`
 * Closing a `Statement` also closes the `ResultSet`
 * *JDBC* automatically closes a `ResultSet` when you run another SQL statement from the same `Statement`
+### `Connection`
+#### How to get `Connection`
+There are two different ways of getting a *JDBC* `Connection`:
 
+* Legacy way: through *service access API* in the context of *service provider framework*<sup>Reference: Effective Java > Chapter 2: Creating and Destroying Objects > Item 1: Consider static factory methods instead of constructors</sup>, i.e. the *static factory method* `DriverManager.getConnection(String url)` or its *overloaded* version like `DriverManager.getConnection(String url, String user, String password)`
+* through `DataSource` since *JDBC 2.0* 
+  
 ### `ResultSet`
 The type of `ResultSet` can be defined in two dimensions:
 * *scrollable*, in relation to which there are the following *constant* `int` defining the scrollability:
