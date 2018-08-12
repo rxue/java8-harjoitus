@@ -16,8 +16,13 @@ There are two different ways of getting a *JDBC* `Connection`:
 From the format above, the part in square brackets means optional => only the **`vendorName`** and the **`databaseName`** at the end are **mandatory**
 
 In Oracle database, the `driverType` might be `oci`, `thin`, `kprb` etc.
+
+### `Statement` retrieved from `Connection`
   
 ### `ResultSet`
+
+> [A ResultSet object is automatically closed when the Statement object that generated it is closed, re-executed, or used to retrieve the next result from a sequence of multiple results.](https://docs.oracle.com/javase/8/docs/api/java/sql/ResultSet.html)
+
 The type of `ResultSet` can be defined in two dimensions:
 * *scrollable*, in relation to which there are the following *constant* `int` defining the scrollability:
   * `ResultSet.TYPE_FORWARD_ONLY` - the *default value* in a `ResultSet` in case no `ResultSet.TYPE_`... is given when creating the `statement`
