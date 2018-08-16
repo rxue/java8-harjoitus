@@ -6,7 +6,7 @@ import java.util.concurrent.ConcurrentSkipListSet;
 import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.*;
 
-public class TestModificationDuringIteration {
+public class ModificationOnIteratorTest {
 	
 	@Test
 	public void testInsertToSkipListDuringIteration() {
