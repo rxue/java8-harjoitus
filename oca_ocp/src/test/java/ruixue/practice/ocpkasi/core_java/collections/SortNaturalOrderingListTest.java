@@ -8,7 +8,7 @@ import java.util.List;
 
 import org.junit.jupiter.api.Test;
 
-public class TestSortNaturalOrderingList {
+public class SortNaturalOrderingListTest {
 	@Test
 	public void testListWithNullElement() {
 		List<Integer> list = Arrays.asList(1, null, 2);
