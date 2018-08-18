@@ -6,6 +6,7 @@
 > [Except `Object`, which has no *superclass*, every *class* has one and only one direct *superclass* (*single inheritance*)](https://docs.oracle.com/javase/tutorial/java/IandI/subclasses.html)
 
 > If you inherit from a non-interface, you can inherit from only one. All the rest of the base elements must be interface. 
+
 <sup>Reference: Interfaces > "Multiple Inheritance" in Java</sup> 
 
 ## Interface & abstract class
