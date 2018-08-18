@@ -1,9 +1,7 @@
 package ruixue.practice.ocpkasi.core_java.util;
 
-import java.util.ListResourceBundle;
 import java.util.Locale;
 import java.util.MissingResourceException;
-import java.util.PropertyResourceBundle;
 import java.util.ResourceBundle;
 
 import org.junit.jupiter.api.Test;
@@ -14,9 +12,17 @@ public class ListResourceBundleTest {
 	public void testMissingResourceException() {
 		String bundleName = "ruixue.practice.ocpkasi.core_java.util.HeaderListResourceBundle";
 		ResourceBundle rb = ResourceBundle.getBundle(bundleName, Locale.US);
-		assertTrue(rb instanceof ListResourceBundle);
 		assertEquals(bundleName, rb.getBaseBundleName());
-		assertThrows(MissingResourceException.class, () -> rb.getString("nav2"));
+		assertTrue(rb instanceof HeaderListResourceBundle_en);
 		assertThrows(MissingResourceException.class, () -> rb.getString("nav1"));
+	}
+	
+	@Test
+	public void testGetString() {
+		String bundleName = "ruixue.practice.ocpkasi.core_java.util.HeaderListResourceBundle";
+		ResourceBundle rb = ResourceBundle.getBundle(bundleName, Locale.US);
+		assertEquals(bundleName, rb.getBaseBundleName());
+		assertTrue(rb instanceof HeaderListResourceBundle_en);
+		assertEquals("value", rb.getString("nav"));
 	}
 }
