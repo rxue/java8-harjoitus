@@ -9,7 +9,7 @@ import java.time.ZonedDateTime;
 import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.*;
 
-public class TestDaylightSavingTime {
+public class DaylightSavingTimeTest {
 	@Test
 	public void testUSEastern() {
 		ZoneId zone = ZoneId.of("US/Eastern");
