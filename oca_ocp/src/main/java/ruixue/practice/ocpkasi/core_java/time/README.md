@@ -8,9 +8,9 @@ The date and time representation within the range of OCP can be grouped into 2 c
   * `LocaleTime`
   * `LocaleDateTime`
 
-## `ZonedDateTime`
-### [Format of `ZonedDateTime`](https://www.w3.org/TR/NOTE-datetime)
-### About Daylight Savings Time in relation to `ZonedDateTime`
+### `ZonedDateTime`
+#### [Format of `ZonedDateTime`](https://www.w3.org/TR/NOTE-datetime)
+#### About Daylight Savings Time in relation to `ZonedDateTime`
 
 In time zone **US/Eastern**
 
