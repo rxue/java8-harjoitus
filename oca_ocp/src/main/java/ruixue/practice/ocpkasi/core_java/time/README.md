@@ -3,7 +3,7 @@ The date and time representation within the range of OCP can be grouped into 2 c
 * with reference frame - UTC
   * `ZonedDateTime`
   * `Instant`
-* without reference frame - local
+* without reference frame - date and time are local
   * `LocalDate`
   * `LocaleTime`
   * `LocaleDateTime`
