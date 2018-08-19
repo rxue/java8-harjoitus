@@ -1,7 +1,7 @@
 ## `Temporal`
 The `Temporal` implementations within the domain of OCP can be grouped into 2 categories:
 * with reference frame - UTC
-  * `Instant`
+  * `Instant` - an instantaneous point on the time-line
   * `ZonedDateTime`, where there is a `toInstant()` method to convert this `ZonedDateTime` to `Instant`
 * without reference frame - date and time are considered as local and have nothing to do with UTC
   * `LocalDate`
