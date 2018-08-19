@@ -25,6 +25,11 @@ Similarly, in the aspect of `Writer`, `OutputStreamWriter` is the only `Writer` 
 ### *Behavioral* Patterns > *Iterator*
 > The *iterator pattern* provides a way to access the elements of an aggregate object sequentially without exposing its underlying representation.
 
+### *Behavioral* Patterns > *Class Behavioral* > *Template method*
+
+#### Application of *Template Method*
+In the *core Java*, since the very beginning, the `protected abstract Object handleGetObject(String key)` in the class `ResourceBundle` is a *template method*. More important, in the *subclass* of `ResourceBundle` - the `abstract class ListResourceBundle`, `protected Object[][] getContents()` is a typical *template method* as well. 
+
 ### *Behavioral* Patterns > Object Behavioral > *Strategy*
 #### Application of Strategy Pattern
 ##### Strategy Pattern in `java.time.temporal`
