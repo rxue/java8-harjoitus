@@ -1,6 +1,16 @@
-## About Daylight Savings Time in relation to `ZonedDateTime`
+## `Temporal`
+The date and time representation within the range of OCP can be grouped into 2 categories:
+* with reference frame - UTC
+ * `ZonedDateTime`
+ * `Instant`
+* without reference frame - local
+ * `LocalDate`
+ * `LocaleTime`
+ * `LocaleDateTime`
 
+## `ZonedDateTime`
 ### [Format of `ZonedDateTime`](https://www.w3.org/TR/NOTE-datetime)
+### About Daylight Savings Time in relation to `ZonedDateTime`
 
 In time zone **US/Eastern**
 
