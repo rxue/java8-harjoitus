@@ -1,12 +1,12 @@
 ## `Temporal`
 The date and time representation within the range of OCP can be grouped into 2 categories:
 * with reference frame - UTC
- * `ZonedDateTime`
- * `Instant`
+  * `ZonedDateTime`
+  * `Instant`
 * without reference frame - local
- * `LocalDate`
- * `LocaleTime`
- * `LocaleDateTime`
+  * `LocalDate`
+  * `LocaleTime`
+  * `LocaleDateTime`
 
 ## `ZonedDateTime`
 ### [Format of `ZonedDateTime`](https://www.w3.org/TR/NOTE-datetime)
