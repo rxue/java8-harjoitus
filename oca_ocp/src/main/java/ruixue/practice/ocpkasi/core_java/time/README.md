@@ -3,7 +3,7 @@ The date and time representation within the range of OCP can be grouped into 2 c
 * with reference frame - UTC
   * `Instant`
   * `ZonedDateTime`, where there is a `toInstant()` method to convert this `ZonedDateTime` to `Instant`
-* without reference frame - date and time are considered as local
+* without reference frame - date and time are considered as local and have nothing to do with UTC
   * `LocalDate`
   * `LocaleTime`
   * `LocaleDateTime`
