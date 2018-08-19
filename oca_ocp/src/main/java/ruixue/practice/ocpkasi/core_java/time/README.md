@@ -1,5 +1,5 @@
 ## `Temporal`
-The date and time representation within the range of OCP can be grouped into 2 categories:
+The `Temporal` implementations within the domain of OCP can be grouped into 2 categories:
 * with reference frame - UTC
   * `Instant`
   * `ZonedDateTime`, where there is a `toInstant()` method to convert this `ZonedDateTime` to `Instant`
