@@ -13,16 +13,16 @@ public class ListResourceBundleTest {
 		String bundleName = "ruixue.practice.ocpkasi.core_java.util.HeaderListResourceBundle";
 		ResourceBundle rb = ResourceBundle.getBundle(bundleName, Locale.US);
 		assertEquals(bundleName, rb.getBaseBundleName());
-		assertTrue(rb instanceof HeaderListResourceBundle_en);
-		assertThrows(MissingResourceException.class, () -> rb.getString("nav1"));
+		assertTrue(rb instanceof HeaderListResourceBundle_en_US);
+		assertThrows(MissingResourceException.class, () -> rb.getString("navx"));
 	}
 	
 	@Test
-	public void testGetString() {
+	public void testGetStringFromParentBundle() {
 		String bundleName = "ruixue.practice.ocpkasi.core_java.util.HeaderListResourceBundle";
 		ResourceBundle rb = ResourceBundle.getBundle(bundleName, Locale.US);
 		assertEquals(bundleName, rb.getBaseBundleName());
-		assertTrue(rb instanceof HeaderListResourceBundle_en);
+		assertTrue(rb instanceof HeaderListResourceBundle_en_US);
 		assertEquals("value", rb.getString("nav"));
 	}
 }
