@@ -10,8 +10,7 @@ public final class ruixue.practice.advanced.compiler_behavior.enums.Color extend
   public static ruixue.practice.advanced.compiler_behavior.enums.Color valueOf(java.lang.String);
 }
 ```  
-
-* All `enum`s implicitly extend `java.lang.Enum`<sup>[Enum Types](https://docs.oracle.com/javase/tutorial/java/javaOO/enum.html)</sup>
+ From the first line, the `enum` class `Color` `extends` `java.lang.Enum<ruixue.practice.advanced.compiler_behavior.enums.Color>` => Java `enum` implicitly `extends` `java.lang.Enum`<sup>[Enum Types](https://docs.oracle.com/javase/tutorial/java/javaOO/enum.html)</sup>
 
 
 
