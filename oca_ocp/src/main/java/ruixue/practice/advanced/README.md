@@ -1,4 +1,7 @@
 ## Java Language
+
+### Java's [*Ordinal* starts from 0](http://www.cs.utexas.edu/users/EWD/transcriptions/EWD08xx/EWD831.html)
+
 ### *Polymorphism*
 In *Java*, *polymorphism* is also called *dynamic binding*, or *late binding* or *run-time binding*, where the term *binding* refers to *method-call binding*.
  
