@@ -25,7 +25,7 @@ class Child extends Parent {
 	}
 }
 
-public class TestBinding {
+public class BindingTest {
 	@Test
 	public void testStaticBinding() {
 		Parent p = new Child();
