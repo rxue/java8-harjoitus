@@ -1,11 +1,9 @@
 package ruixue.practice.ocpkasi.functional_programming;
 
-import org.apache.logging.log4j.LogManager;
-import org.apache.logging.log4j.Logger;
 import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.*;
 
-public class TestMath {
+public class MathTest {
 	@Test
 	public void testPowPositive() {
 		assertEquals(MyMath.pow(3, 20), Math.pow(3, 20), 0.01);

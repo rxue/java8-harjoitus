@@ -7,8 +7,8 @@ import org.apache.logging.log4j.Logger;
 import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.*;
 
-public class TestDeferredExecution {
-	private static final Logger logger = LogManager.getLogger(TestDeferredExecution.class);
+public class DeferredExecutionTest {
+	private static final Logger logger = LogManager.getLogger(DeferredExecutionTest.class);
 	//@Test
 	public void testDeferredExecution() {
 		long upTo = 200_000_000;
