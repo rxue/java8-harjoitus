@@ -1,4 +1,4 @@
-package ruixue.practice.advanced.design_pattern.creational;
+package ruixue.practice.advanced.design_pattern.creational.builder;
 
 import ruixue.practice.advanced.design_pattern.immutable.Account;
 

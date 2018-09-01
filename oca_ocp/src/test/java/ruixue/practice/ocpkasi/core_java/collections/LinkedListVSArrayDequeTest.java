@@ -11,7 +11,7 @@ import org.junit.jupiter.api.BeforeEach;
 
 import static org.junit.jupiter.api.Assertions.*;
 
-public class TestLinkedListVSArrayDeque {
+public class LinkedListVSArrayDequeTest {
 	private Deque<String> linkedList;
 	private Deque<String> arrayDeque;
 	

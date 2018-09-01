@@ -4,13 +4,13 @@ import java.util.stream.DoubleStream;
 import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.*;
 
-import ruixue.practice.advanced.design_pattern.creational.AccountBuilder;
+import ruixue.practice.advanced.design_pattern.creational.builder.AccountBuilder;
 
 public class ObjDoubleConsumerTest {
 
 	@Test
 	public void testObjDoubleConsumer() {
-		DoubleStream stream = DoubleStream.iterate(1, e -> e +1);
+		DoubleStream stream = DoubleStream.iterate(1, e -> e + 1);
 		int limit = 100;
 		AccountBuilder resultBuilder = stream
 				.limit(limit)
