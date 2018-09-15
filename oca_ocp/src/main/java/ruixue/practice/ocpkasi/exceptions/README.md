@@ -8,6 +8,9 @@ Typically used in:
 A *checked exception* includes *`Exception` and all subclasses that do not extend `RuntimeException`*
 
 ### Various values of `SQLState` explains that `SQLException` is not (only) `IOException`
+Consider `02000`, no data, as an example, this could happen when the connection is successful, say free from `IOException`. 
+
+In summary, `SQLException` might be due to the *IO* but also something else, so merely `IOException` cannot describe all the SQL exceptions => design decision: `SQLException` is not sub-class of `IOException` 
 
 ## *Multi-catch*
 Unique rules comparing with legacy `catch` block:
