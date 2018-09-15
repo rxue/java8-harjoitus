@@ -7,6 +7,8 @@ Typically used in:
 ## *Checked Exception*
 A *checked exception* includes *`Exception` and all subclasses that do not extend `RuntimeException`*
 
+### Various values of `SQLState` explains that `SQLException` is not (only) `IOException`
+
 ## *Multi-catch*
 Unique rules comparing with legacy `catch` block:
 * Java intends multi-catch to be used for exceptions that aren't related 
