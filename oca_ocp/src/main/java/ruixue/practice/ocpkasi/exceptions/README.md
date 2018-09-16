@@ -7,7 +7,7 @@ Typically used in:
 ## *Checked Exception*
 A *checked exception* includes *`Exception` and all subclasses that do not extend `RuntimeException`*
 
-> A *checked exception* is an exception that represents a problem with the possibility of recovery, and for which the developer must provide a workaround.
+> A *checked exception* is an exception that represents a problem with the possibility of recovery, and for which the **developer must provide a workaround**.
 Reference: Beginning Java 7 > Chapter 3 > Exceptions > The Throwable Class Hierarchy > *Checked Exceptions* VS *Runtime Exceptions*
 
 ### Various values of `SQLState` explains that `SQLException` is not (only) `IOException`
