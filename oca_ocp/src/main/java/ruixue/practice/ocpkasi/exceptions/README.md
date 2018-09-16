@@ -3,6 +3,8 @@
 
 Reference: Effective Java (Third Edition) > Chapter 10 Exceptions > Item 70: Use checked exceptions for recoverable conditions and runtime exceptions for programming errors
 
+All other *Throwables* are *checked*, which the program has to `catch`
+
 ### `UnsupportedOperationException`
 Typically used in:
 * [*stub*](https://books.google.fi/books?id=mxZBPSjSEYUC&pg=PA308&redir_esc=y#v=onepage&q&f=false)
