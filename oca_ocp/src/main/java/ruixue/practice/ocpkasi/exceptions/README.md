@@ -1,4 +1,8 @@
-## `RuntimeException` aka *Unchecked Exception*
+## *Unchecked Throwables*
+> There are two kinds of unchecked throwables: *runtime exceptions* and *errors*
+
+Reference: Effective Java (Third Edition) > Chapter 10 Exceptions > Item 70: Use checked exceptions for recoverable conditions and runtime exceptions for programming errors
+
 ### `UnsupportedOperationException`
 Typically used in:
 * [*stub*](https://books.google.fi/books?id=mxZBPSjSEYUC&pg=PA308&redir_esc=y#v=onepage&q&f=false)
