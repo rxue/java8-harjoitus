@@ -1,4 +1,4 @@
-## An `enum` Cannot Explicitly `extends` Any Classes
+## An `enum` Cannot Explicitly `extends` Any Classes Because it Implicitly `extends Enum`
 The `enum` example [ruixue.practice.advanced.compiler_behavior.enums.Color.java](https://github.com/rxue/java8-perusharjoitus/tree/master/oca_ocp/src/main/java/ruixue/practice/advanced/compiler_behavior/enums) can be decompiled (in the class directory call `javap Color`) to the following code:
 ```
 public final class ruixue.practice.advanced.compiler_behavior.enums.Color extends java.lang.Enum<ruixue.practice.advanced.compiler_behavior.enums.Color> {
