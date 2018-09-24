@@ -1,13 +1,20 @@
-## An `enum` Cannot Explicitly `extends` Any Classes Because it Implicitly `extends Enum`
-The `enum` example [ruixue.practice.advanced.compiler_behavior.enums.Color.java](https://github.com/rxue/java8-perusharjoitus/tree/master/oca_ocp/src/main/java/ruixue/practice/advanced/compiler_behavior/enums) can be decompiled (in the class directory call `javap Color`) to the following code:
+## An `enum` cannot `extends` any classes because it already `extends Enum` implicitly
+## An `enum` constructor is intrinsically `private` 
+
+### Proof:
+
+The `enum` example [ruixue.practice.advanced.compiler_behavior.enums.Color.java](https://github.com/rxue/java8-perusharjoitus/tree/master/oca_ocp/src/main/java/ruixue/practice/advanced/compiler_behavior/enums) can be decompiled (in the class directory call `javap -p Color`) to the following code:
 ```
 public final class ruixue.practice.advanced.compiler_behavior.enums.Color extends java.lang.Enum<ruixue.practice.advanced.compiler_behavior.enums.Color> {
   public static final ruixue.practice.advanced.compiler_behavior.enums.Color WHITE;
   public static final ruixue.practice.advanced.compiler_behavior.enums.Color RED;
-  static {};
-  public java.lang.String getColor();
+  private java.lang.String color;
+  private static final ruixue.practice.advanced.compiler_behavior.enums.Color[] $VALUES;
   public static ruixue.practice.advanced.compiler_behavior.enums.Color[] values();
   public static ruixue.practice.advanced.compiler_behavior.enums.Color valueOf(java.lang.String);
+  private ruixue.practice.advanced.compiler_behavior.enums.Color(java.lang.String);
+  public java.lang.String getColor();
+  static {};
 }
 ```  
  From the first line, the `enum` class `Color` `extends` `java.lang.Enum<ruixue.practice.advanced.compiler_behavior.enums.Color>` => Java `enum` implicitly `extends` `java.lang.Enum`<sup>[Enum Types](https://docs.oracle.com/javase/tutorial/java/javaOO/enum.html)</sup> 
