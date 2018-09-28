@@ -21,8 +21,9 @@ In this general case, the *context* *has-a* *strategy* instance, which can be as
 #### Application of *Strategy* in Java 8
 ##### `default void sort(Comparator<? super E>)` in `List<E>` 
 In this case, the relationship between the `List`, i.e. *context*, and `Comparator`, i.e. *strategy*, are the least loosely coupled, say *dependency* in the aspect of UML. Moreover, `public static <T> void sort(List<T> list, Comparator<? super T> c)` in `Collections` is implemented with this *default* method
-##### *Strategy Pattern* with *Delegation* 
+##### *Strategy Pattern* with *Delegation* and *Dependency*
 * `public static long ChronoUnit.between(Temporal temporal1Inclusive, Temporal temporal2Exclusive)`
+* `<R extends Temporal> ChronoUnit.addTo(Temporal temporal, long amount)`
   * *Context*: `ChronoUnit`
   * *Strategy*: `Temporal`
   * *Concrete Strategy*, i.e. implementation of `Temporal`:
@@ -30,9 +31,9 @@ In this case, the relationship between the `List`, i.e. *context*, and `Comparat
     * `LocalTime`
     * `LocalDateTime`
     * `ZonedDateTime`
-This is similar with the *strategy* enum pattern<sup>[Effective Java](https://www.amazon.com/Effective-Java-3rd-Joshua-Bloch/dp/0134685997)</sup> in that the *context* `ChronoUnit` is `enum`. The implementation of `between` method is *delegated* to the first argument - `temporal1Inclusive`, who invokes its `until(temporal2Exclusive, this)` method.
+
+This *strategy* resembles the *strategy* enum pattern<sup>[Effective Java](https://www.amazon.com/Effective-Java-3rd-Joshua-Bloch/dp/0134685997)</sup> in that the *context* `ChronoUnit` is `enum`. The implementation of `between` method is *delegated* to the first argument - `temporal1Inclusive`, who invokes its `until(temporal2Exclusive, this)` method.
 
 * `public String format(DateTimeFormatter formatter)` in `LocalDate`,`LocalTime`,`LocalDateTime`,`ZonedDateTime`
-There is also *dependency* between the *strategy* and *context*. The implementation is *delegation*, say the *context* itself is passed to the `format` method.
 * `public static LocalDate parse(CharSequence text, DateTimeFormatter formatter)` in `LocalDate`,`LocalTime`,`LocalDateTime`,`ZonedDateTime` 
-* `<R extends Temporal> ChronoUnit.addTo(Temporal temporal, long amount)`
+
