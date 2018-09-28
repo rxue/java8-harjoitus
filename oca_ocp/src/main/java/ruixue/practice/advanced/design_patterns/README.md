@@ -16,29 +16,23 @@ In the *core Java*, since the very beginning, the `protected abstract Object han
 Based on [Gamma](https://www.amazon.com/Design-Patterns-Elements-Reusable-Object-Oriented/dp/0201633612) partially, the structure of *strategy pattern* can be generalized as the following UML class diagram:
 ![strategy](https://user-images.githubusercontent.com/3033388/45920421-7916f480-beac-11e8-80b4-a7ad53f65c55.jpg)
 
-In this general case, the *context* *has-a* *strategy* instance, which can be assigned through the *context* constructor with *lambda expression* and *method reference* in Java 8. However, the *class relationship* between the *Context* and *Strategy* is not restricted to *composition*, the *has-a* relationship, it can be more loosely coupled. 
+In this general case, the *context* *has-a* *strategy* instance, which can be assigned through the *context* constructor with *lambda expression* and *method reference* in Java 8. However, the *class relationship* between the *Context* and *Strategy* is not restricted to *composition*, the *has-a* relationship, it can be more loosely coupled such as *dependency*, i.e. *delegation*.
   
 #### Application of *Strategy* in Java 8
-##### `java.time.temporal`
-In *OpenJDK-8*, the implementation of 
-
-* `<R extends Temporal> ChronoUnit.addTo(Temporal temporal, long amount)` and 
-* `long ChronoUnit.between(Temporal temproal1Inclusive, Temporal temporal2Exclusive)` applied the *strategy pattern*:
+##### `default void sort(Comparator<? super E>)` in `List<E>` 
+In this case, the relationship between the `List`, i.e. *context*, and `Comparator`, i.e. *strategy*, are the least loosely coupled, say *dependency* in the aspect of UML. Moreover, `public static <T> void sort(List<T> list, Comparator<? super T> c)` in `Collections` is implemented with this *default* method
+##### *Strategy Pattern* with *Delegation* 
+* `public static long ChronoUnit.between(Temporal temporal1Inclusive, Temporal temporal2Exclusive)`
   * *Context*: `ChronoUnit`
   * *Strategy*: `Temporal`
-  * *Concrete Strategy*:
+  * *Concrete Strategy*, i.e. implementation of `Temporal`:
     * `LocalDate`
     * `LocalTime`
     * `LocalDateTime`
     * `ZonedDateTime`
+This is similar with the *strategy* enum pattern<sup>[Effective Java](https://www.amazon.com/Effective-Java-3rd-Joshua-Bloch/dp/0134685997)</sup> in that the *context* `ChronoUnit` is `enum`. The implementation of `between` method is *delegated* to the first argument - `temporal1Inclusive`, who invokes its `until(temporal2Exclusive, this)` method.
 
-Consider [`long ChronoUnit.between(Temporal temporal1Inclusive, Temporal temporal2Exclusive)`](http://grepcode.com/file/repository.grepcode.com/java/root/jdk/openjdk/8-b132/java/time/temporal/ChronoUnit.java#ChronoUnit.between%28java.time.temporal.Temporal%2Cjava.time.temporal.Temporal%29), the implementation is only one statement - `return temporal1Inclusive.until(temporal2Exclusive, this);`. So
-**`long ChronoUnit.between(Temporal temporal1Inclusive, Temporal temporal2Exclusive)` is equivalent to `long Temporal.until(Temporal temporal, TemporalUnit unit)` and, the relationship between the ChronoUnit and the Temporal is weak assoication, say dependency** In the book [GOF23], the relationship between the *Strategy* and the *Context* is marked as *aggregration* other than *dependecy*. Therefore, in practice the relationship between *strategy* and *context* is not fixed.  
-
-##### `default void sort(Comparator<? super E>)` in `List<E>` 
-In this case, the relationship between the `List`, i.e. *context*, and `Comparator`, i.e. *strategy*, are the least loosely coupled, say *dependency* in the aspect of UML. Moreover, `public static <T> void sort(List<T> list, Comparator<? super T> c)` in `Collections` is implemented with this *default* method
-
-##### `public String format(DateTimeFormatter formatter)` in `LocalDate`,`LocalTime`,`LocalDateTime`,`ZonedDateTime`
+* `public String format(DateTimeFormatter formatter)` in `LocalDate`,`LocalTime`,`LocalDateTime`,`ZonedDateTime`
 There is also *dependency* between the *strategy* and *context*. The implementation is *delegation*, say the *context* itself is passed to the `format` method.
-##### `public static LocalDate parse(CharSequence text, DateTimeFormatter formatter)` in `LocalDate`,`LocalTime`,`LocalDateTime`,`ZonedDateTime`
-
+* `public static LocalDate parse(CharSequence text, DateTimeFormatter formatter)` in `LocalDate`,`LocalTime`,`LocalDateTime`,`ZonedDateTime` 
+* `<R extends Temporal> ChronoUnit.addTo(Temporal temporal, long amount)`
