@@ -47,11 +47,12 @@ NB! Operations on *concurrent collections* are not necessarily *blocking*. Among
 |                           |`Runnable`                       |`Callable<V>`                 
 |---------------------------|---------------------------------|--------------------------
 |annotation                 |`@FunctionalInterface`           |`@FunctionalInterface`
-|method signature           |`run()`                          |`call()`                   
-|method return value        |`void`                           |`T`                        
+|method *signature*         |`run()`                          |`call()`                   
+|method exception           |no exception                     |`throws Exception`                   
+|method return value        |`void`                           |`V`
 |*applicable design pattern*|*command* and *command processor*|*active object*            
 
-Both are *functional interfaces*, say contains one and only one abstract method. In the aspect of the abstract method they have, neither of them contains arguments, but the return types differ, the `run()` method of `java.lang.Runnable` does not return anything, whereas the `call()` method of `java.util.concurrent.Callable` returns a *generic type* T.
+Both are *functional interfaces*, say contains one and only one abstract method. In the aspect of the abstract method they have, neither of them contains arguments, but the return types differ, the `run()` method of `java.lang.Runnable` does not return anything, whereas the `call()` method of `java.util.concurrent.Callable` returns a *generic type* V.
 
 ## `ExecutorService`
 ### `ExecutorService` VS `Executor`
