@@ -44,13 +44,14 @@ NB! From the list above, we can see that the **blocking methods can be timed**.
 NB! Operations on *concurrent collections* are not necessarily *blocking*. Among the *concurrent collections* in Java SE, only *blocking queues*, `BlockingQueue` and its sub-interface `BlockingDeque`, contain *blocking methods* and **timed blocking methods**.   
 
 ## `Runnable` VS `Callable`
-|                           |`Runnable`                       |`Callable<V>`                 
-|---------------------------|---------------------------------|--------------------------
-|                           |`@FunctionalInterface`           |`@FunctionalInterface`
-|method name                |`run()`                          |`call()`                   
-|method return value        |`void`                           |`T`                        
-|*applicable design pattern*|*command* and *command processor*|*active object*            
- 
+                           |`Runnable`                       |`Callable<V>`                 
+---------------------------|---------------------------------|--------------------------
+annotation                 |`@FunctionalInterface`           |`@FunctionalInterface`
+method signature           |`run()`                          |`call()`                   
+method return value        |`void`                           |`T`                        
+*applicable design pattern*|*command* and *command processor*|*active object*            
+
+Both are *functional interfaces*, say contains one and only one abstract method. In the aspect of the abstract method they have, neither of them contains arguments, but the return types differ, the `run()` method of `java.lang.Runnable` does not return anything, whereas the `call()` method of `java.util.concurrent.Callable` returns a *generic type* T.
 
 ## `ExecutorService`
 ### `ExecutorService` VS `Executor`
