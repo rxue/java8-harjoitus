@@ -1,4 +1,4 @@
-## *JDBC*
+## [*JDBC*](https://docs.oracle.com/javase/8/docs/technotes/guides/jdbc/)
 About automatic *close* resources:
 * Closing a `Connection` also closes the `Statement` and `ResultSet`
 * Closing a `Statement` also closes the `ResultSet`
