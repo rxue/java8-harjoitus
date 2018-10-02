@@ -17,6 +17,8 @@ From the format above, the part in square brackets means optional => only the **
 
 In Oracle database, the `driverType` might be `oci`, `thin`, `kprb` etc.
 
+#### Closing `Connection` Objects
+> 
 ### `Statement` retrieved from `Connection`
   
 ### `ResultSet`
