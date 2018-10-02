@@ -1,4 +1,4 @@
-## [*JDBC*](https://docs.oracle.com/javase/8/docs/technotes/guides/jdbc/) Based on [JDBC 4.2 Specification](http://download.oracle.com/otn-pub/jcp/jdbc-4_2-mrel2-spec/jdbc4.2-fr-spec.pdf?AuthParam=1538462986_7e717e788b18beae093c9c5f27917be9)
+## [*JDBC*](https://docs.oracle.com/javase/8/docs/technotes/guides/jdbc/) Based on [JDBC 4.2 Specification](http://download.oracle.com/otndocs/jcp/jdbc-4_2-mrel2-spec/index.html)
 About automatic *close* resources:
 * Closing a `Connection` also closes the `Statement` and `ResultSet`
 * Closing a `Statement` also closes the `ResultSet`
@@ -20,10 +20,9 @@ In Oracle database, the `driverType` might be `oci`, `thin`, `kprb` etc.
 #### Closing `Connection` Objects
 > An application calls the method `Connection.close()` to indicate that it has finished using a connection. All Statement objects created from a given Connection object will be closed when the close method for the Connection object is called.<sup> JDBC 4.2 Specification > 9.6.4.1 Connection.close</sup>
 
-Based on the specification, it is enough to initialize only the `Connection` in the *try-with-resource* in practice
-
-
-### `Statement` retrieved from `Connection`
+### `Statement` Retrieved from `Connection`
+#### Closing `Statement` Objects
+> Closing a Statement object will close and invalidate any instances of ResultSet produced by that Statement object. The resources held by the ResultSet object may not be released until garbage collection runs again, so it is a good practice to explicitly close ResultSet objects when they are no longer needed.<sup> JDBC 4.2 Specification > 13.1.4 Closing Statements</sup> 
   
 ### `ResultSet`
 
@@ -49,4 +48,8 @@ Method Name         | return type
 `beforeFirst()`     |`void`
 `afterLast()`       |`void`
 
-All these methods would `throw SQLException` if the type of the `ResultSet` is `TYPE_FORWARD_ONLY`  
+All these methods would `throw SQLException` if the type of the `ResultSet` is `TYPE_FORWARD_ONLY` 
+
+### Summary
+
+Based on the specification, it is enough to initialize only the `Connection` in the *try-with-resource*. However, it is good code practice for applications to close statements as soon as they have finished processing them.
