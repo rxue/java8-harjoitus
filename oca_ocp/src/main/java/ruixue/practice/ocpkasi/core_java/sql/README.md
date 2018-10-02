@@ -18,7 +18,7 @@ From the format above, the part in square brackets means optional => only the **
 In Oracle database, the `driverType` might be `oci`, `thin`, `kprb` etc.
 
 #### Closing `Connection` Objects
-> An application calls the method `Connection.close()` to indicate that it has finished using a connection. All Statement objects created from a given Connection object will be closed when the close method for the Connection object is called.<sup> JDBC 4.2 specification 9.6.4.1 Connection.close<sp>
+> An application calls the method `Connection.close()` to indicate that it has finished using a connection. All Statement objects created from a given Connection object will be closed when the close method for the Connection object is called.<sup> JDBC 4.2 Specification > 9.6.4.1 Connection.close<sp>
 
 
 ### `Statement` retrieved from `Connection`
