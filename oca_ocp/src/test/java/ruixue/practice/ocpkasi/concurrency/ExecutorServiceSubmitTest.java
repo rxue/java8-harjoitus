@@ -10,7 +10,7 @@ import java.util.concurrent.Future;
 import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.*;
 
-public class TestExecutorServiceSubmit {
+public class ExecutorServiceSubmitTest {
 	
 	@Test
 	public void testSubmitRunnableWithSuccessfulCancel() throws InterruptedException, ExecutionException {
