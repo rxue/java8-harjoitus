@@ -8,7 +8,7 @@ import java.util.stream.Stream;
 import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.*;
 
-public class TestCollectorsToMap {
+public class CollectorsToMapTest {
 	@Test
 	public void testToMapWithCollision() {
 		Stream<String> stream = Stream.of("one", "two", "three");

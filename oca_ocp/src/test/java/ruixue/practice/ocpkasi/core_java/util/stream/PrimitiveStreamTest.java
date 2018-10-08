@@ -6,7 +6,7 @@ import java.util.stream.IntStream;
 import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.*;
 
-public class TestPrimitiveStream {
+public class PrimitiveStreamTest {
 	
 	@Test
 	public void testIntStream() {

@@ -15,8 +15,8 @@ import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.*;
 
-public class TestTerminalOperations {
-	private static final Logger logger = LogManager.getLogger(TestTerminalOperations.class);
+public class TerminalOperationsTest {
+	private static final Logger logger = LogManager.getLogger(TerminalOperationsTest.class);
 	
 	@Test
 	public void testCallTerminalOperationTwice() {
