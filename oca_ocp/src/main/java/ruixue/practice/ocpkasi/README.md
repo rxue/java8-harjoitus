@@ -1,7 +1,3 @@
-# Buzzwords
-* *marker interface*
-* *legacy code* is older code. It is usually code that is in a different style than you would write if you were writing the code today. 
-
 # Object Oriented Design Principles
 * *Coupling*: the degree to which one class knows about another class (Reference: Sun Certified Programmer for Java 6 Study Guide)
   * *Loose coupling*: If the only knowledge that class A has about class B, is what class has exposed through its interface, then class A and class B are loosely coupled
@@ -38,4 +34,10 @@ The *factory pattern*, sometimes referred to as the *factory method pattern*, is
 # Summary
 ## Synthetic Comparisons
 ### *Anonymous Inner Class* VS *Lambda Expresson*
-*Anonymous inner class* and *lambda expresson* are similar in that as to the accessibility of *local variable*, both do not have access unless those variables are *final* or *effectively final*. 
+*Anonymous inner class* and *lambda expresson* are similar in that as to the accessibility of *local variable*, both do not have access unless those variables are *final* or *effectively final*.
+# Exam Essentials
+## Concurrency
+### *Intrinsic Lock*
+> `static synchronized` methods used the `Class` object for the lock <sup>Java Concurrency in Practice</sup>
+### `ExecutorService` has to call `shutdown()` to be shut down explicitly
+
