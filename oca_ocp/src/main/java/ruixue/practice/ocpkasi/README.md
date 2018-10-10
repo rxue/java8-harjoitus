@@ -45,4 +45,4 @@ The *factory pattern*, sometimes referred to as the *factory method pattern*, is
 > `static synchronized` methods used the `Class` object for the lock <sup>Java Concurrency in Practice</sup>
 ### `ExecutorService` has to call `shutdown()` to be shut down explicitly
 
-#### *Blocking* methods are always connected to the checked `InterruptedException`
+#### *Blocking* methods always *declare* the checked `InterruptedException`
