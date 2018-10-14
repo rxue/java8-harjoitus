@@ -12,11 +12,9 @@ import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
-import ruixue.practice.advanced.core_java.io.CustomSerializableCompanyUser;
-
 import static org.junit.jupiter.api.Assertions.*;
 
-public class ObjectStreamTest {
+public class DefaultSerializedObjectStreamTest {
 	private static File objectStore;
 	@BeforeEach
 	public void init() {
@@ -40,18 +38,6 @@ public class ObjectStreamTest {
 			} 
 	}
 	
-	private void writeCustomSerializedCompanyUser() {
-		try(OutputStream os = new FileOutputStream(objectStore);
-			ObjectOutputStream oOs = new ObjectOutputStream(os)) {
-				CustomSerializableCompanyUser user = new CustomSerializableCompanyUser("Sisu", "password");
-				CustomSerializableCompanyUser.companyName = "Google";
-				oOs.writeObject(user);
-			} catch (IOException e) {
-				// TODO Auto-generated catch bloc
-				e.printStackTrace();
-			} 
-	}
-
 	@Test
 	public void testReadDefaultSerializedObject() {
 		writeDefaultSerializedCompanyUser();
@@ -62,23 +48,6 @@ public class ObjectStreamTest {
 			assertEquals("Sisu", user.getUserName());
 			assertNull(user.getPassword());
 			assertNotEquals("Google", user.companyName);
-		} catch (IOException | ClassNotFoundException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
-		 
-	}
-	
-	@Test
-	public void testReadCutomSerializedObject() {
-		writeCustomSerializedCompanyUser();
-		CustomSerializableCompanyUser.companyName = "IBM";
-		try(InputStream is = new FileInputStream(objectStore);
-			ObjectInputStream oIs = new ObjectInputStream(is)) {
-			CustomSerializableCompanyUser user = (CustomSerializableCompanyUser) oIs.readObject();	
-			assertEquals("Sisu", user.getUserName());
-			assertNull(user.getPassword());
-			assertEquals("Google", user.companyName);
 		} catch (IOException | ClassNotFoundException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
