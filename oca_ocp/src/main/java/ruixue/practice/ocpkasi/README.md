@@ -35,6 +35,7 @@ The *factory pattern*, sometimes referred to as the *factory method pattern*, is
 ## Synthetic Comparisons
 ### *Anonymous Inner Class* VS *Lambda Expresson*
 *Anonymous inner class* and *lambda expresson* are similar in that as to the accessibility of *local variable*, both do not have access unless those variables are *final* or *effectively final*.
+
 # Exam Essentials
 ## Concurrency
 ### `Runnable` and `Callable<V>`
@@ -46,3 +47,8 @@ The *factory pattern*, sometimes referred to as the *factory method pattern*, is
 ### `ExecutorService` has to call `shutdown()` to be shut down explicitly
 
 #### *Blocking* methods always *declare* the checked `InterruptedException`
+
+## IO
+### `InputStream`/`OutputStream
+#### *Serialization*/*Deserialization* with `ObjectInputStream`/`ObjectOutputStream`
+> If you are using the default *serialized* form and you have labeled one or more fields `transient`, remember that these fields will be initialized to their *default values* when an instance is *deserialized*: `null` for object reference fields, zero for numeric *primitive* fields and `false` for `boolean` fields. <sup>Effective Java > Chapter 12 Serialization</sup> 
