@@ -1,4 +1,4 @@
-package ruixue.practice.ocpkasi.class_design.nested_class;
+package ruixue.practice.ocpkasi.classes.nested_class;
 
 public class TestMemberInnerClass {
 	private String greeting = "Hi";
