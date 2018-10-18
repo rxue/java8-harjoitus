@@ -15,7 +15,7 @@ The essence of `Path`:
 `p0.relativize(p1)` can be explained as: **starting from the path `p0`, how to reach `p1`**
 
 ##### `Path relativize(Path p)` throws a *runtime* `IllegalArgumentException`
-As the word *relativize* indicate literally, the base `Path` object and the given `Path` p has to be of the same type, say either both *absolute* or *relative*, otherwise a *runtime* `IllegelArgumentException` would be thrown. Refer to the source code [sun.nio.fs.UnixPath.relativize()](http://grepcode.com/file/repository.grepcode.com/java/root/jdk/openjdk/7-b147/sun/nio/fs/UnixPath.java#UnixPath.relativize%28java.nio.file.Path%29), where there is:
+As the word *relativize* indicates literally, the base `Path` object and the given `Path` p has to be of the same type, say either both *absolute* or both *relative*, otherwise a *runtime* `IllegelArgumentException` would be thrown. In the source code there is:
 ```
 if (this.isAbsolute() != other.isAbsolute())
   throw new IllegalArgumentException("'other' is different type of Path")
