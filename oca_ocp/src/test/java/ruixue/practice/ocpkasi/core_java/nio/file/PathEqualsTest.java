@@ -11,7 +11,7 @@ import org.junit.jupiter.api.Test;
  * @author dingding
  *
  */
-public class TestPathEquals {
+public class PathEqualsTest {
 	@Test
 	public void testTrueWithNonexistentPath() {
 		String fileName = "not_exists";
