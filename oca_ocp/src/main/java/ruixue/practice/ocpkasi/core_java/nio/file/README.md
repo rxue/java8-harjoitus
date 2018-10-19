@@ -5,7 +5,7 @@ The essence of `Path`:
 * Its implementations are *immutable*
 * it is an "abstract" primary entry point for working with NIO.2 API
 * most methods of `Path` interface but **not all** are sometimes called *syntactic operations* in that they operate on the `Path` itself but don't access to the *file system*
-	* the *path* of `Path` object might not exist physically, invoking mehtods of `Path` can still work
+	* the *path* of `Path` object might not exist physically, invoking methods of `Path` can still work
 	* the actual operations on *file system* can be executed with those *static methods* on *utility class* `java.nio.file.Files`
 	* methods of `Path`, which is not *syntactic operation* - `public Path toRealPath(LinkOption... options) throws IOException`
 * Unlike `java.io.File` class, `Path` contains support for *symbolic links*
@@ -15,7 +15,7 @@ The essence of `Path`:
 `p0.relativize(p1)` can be explained as: **starting from the path `p0`, how to reach `p1`**
 
 ##### `Path relativize(Path p)` throws a *runtime* `IllegalArgumentException`
-As the word *relativize* indicates literally, the base `Path` object and the given `Path` p has to be of the same type, say either both *absolute* or both *relative*, otherwise a *runtime* `IllegelArgumentException` would be thrown. In the source code there is:
+As the word *relativize* indicates literally, the base `Path` object and the given `Path` p has to be of the same type, say either both *absolute* or both *relative*, otherwise a *runtime* `IllegalArgumentException` would be thrown. Refer to the source code snippet below:
 ```
 if (this.isAbsolute() != other.isAbsolute())
   throw new IllegalArgumentException("'other' is different type of Path")
@@ -28,7 +28,7 @@ if (this.isAbsolute() != other.isAbsolute())
 
 Their return values have 2 common features among these three methods:
 * return type is `Path`
-* return `null` to indicate no such componenet in the given `Path` object
+* return `null` to indicate no such component in the given `Path` object
 
 
 
