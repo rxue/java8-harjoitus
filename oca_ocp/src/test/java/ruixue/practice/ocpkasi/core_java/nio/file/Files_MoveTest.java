@@ -3,7 +3,6 @@ package ruixue.practice.ocpkasi.core_java.nio.file;
 import static org.junit.jupiter.api.Assertions.*;
 
 import java.io.IOException;
-import java.nio.file.DirectoryNotEmptyException;
 import java.nio.file.FileAlreadyExistsException;
 import java.nio.file.Files;
 import java.nio.file.Path;
@@ -63,6 +62,7 @@ public class Files_MoveTest {
 		try {
 			Files.createDirectory(emptyDirectory);
 			assert Files.isDirectory(emptyDirectory);
+			assertThrows(FileAlreadyExistsException.class, () -> Files.move(sourceFile, emptyDirectory));
 			Path targetPath = Files.move(sourceFile, emptyDirectory, StandardCopyOption.REPLACE_EXISTING);
 			assertTrue(Files.isRegularFile(targetPath));
 			Files.delete(targetPath);
