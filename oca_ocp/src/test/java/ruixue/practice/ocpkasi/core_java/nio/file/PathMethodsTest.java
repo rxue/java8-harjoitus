@@ -12,13 +12,7 @@ import static org.junit.jupiter.api.Assertions.*;
 
 import org.junit.jupiter.api.Test;
 
-public class TestPathMethods {
-	
-	@Test
-	public void testNormalize() {
-		Path p = Paths.get("x/y/.././z");
-		assertEquals(Paths.get("x/z"), p.normalize());
-	}
+public class PathMethodsTest {
 	
 	@Test
 	public void testResolve() {
