@@ -10,7 +10,7 @@ import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.*;
 
-public class Files_IsDirectoryTest {
+public class FilesIsDirectoryTest {
 	@Test
 	public void testIsDirectoryWithSymbolicLink() {
 		Path targetDir = Paths.get("target_dir");

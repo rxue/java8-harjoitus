@@ -10,7 +10,7 @@ import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.*;
 
-public class TestFilesIsSameFile {
+public class FilesIsSameFileTest {
 	@Test
 	public void testSameNonExistentPath() {
 		String fileName = "not_exists";
@@ -24,6 +24,25 @@ public class TestFilesIsSameFile {
 				e.printStackTrace();
 			}		
 	}
+	
+	@Test
+	public void testSymbolicLinkWithTargetFile() {
+		String fileName = "targetFile";
+		String link = "link";
+		Path target = Paths.get(fileName);
+		Path linkPath = Paths.get(link);
+			try {
+				Files.createFile(target);
+				Files.createLink(linkPath, target);				
+				assertTrue(Files.isSameFile(target, linkPath));
+				Files.delete(linkPath);
+				Files.delete(target);
+			} catch (IOException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}		
+	}
+	
 	@Test
 	public void testSameNonExistentPath_OneAbsoluteOneRelative() {
 		Path currentDir = Paths.get(".").toAbsolutePath();

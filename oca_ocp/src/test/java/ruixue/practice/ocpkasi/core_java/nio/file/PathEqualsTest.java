@@ -21,7 +21,7 @@ public class PathEqualsTest {
 	}
 	
 	@Test
-	public void testFalseWithNormalizedSamePath() {
+	public void testFalseWithNotNormalizedSamePath() {
 		Path p1 = Paths.get("/x/not_exists");
 		Path p2 = Paths.get("/y/../x/not_exists");
 		assertFalse(p1.equals(p2));

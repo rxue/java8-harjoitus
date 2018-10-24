@@ -12,7 +12,7 @@ import java.nio.file.StandardCopyOption;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
-public class Files_MoveTest {
+public class FilesMoveTest {
 	private Path sourceFile;
 	@BeforeEach
 	public void init() {
