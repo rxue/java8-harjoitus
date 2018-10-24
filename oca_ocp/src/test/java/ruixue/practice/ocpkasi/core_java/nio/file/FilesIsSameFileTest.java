@@ -44,7 +44,7 @@ public class FilesIsSameFileTest {
 	}
 	
 	@Test
-	public void testSameNonExistentPath_OneAbsoluteOneRelative() {
+	public void testNoSuchFileException() {
 		Path currentDir = Paths.get(".").toAbsolutePath();
 		Path p1 = currentDir.resolve("sneakers");
 		try {
@@ -56,12 +56,4 @@ public class FilesIsSameFileTest {
 		Path p2 = Paths.get("sneakers");
 		assertThrows(NoSuchFileException.class, () -> Files.isSameFile(p1, p2));
 	}
-	@Test
-	public void testNormalizedSameNonExistentPath() {
-		Path currentDir = Paths.get(".");
-		Path p1 = currentDir.toAbsolutePath().normalize().resolve("test");
-		Path p2 = currentDir.toAbsolutePath().resolve("test");
-		assertThrows(NoSuchFileException.class, () -> Files.isSameFile(p1, p2));
-	}
-
 }
