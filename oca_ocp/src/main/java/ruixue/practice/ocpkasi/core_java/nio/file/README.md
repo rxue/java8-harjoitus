@@ -31,17 +31,22 @@ Their return values have 2 common features among these three methods:
 * return `null` to indicate no such component in the given `Path` object
 
 
-
 ### `Path toRealPath(LinkOption... options)` - The Only Non-syntactic, **real**, Operation that `throws IOException`
 `Path toRealPath(LinkOption... options)` is the only concrete operation on a `Path` *object*. There are the following key point on this method:
 * `toRealPath` **follows symbolic link** by default
   * In order not to follow link, it should be called with `LinkOption.NOFOLLOW_LINKS` as *argument*, i.e. `toRealPath(LinkOption.NOFOLLOW_LINKS)`
 * `toRealPath` only works on existing file => if the given `Path` does not exist in the file system, `IOException` will be thrown instead of `FileNotFoundException`
 
+
 ## `java.nio.file.Files`
 `java.nio.file.Files` provides basic operations on files such as create, delete etc., which are in legacy `java.io`. On the other hands, it provides more basic operations, which are not in legacy `java.io`, such as copy, move etc.
 
 ### *File Operations*
+#### Test methods
+##### `boolean isSameFile(Path path1, Path path2)` 
+* This method has dependency on the `equals` method of `Path`, meaning if the 2 given `Path` objects are *equal*, `isSameFile` will return `true` in any case
+* Otherwise, there will be `NoSuchFileException` if at least one of the given `Path` does not exist in the file system
+
 #### Copy Files
 Cases 		 		|`cp`	|`copy`
 --------------------------------|-------|----------------------------
