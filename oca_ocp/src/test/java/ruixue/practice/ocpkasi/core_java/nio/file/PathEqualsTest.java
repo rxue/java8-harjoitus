@@ -25,6 +25,9 @@ public class PathEqualsTest {
 		Path p1 = Paths.get("/x/not_exists");
 		Path p2 = Paths.get("/y/../x/not_exists");
 		assertFalse(p1.equals(p2));
+		Path current = Paths.get(".");
+		Path normalizedCurrent = Paths.get(".").normalize();
+		assertFalse(current.equals(normalizedCurrent));
 	}
 
 }
