@@ -8,6 +8,7 @@ import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
 import java.nio.file.StandardCopyOption;
+import java.util.Arrays;
 
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
@@ -17,6 +18,16 @@ public class FilesMoveTest {
 	@BeforeEach
 	public void init() {
 		sourcePath = Paths.get("original_path");
+	}
+	
+	private void destroy(Path ...paths) {
+		Arrays.stream(paths).forEach(p ->  {
+			try {
+				Files.delete(p);
+			} catch(IOException e) {
+				e.printStackTrace();
+			}
+		});
 	}
 	
 	@Test
@@ -74,29 +85,31 @@ public class FilesMoveTest {
 		}
 	}
 	
-	@Test
-	public void testMoveNonEmptyDirectoryInTheSameDrive() {
-		Path fileInSourceDirectory = sourcePath.resolve("file_in_source_dir");
-		Path targetDir = Paths.get("target_dir");
+	private void preTestMoveNonEmptyDirectoryInTheSameDrive(Path fileInSourceDirectory, Path targetDir) {
 		try {
 			Files.createDirectory(sourcePath);
 			Files.createFile(fileInSourceDirectory);
 			Files.createDirectory(targetDir);
 			assert Files.getFileStore(fileInSourceDirectory).equals(Files.getFileStore(targetDir));
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+	}
+	
+	@Test
+	public void testMoveNonEmptyDirectoryInTheSameDrive() {
+		Path fileInSourceDirectory = sourcePath.resolve("file_in_source_dir");
+		Path targetDir = Paths.get("target_dir");
+		preTestMoveNonEmptyDirectoryInTheSameDrive(fileInSourceDirectory, targetDir);
+		try {
 			assertNotNull(Files.move(sourcePath, targetDir, StandardCopyOption.REPLACE_EXISTING));
 			assertTrue(Files.walk(targetDir).count()>0);
 		} catch (IOException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
-		
-		try {
-			Files.delete(targetDir.resolve("file_in_source_dir"));
-			Files.delete(targetDir);
-		} catch (IOException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
+		destroy(targetDir.resolve("file_in_source_dir"), targetDir);
 	}
 
 }
