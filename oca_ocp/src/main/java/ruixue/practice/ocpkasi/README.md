@@ -49,11 +49,13 @@ The *factory pattern*, sometimes referred to as the *factory method pattern*, is
 #### *Blocking* methods always *declare* the checked `InterruptedException`
 
 ## IO
-### `InputStream`/`OutputStream
+### `InputStream`/`OutputStream`
 #### *Serialization*/*Deserialization* with `ObjectInputStream`/`ObjectOutputStream`
 > If you are using the default *serialized* form and you have labeled one or more fields `transient`, remember that these fields will be initialized to their *default values* when an instance is *deserialized*: `null` for object reference fields, zero for numeric *primitive* fields and `false` for `boolean` fields. <sup>Effective Java > Chapter 12 Serialization</sup> 
 
 ## NIO.2
+### `Path`
+There is only one method in `Path`, which returns `String`, i.e. `toString()`
 ### *Static factory methods* in `Files`
 #### Test methods
 There are only two methods declaring `IOException` among all the test methods within the spectrum of exam:
