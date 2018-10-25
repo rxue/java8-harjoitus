@@ -13,23 +13,18 @@ import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
 public class FilesMoveTest {
-	private Path sourceFile;
+	private Path sourcePath;
 	@BeforeEach
 	public void init() {
-		sourceFile = Paths.get("originalFile");
-		try {
-			sourceFile = Files.createFile(sourceFile);
-		} catch (IOException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
+		sourcePath = Paths.get("original_path");
 	}
 	
 	@Test
 	public void testRenameFile() {
 		Path renamedFile = Paths.get("renamedFile");
 		try {
-			assertNotNull(Files.move(sourceFile, renamedFile));
+			sourcePath = Files.createFile(sourcePath);
+			assertNotNull(Files.move(sourcePath, renamedFile));
 			Files.delete(renamedFile);
 		} catch (IOException e) {
 			// TODO Auto-generated catch block
@@ -38,57 +33,69 @@ public class FilesMoveTest {
 	}
 	
 	@Test
-	public void testOverwriteExistingFile() {
+	public void testFileAlreadyExistsException() {
 		Path target = Paths.get("target_file");
 		try {
+			sourcePath = Files.createFile(sourcePath);
 			Files.createFile(target);
 		} catch (IOException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
-		assertThrows(FileAlreadyExistsException.class, () -> Files.move(sourceFile, target));
+		assertThrows(FileAlreadyExistsException.class, () -> Files.move(sourcePath, target));
 		try {
-			Files.delete(sourceFile);
+			Files.delete(sourcePath);
 			Files.delete(target);
-		} catch (IOException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
-		
-	}
-	@Test
-	public void testMoveFileToEmptyDirectory() {
-		Path emptyDirectory = Paths.get("target_emptyDir");
-		try {
-			Files.createDirectory(emptyDirectory);
-			assert Files.isDirectory(emptyDirectory);
-			assertThrows(FileAlreadyExistsException.class, () -> Files.move(sourceFile, emptyDirectory));
-			Path targetPath = Files.move(sourceFile, emptyDirectory, StandardCopyOption.REPLACE_EXISTING);
-			assertTrue(Files.isRegularFile(targetPath));
-			Files.delete(targetPath);
 		} catch (IOException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
 	}
 	
-//	@Test
-//	public void testMoveFileToExistingNoEmptyDirectory_REPLACE_EXISTING() {
-//		Path source = Paths.get("file_to_move");
-//		Path targetDir = Paths.get("target_dir");
-//		Path fileInTargetDir = targetDir.resolve(targetDir);
-//		try {
-//			Files.createFile(source);
-//			Files.createDirectory(targetDir);
-//			Files.createFile(fileInTargetDir);
-//			assertThrows(DirectoryNotEmptyException.class, () -> Files.move(source, targetDir, StandardCopyOption.REPLACE_EXISTING));
-//			Files.delete(source);
-//			Files.delete(fileInTargetDir);
-//			Files.delete(targetDir);
-//		} catch (IOException e) {
-//			// TODO Auto-generated catch block
-//			e.printStackTrace();
-//		}
-//	}
+	@Test
+	public void testReplaceExistingDirectory() {
+		Path fileInSourceDirectory = sourcePath.resolve("file_in_source_dir");
+		Path existingTargetDirectory = Paths.get("target_dir");
+		try {
+			Files.createDirectory(sourcePath);
+			Files.createFile(fileInSourceDirectory);
+			Files.createDirectory(existingTargetDirectory);
+			assertNotNull(Files.move(sourcePath, existingTargetDirectory, StandardCopyOption.REPLACE_EXISTING));
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		try {
+			Files.delete(existingTargetDirectory.resolve("file_in_source_dir"));
+			Files.delete(existingTargetDirectory);
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+	}
+	
+	@Test
+	public void testMoveNonEmptyDirectoryInTheSameDrive() {
+		Path fileInSourceDirectory = sourcePath.resolve("file_in_source_dir");
+		Path targetDir = Paths.get("target_dir");
+		try {
+			Files.createDirectory(sourcePath);
+			Files.createFile(fileInSourceDirectory);
+			Files.move(sourcePath, targetDir);
+			assertTrue(Files.isDirectory(targetDir));
+			assertTrue(Files.walk(targetDir).count()>0);
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		
+		try {
+			Files.delete(targetDir.resolve("file_in_source_dir"));
+			Files.delete(targetDir);
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+	}
 
 }
