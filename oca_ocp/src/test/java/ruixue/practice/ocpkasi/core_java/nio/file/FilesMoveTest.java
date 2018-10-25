@@ -81,8 +81,9 @@ public class FilesMoveTest {
 		try {
 			Files.createDirectory(sourcePath);
 			Files.createFile(fileInSourceDirectory);
-			Files.move(sourcePath, targetDir);
-			assertTrue(Files.isDirectory(targetDir));
+			Files.createDirectory(targetDir);
+			assert Files.getFileStore(fileInSourceDirectory).equals(Files.getFileStore(targetDir));
+			assertNotNull(Files.move(sourcePath, targetDir, StandardCopyOption.REPLACE_EXISTING));
 			assertTrue(Files.walk(targetDir).count()>0);
 		} catch (IOException e) {
 			// TODO Auto-generated catch block
