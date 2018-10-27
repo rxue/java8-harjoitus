@@ -27,6 +27,9 @@ The action of a `Consumer` is to *accept* something and then consume it.  Theref
 The counterpart of *producer* is `Supplier`. The action of a `Supplier` is to produce/supply something to another party. Therefore, the abstract method is defined as `T get()`, where the name `get` was probably inspired by the *JavaBeans* naming convention, say the method is obviously a *getter* as it returns `T`
  
 ## `BiConsumer<T,U>` VS `BinaryOperator<T>`
+
+## When Should You Define Your Own Functional Interfaces
+> For example, if you require a predicate that takes three parameters, or one that throws a *checked exception* <sup>Effective Java > Chapter 7 Lambdas and Streams</sup>
  
 
 

@@ -37,10 +37,13 @@ The *factory pattern*, sometimes referred to as the *factory method pattern*, is
 *Anonymous inner class* and *lambda expresson* are similar in that as to the accessibility of *local variable*, both do not have access unless those variables are *final* or *effectively final*.
 
 # Exam Essentials
+## *Functional Interface*
+None of the *built-in* *functional interfaces* in *Java 8* allows for *checked exception* to be thrown
+
 ## Concurrency
 ### `Runnable` and `Callable<V>`
 * `Callable` is similar with `Runnable` in that both are *functional interface* and the method to be implemented does not contain any inputer parameter
-* `Callable` differs from `Runnable` by its `generic` return type 
+* `Callable` differs from `Runnable` by its `generic` return type `V` and the declaration of `Exception` in the `call()` method 
 
 ### *Intrinsic Lock*
 > `static synchronized` methods used the `Class` object for the lock <sup>Java Concurrency in Practice</sup>
@@ -61,3 +64,6 @@ There is only one method in `Path`, which returns `String`, i.e. `toString()`
 There are only two methods declaring `IOException` among all the test methods within the spectrum of exam:
 * `isHidden(Path path)`
 * `isSameFile(Path path1, Path path2)`
+#### Traversal of A Directory
+##### `Stream<Path> walk(Path path, int maxDeption)`
+The given `Path` argument is always included in any case in the returned `Stream<Path>`. Refer to [`FilesWalkTest.java`](https://github.com/rxue/java8-perusharjoitus/blob/master/oca_ocp/src/test/java/ruixue/practice/ocpkasi/core_java/nio/file/FilesWalkTest.java)
