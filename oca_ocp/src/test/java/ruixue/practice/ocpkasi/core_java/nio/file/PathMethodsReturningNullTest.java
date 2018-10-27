@@ -6,7 +6,7 @@ import java.nio.file.Paths;
 import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.*;
 
-public class TestPathMethodsReturnNull {
+public class PathMethodsReturningNullTest {
 	@Test
 	public void testGetRootOfRelativePath() {
 		Path p = Paths.get("../here");

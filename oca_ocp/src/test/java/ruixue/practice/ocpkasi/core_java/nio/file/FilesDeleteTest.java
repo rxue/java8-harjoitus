@@ -10,7 +10,7 @@ import java.nio.file.Paths;
 
 import org.junit.jupiter.api.Test;
 
-public class TestFilesDelete {
+public class FilesDeleteTest {
 	@Test
 	public void testDeleteNonexistentDirectory() {
 		Path p = Paths.get("to_delete");
