@@ -38,7 +38,7 @@ The *factory pattern*, sometimes referred to as the *factory method pattern*, is
 
 # Exam Essentials
 ## *Functional Interface*
-None of the *functional interfaces* provided in *Java 8* allows for *checked exception* to be thrown
+None of the *built-in* *functional interfaces* in *Java 8* allows for *checked exception* to be thrown
 
 ## Concurrency
 ### `Runnable` and `Callable<V>`
