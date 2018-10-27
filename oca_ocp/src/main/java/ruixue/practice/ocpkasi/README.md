@@ -64,3 +64,6 @@ There is only one method in `Path`, which returns `String`, i.e. `toString()`
 There are only two methods declaring `IOException` among all the test methods within the spectrum of exam:
 * `isHidden(Path path)`
 * `isSameFile(Path path1, Path path2)`
+#### Traversal of A Directory
+##### `Stream<Path> walk(Path path, int maxDeption)`
+The given `Path` argument is always included in any case in the returned `Stream<Path>`. 
