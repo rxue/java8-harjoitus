@@ -66,4 +66,4 @@ There are only two methods declaring `IOException` among all the test methods wi
 * `isSameFile(Path path1, Path path2)`
 #### Traversal of A Directory
 ##### `Stream<Path> walk(Path path, int maxDeption)`
-The given `Path` argument is always included in any case in the returned `Stream<Path>`. 
+The given `Path` argument is always included in any case in the returned `Stream<Path>`. Refer to [`FilesWalkTest.java`](https://github.com/rxue/java8-perusharjoitus/blob/master/oca_ocp/src/test/java/ruixue/practice/ocpkasi/core_java/nio/file/FilesWalkTest.java)
