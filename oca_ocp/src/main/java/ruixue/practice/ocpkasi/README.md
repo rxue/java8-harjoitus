@@ -37,10 +37,13 @@ The *factory pattern*, sometimes referred to as the *factory method pattern*, is
 *Anonymous inner class* and *lambda expresson* are similar in that as to the accessibility of *local variable*, both do not have access unless those variables are *final* or *effectively final*.
 
 # Exam Essentials
+## *Functional Interface*
+None of the *functional interfaces* provided in *Java 8* allows for *checked exception* to be thrown
+
 ## Concurrency
 ### `Runnable` and `Callable<V>`
 * `Callable` is similar with `Runnable` in that both are *functional interface* and the method to be implemented does not contain any inputer parameter
-* `Callable` differs from `Runnable` by its `generic` return type 
+* `Callable` differs from `Runnable` by its `generic` return type `V` and the declaration of `Exception` in the `call()` method 
 
 ### *Intrinsic Lock*
 > `static synchronized` methods used the `Class` object for the lock <sup>Java Concurrency in Practice</sup>
