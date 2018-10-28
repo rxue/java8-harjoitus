@@ -68,7 +68,7 @@ There are only two methods declaring `IOException` among all the test methods wi
 There are overloaded `copy` methods:
 * `long copy(Path source, Path target CopyOption... options) throws IOException`
 * `long copy(InputStream source, Path target CopyOption... options) throws IOException`
-* `long copy(Path source, OutputStream target CopyOption... options) throws IOException`
+* `long copy(Path source, OutputStream target) throws IOException`
 #### Traversal of A Directory
 ##### `Stream<Path> walk(Path path, int maxDeption)`
 The given `Path` argument is always included in any case in the returned `Stream<Path>`. Refer to [`FilesWalkTest.java`](https://github.com/rxue/java8-perusharjoitus/blob/master/oca_ocp/src/test/java/ruixue/practice/ocpkasi/core_java/nio/file/FilesWalkTest.java)
