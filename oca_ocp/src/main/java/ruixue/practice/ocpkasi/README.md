@@ -76,8 +76,11 @@ The given `Path` argument is always included in any case in the returned `Stream
 ## *JDBC*
 ### `Connection`
 #### [The JDBC `Connection` URL Format](https://docs.oracle.com/cd/B28359_01/java.111/b31224/urls.htm#BEIJFHHB)
-`jdbc:vendorName:[driverType:][user/password:][@][address/]databaseName`
+`jdbc:vendorName:[driverType:][user/password:][@][address/]serviceName`
 
 From the format above, the part in square brackets means optional => only the **`vendorName`** and the **`databaseName`** at the end are **mandatory**
 
-In Oracle database, the `driverType` might be `oci`, `thin`, `kprb` etc.
+`driverType` - In Oracle database, the `driverType` might be `oci`, `thin`, `kprb` etc.
+`serviceName` - database service name, i.e. the database name
+
+
