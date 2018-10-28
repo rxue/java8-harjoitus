@@ -72,3 +72,12 @@ There are overloaded `copy` methods:
 #### Traversal of A Directory
 ##### `Stream<Path> walk(Path path, int maxDeption)`
 The given `Path` argument is always included in any case in the returned `Stream<Path>`. Refer to [`FilesWalkTest.java`](https://github.com/rxue/java8-perusharjoitus/blob/master/oca_ocp/src/test/java/ruixue/practice/ocpkasi/core_java/nio/file/FilesWalkTest.java)
+
+## *JDBC*
+### `Connection`
+#### [The JDBC `Connection` URL Format](https://docs.oracle.com/cd/B28359_01/java.111/b31224/urls.htm#BEIJFHHB)
+`jdbc:vendorName:[driverType:][user/password:][@][address/]databaseName`
+
+From the format above, the part in square brackets means optional => only the **`vendorName`** and the **`databaseName`** at the end are **mandatory**
+
+In Oracle database, the `driverType` might be `oci`, `thin`, `kprb` etc.
