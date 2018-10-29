@@ -90,4 +90,8 @@ The value of `resultSetType` can be:
 * `ResultSet.TYPE_SCROLL_INSENSITIVE`
 * `ResultSet.TYPE_SCROLL_SENSITIVE`
 
+The value of `resultSetConcurrency` can be:
+* `ResultSet.CONCUR_READ_ONLY`
+* `ResultSet.CONCUR_UPDATABLE`
+
 
