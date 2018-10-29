@@ -82,5 +82,12 @@ From the format above, the part in square brackets means optional => only the **
 
 `driverType` - In Oracle database, the `driverType` might be `oci`, `thin`, `kprb` etc.
 `serviceName` - database service name, i.e. the database name
+### `Statement` 
+`Statement` can be initialized through `Connection`: `Statement createStatement(int resultSetType, int resultSetConcurrency) throws IOException`
+
+The value of `resultSetType` can be:
+* `ResultSet.TYPE_FORWARD_ONLY`
+* `ResultSet.TYPE_SCROLL_INSENSITIVE`
+* `ResultSet.TYPE_SCROLL_SENSITIVE`
 
 
