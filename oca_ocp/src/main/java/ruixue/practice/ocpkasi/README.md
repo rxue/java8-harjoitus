@@ -97,7 +97,20 @@ The value of `resultSetConcurrency` can be:
 
 > [By default, only one `ResultSet` object per `Statement` object can be open at the same time](https://docs.oracle.com/javase/8/docs/api/java/sql/Statement.html)
 
-### `ResultSet`
+> [All execution methods in the `statement` interface implicitly `close` a current `ResultSet` object of the statement if an open one exists](https://docs.oracle.com/javase/8/docs/api/java/sql/Statement.html)
 
+### `ResultSet`
 > [A ResultSet object is automatically closed when the Statement object that generated it is closed, re-executed, or used to retrieve the next result from a sequence of multiple results.](https://docs.oracle.com/javase/8/docs/api/java/sql/ResultSet.html)
 
+#### Operations Working merely on *Scrollable* `ResultSet`
+Method Name         | return type 
+--------------------|------------
+`absolute(int row)` |`boolean`
+`first()`           |`boolean`
+`last()`            |`boolean`
+`previous()`        |`boolean`
+`relative(int row)` |`boolean`
+`beforeFirst()`     |`void`
+`afterLast()`       |`void`
+
+All these methods would *throw* `SQLFeatureNotSupportedException` if the type of the `ResultSet` is `TYPE_FORWARD_ONLY` 
