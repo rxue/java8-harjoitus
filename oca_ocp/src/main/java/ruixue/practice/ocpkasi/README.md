@@ -82,16 +82,22 @@ From the format above, the part in square brackets means optional => only the **
 
 `driverType` - In Oracle database, the `driverType` might be `oci`, `thin`, `kprb` etc.
 `serviceName` - database service name, i.e. the database name
+
 ### `Statement` 
 `Statement` can be initialized through `Connection`: `Statement createStatement(int resultSetType, int resultSetConcurrency) throws IOException`
 
 The value of `resultSetType` can be:
-* `ResultSet.TYPE_FORWARD_ONLY`
+* `ResultSet.TYPE_FORWARD_ONLY` (default)
 * `ResultSet.TYPE_SCROLL_INSENSITIVE`
 * `ResultSet.TYPE_SCROLL_SENSITIVE`
 
 The value of `resultSetConcurrency` can be:
-* `ResultSet.CONCUR_READ_ONLY`
+* `ResultSet.CONCUR_READ_ONLY` (default)
 * `ResultSet.CONCUR_UPDATABLE`
 
+> [By default, only one `ResultSet` object per `Statement` object can be open at the same time](https://docs.oracle.com/javase/8/docs/api/java/sql/Statement.html)
+
+### `ResultSet`
+
+> [A ResultSet object is automatically closed when the Statement object that generated it is closed, re-executed, or used to retrieve the next result from a sequence of multiple results.](https://docs.oracle.com/javase/8/docs/api/java/sql/ResultSet.html)
 
