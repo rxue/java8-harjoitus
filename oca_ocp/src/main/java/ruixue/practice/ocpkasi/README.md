@@ -103,7 +103,8 @@ The value of `resultSetConcurrency` can be:
 > [A ResultSet object is automatically closed when the Statement object that generated it is closed, re-executed, or used to retrieve the next result from a sequence of multiple results.](https://docs.oracle.com/javase/8/docs/api/java/sql/ResultSet.html)
 
 #### Methods for Moving the Cursor of `ResultSet`
-`boolean next()` is working in any case as a part of *iterator* pattern implementation. 
+##### `boolean next()` Works in Any Event 
+`boolean next()`is always working as a part of *iterator* pattern implementation. 
 
 Whereas the other methods for moving cursor works merely in *Scrollable* `ResultSet` with type `ResultSet.TYPE_SCROLL_INSENSITIVE` or `ResultSet.TYPE_SCROLL_SENSITIVE`:
 
