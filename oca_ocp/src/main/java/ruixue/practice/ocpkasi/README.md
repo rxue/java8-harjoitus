@@ -102,14 +102,14 @@ The value of `resultSetConcurrency` can be:
 ### `ResultSet`
 > [A ResultSet object is automatically closed when the Statement object that generated it is closed, re-executed, or used to retrieve the next result from a sequence of multiple results.](https://docs.oracle.com/javase/8/docs/api/java/sql/ResultSet.html)
 
-#### Operations Working merely on *Scrollable* `ResultSet`
+#### Operations Working merely on *Scrollable* `ResultSet` with type `ResultSet.TYPE_SCROLL_INSENSITIVE` or `ResultSet.TYPE_SCROLL_SENSITIVE`
 Method Name         | return type 
 --------------------|------------
 `absolute(int row)` |`boolean`
+`relative(int row)` |`boolean`
+`previous()`        |`boolean`
 `first()`           |`boolean`
 `last()`            |`boolean`
-`previous()`        |`boolean`
-`relative(int row)` |`boolean`
 `beforeFirst()`     |`void`
 `afterLast()`       |`void`
 
