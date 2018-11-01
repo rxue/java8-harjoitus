@@ -106,16 +106,40 @@ The value of `resultSetConcurrency` can be:
 ##### `boolean next()` Works in Any Event 
 `boolean next()`is always working as a part of *iterator* pattern implementation. 
 
-Whereas the other methods for moving cursor works merely in *Scrollable* `ResultSet` with type `ResultSet.TYPE_SCROLL_INSENSITIVE` or `ResultSet.TYPE_SCROLL_SENSITIVE`:
+##### Methods for Moving the Cursor of *Scrollable* `ResultSet` 
 
 Method Name         | return type 
 --------------------|------------
 `absolute(int row)` |`boolean`
-`relative(int row)` |`boolean`
 `previous()`        |`boolean`
+`relative(int row)` |`boolean`
 `first()`           |`boolean`
 `last()`            |`boolean`
-`beforeFirst()`     |`void`
 `afterLast()`       |`void`
+`beforeFirst()`     |`void`
 
-All these methods would *throw* `SQLFeatureNotSupportedException` if the type of the `ResultSet` is `TYPE_FORWARD_ONLY` 
+*Scrollable* means the `ResultSet` type is `ResultSet.TYPE_SCROLL_INSENSITIVE` or `ResultSet.TYPE_SCROLL_SENSITIVE`, meaning the `Statement` returning the `ResultSet` is initialized with `ResultSet.TYPE_SCROLL_INSENSITIVE` or `ResultSet.TYPE_SCROLL_SENSITIVE`. So if the `ResultSet` is of type `ResultSet.TYPE_FORWARD_ONLY`, for instance the `Statement` returning it is initialized with method `createStatement()`, calling *scrollable* methods would throw `SQLException`.
+
+###### Methods for Moving the Cursor of *Scrollable* `ResultSet` Returning `boolean`
+
+* `boolean absolute(int row)`
+* `boolean previous(int row)`
+* `boolean relative(int row)`
+
+As to these three methods, returning `false` means the *cursor* is positioned before the first row or after the last row.
+
+* `boolean first()`
+* `boolean last()`
+
+As to these five methods above, returning `false` means there is no rows in the `ResultSet`
+
+###### `void` Methods for Moving the Cursor Out of Bound
+
+* `void afterLast()`
+* `void beforeFirst()`
+
+Proof by contradiction for these two methods being `void`:
+
+Assuming these two methods returns `boolean`, then `true` for `beforeFirst()` should mean the cursor is moved before the first row, whereas "before the first row" is already a `false` condition in the aforementioned `absolute`, `relative`, `previous` methods. Therefore, in order to make the logic of the `ResultSet` API as simple as possible, it would be better to make the definition consistently => these two methods are `void` 
+
+
