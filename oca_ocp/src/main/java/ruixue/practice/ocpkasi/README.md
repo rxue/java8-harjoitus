@@ -148,4 +148,5 @@ Assuming these two methods returns `boolean`, then `true` for `beforeFirst()` sh
 
 ##### *Getters* of `ResultSet`
 ###### `String getString(String columnLabel)`
+##### There Is No *Getter* but `update...` Methods in `ResultSet`
 
