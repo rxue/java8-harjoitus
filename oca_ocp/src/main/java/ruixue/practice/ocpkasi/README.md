@@ -102,6 +102,9 @@ The value of `resultSetConcurrency` can be:
 ### `ResultSet`
 > [A ResultSet object is automatically closed when the Statement object that generated it is closed, re-executed, or used to retrieve the next result from a sequence of multiple results.](https://docs.oracle.com/javase/8/docs/api/java/sql/ResultSet.html)
 
+#### `ResultSet` Types
+> If the `Driver` does not support the type supplied to the methods `createStatement`, `prepareStatement` or `prepareCall`, it generates an `SQLWarning` on the `Connection` object that is creating the statement. When the statement is executed, the driver returns a `ResultSet` object of a type that most closely matches the requested type <sup>JDBC 4.2 Specification > 15.1.1 ResultSet Types</sup>
+
 #### Methods for Moving the Cursor of `ResultSet`
 ##### `boolean next()` Works in Any Event 
 `boolean next()`is always working as a part of *iterator* pattern implementation. 
