@@ -86,12 +86,12 @@ From the format above, the part in square brackets means optional => only the **
 ### `Statement` 
 `Statement` can be initialized through `Connection`: `Statement createStatement(int resultSetType, int resultSetConcurrency) throws IOException`
 
-The value of `resultSetType` can be:
+`resultSetType` defines the way the cursor can be manipulated and, the value can be:
 * `ResultSet.TYPE_FORWARD_ONLY` (default)
 * `ResultSet.TYPE_SCROLL_INSENSITIVE`
 * `ResultSet.TYPE_SCROLL_SENSITIVE`
 
-The value of `resultSetConcurrency` can be:
+`resultSetConcurrency` defines how concurrent changes made to the data source are reflected and, the value can be:
 * `ResultSet.CONCUR_READ_ONLY` (default)
 * `ResultSet.CONCUR_UPDATABLE`
 
