@@ -105,11 +105,12 @@ The value of `resultSetConcurrency` can be:
 #### `ResultSet` Types
 > If the `Driver` does not support the type supplied to the methods `createStatement`, `prepareStatement` or `prepareCall`, it generates an `SQLWarning` on the `Connection` object that is creating the statement. When the statement is executed, the driver returns a `ResultSet` object of a type that most closely matches the requested type <sup>JDBC 4.2 Specification > 15.1.1 ResultSet Types</sup>
 
-#### Methods for Moving the Cursor of `ResultSet`
-##### `boolean next()` Works in Any Event 
+#### Methods on `ResultSet`
+##### Methods for Moving the Cursor of `ResultSet`
+###### `boolean next()` Works in Any Event 
 `boolean next()`is always working as a part of *iterator* pattern implementation. 
 
-##### Methods for Moving the Cursor of *Scrollable* `ResultSet` 
+###### Methods for Moving the Cursor of *Scrollable* `ResultSet` 
 
 Method Name         | return type 
 --------------------|------------
@@ -123,7 +124,7 @@ Method Name         | return type
 
 *Scrollable* means the `ResultSet` type is `ResultSet.TYPE_SCROLL_INSENSITIVE` or `ResultSet.TYPE_SCROLL_SENSITIVE`, meaning the `Statement` returning the `ResultSet` is initialized with `ResultSet.TYPE_SCROLL_INSENSITIVE` or `ResultSet.TYPE_SCROLL_SENSITIVE`. So if the `ResultSet` is of type `ResultSet.TYPE_FORWARD_ONLY`, for instance the `Statement` returning it is initialized with method `createStatement()`, calling *scrollable* methods would throw `SQLException`.
 
-###### Methods for Moving the Cursor of *Scrollable* `ResultSet` Returning `boolean`
+Methods for Moving the Cursor of *Scrollable* `ResultSet` Returning `boolean`
 
 * `boolean absolute(int row)`
 * `boolean previous(int row)`
@@ -136,7 +137,7 @@ As to these three methods, returning `false` means the *cursor* is positioned be
 
 As to these five methods above, returning `false` means there is no rows in the `ResultSet`
 
-###### `void` Methods for Moving the Cursor Out of Bound
+`void` Methods for Moving the Cursor Out of Bound
 
 * `void afterLast()`
 * `void beforeFirst()`
@@ -145,4 +146,6 @@ Proof by contradiction for these two methods being `void`:
 
 Assuming these two methods returns `boolean`, then `true` for `beforeFirst()` should mean the cursor is moved before the first row, whereas "before the first row" is already a `false` condition in the aforementioned `absolute`, `relative`, `previous` methods. Therefore, in order to make the logic of the `ResultSet` API as simple as possible, it would be better to make the definition consistently => these two methods are `void` 
 
+##### *Getters* of `ResultSet`
+###### `String getString(String columnLabel)`
 
