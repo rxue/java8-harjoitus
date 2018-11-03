@@ -105,6 +105,8 @@ From the format above, the part in square brackets means optional => only the **
 #### `ResultSet` Types
 > If the `Driver` does not support the type supplied to the methods `createStatement`, `prepareStatement` or `prepareCall`, it generates an `SQLWarning` on the `Connection` object that is creating the statement. When the statement is executed, the driver returns a `ResultSet` object of a type that most closely matches the requested type <sup>JDBC 4.2 Specification > 15.1.1 ResultSet Types</sup>
 
+Note that once the `ResultSet` type is defined during the initialization of `ResultSet`, there is no way to change the `ResultSet` type as there is no corresponding setter in the `ResultSet`.
+
 #### Methods on `ResultSet`
 ##### Methods for Moving the Cursor of `ResultSet`
 ###### `boolean next()` Works in Any Event 
