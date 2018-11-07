@@ -50,7 +50,10 @@ The enforcement of *Mutual exclusion* creates two additional control problems:
 * *dead lock*
 * [*Resource Starvation*](https://www.youtube.com/watch?v=2klwq4GeVtw&t=460s)
   * [*Livelock*](https://www.youtube.com/watch?v=v4Tp8dxGA2U&t=155s) is a situation in which **two or more processes continuously** change their states in response to changes in other processes without doing any useful work. **Livelock is a special case of resource starvation** in that the set of processes or threads are *starved* due to the *livelock*, and thus never get the *resources* they intend to get
+
 <sup>Operating Systems: Internal and Design Principles > Chapter 5 Concurrency > 5.1 Principle of Concurrency > Competition among processors for Resources</sup>
+
+As the aforementioned *resource starvation* could happen only when *mutual exclusion* holds, which avoids *race condition*. Therefore, **it makes no sense to relate resource starvation to race condition. For instance, the OCP exam question might trap you by asking whether "Resource starvation is a special case of race condition". The answer is obviously NOT!** 
 
 ### `Runnable` and `Callable<V>`
 * `Callable` is similar with `Runnable` in that both are *functional interface* and the method to be implemented does not contain any inputer parameter
