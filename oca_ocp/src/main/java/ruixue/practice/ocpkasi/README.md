@@ -41,6 +41,17 @@ The *factory pattern*, sometimes referred to as the *factory method pattern*, is
 None of the *built-in* *functional interfaces* in *Java 8* allows for *checked exception* to be thrown
 
 ## Concurrency
+### Terminologies 
+#### *Scaling*
+*Scaling* is a property when we add more resources such as CPUs, the performance results gradually improve
+
+#### [*Mutual Exclusion*](https://www.youtube.com/watch?v=n0Zbtt4C1XU&t=84s) - Solution of *Race Condition*
+The enforcement of *Mutual exclusion* creates two additional control problems:
+* *dead lock*
+* [*Resource Starvation*](https://www.youtube.com/watch?v=2klwq4GeVtw&t=460s)
+  * [*Livelock*](https://www.youtube.com/watch?v=v4Tp8dxGA2U&t=155s) is a situation in which **two or more processes continuously** change their states in response to changes in other processes without doing any useful work. **Livelock is a special case of resource starvation** in that the set of processes or threads are *starved* due to the *livelock*, and thus never get the *resources* they intend to get
+<sup>Operating Systems: Internal and Design Principles > Chapter 5 Concurrency > 5.1 Principle of Concurrency > Competition among processors for Resources</sup>
+
 ### `Runnable` and `Callable<V>`
 * `Callable` is similar with `Runnable` in that both are *functional interface* and the method to be implemented does not contain any inputer parameter
 * `Callable` differs from `Runnable` by its `generic` return type `V` and the declaration of `Exception` in the `call()` method 
