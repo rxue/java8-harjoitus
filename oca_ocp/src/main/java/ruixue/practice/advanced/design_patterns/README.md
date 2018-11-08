@@ -1,4 +1,21 @@
 ## *Design Patterns*
+### *Object Creational* Patterns > *Builder Pattern*
+#### *Builder Pattern* Features
+* *tightly coupled*
+#### *Builder Pattern* Application in Java Core
+* [`java.lang.StringBuilder`](http://grepcode.com/file/repository.grepcode.com/java/root/jdk/openjdk/8-b132/java/lang/StringBuilder.java)
+* [`java.util.stream.Stream`](http://grepcode.com/file/repository.grepcode.com/java/root/jdk/openjdk/8-b132/java/util/stream/Stream.java)
+* [`java.util.Locale`](http://grepcode.com/file/repository.grepcode.com/java/root/jdk/openjdk/8-b132/java/util/Locale.java)
+
+### *Object Creational* Patterns > *Factory Pattern*
+The *factory pattern*, sometimes referred to as the *factory method pattern*, is a *creational pattern* based on the idea of using a factory class to produce instances of objects based on a set of input parameters. 
+* It is similar to the *builder pattern*, although it is focused on supporting class polymorphism => creates objects in which the precise type of the object may not be known until runtime
+* *Factory patterns* are often, although not always, implemented using **`static`** methods that return objects and do not require a pointer to an instance of the factory class
+* *loosely coupled*
+#### *Factory Pattern* Application in Java Core
+* ~~[`java.time.ZonedDateTime`](http://grepcode.com/file/repository.grepcode.com/java/root/jdk/openjdk/8-b132/java/time/ZonedDateTime.java)~~
+  * ~~refer to the *overloading* of `static` method [`ZonedDateTime.of`](https://docs.oracle.com/javase/8/docs/api/java/time/ZonedDateTime.html#of-int-int-int-int-int-int-int-java.time.ZoneId-)~~
+
 ### *Structural* Patterns > *Adapter*
 #### *Object Adapter* in `java.io`
 `InputStreamReader` is the *adapter* of *adaptee* - `InputStream` - in relation to `Reader` as the *target*. In other words, `InputStreamReader` is the only `Reader` with a *constructor* accepting `InputStream` as a *parameter*. 
@@ -36,4 +53,5 @@ This *strategy* resembles the *strategy* enum pattern<sup>[Effective Java](https
 
 * `public String format(DateTimeFormatter formatter)` in `LocalDate`,`LocalTime`,`LocalDateTime`,`ZonedDateTime`
 * `public static LocalDate parse(CharSequence text, DateTimeFormatter formatter)` in `LocalDate`,`LocalTime`,`LocalDateTime`,`ZonedDateTime` 
+
 
