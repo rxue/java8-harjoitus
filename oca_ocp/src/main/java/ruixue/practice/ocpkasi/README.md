@@ -29,8 +29,12 @@ As the aforementioned *resource starvation* could happen only when *mutual exclu
 ### *Intrinsic Lock*
 > `static synchronized` methods used the `Class` object for the lock <sup>Java Concurrency in Practice</sup>
 
-### `ExecutorService`
+### `ExecutorService` Framework
 #### `ExecutorService` has to call `shutdown()` to be shut down explicitly
+
+#### [`Future<V>`](https://www.youtube.com/watch?v=2NAlvSkK9-k&t=760s)
+##### `Future<?>` as the Return Type Will Return `null`
+> [If you would like to use a `Future` for the sake of cancellability but not provide a usable result, you can declare types of the form `Future<?>` and return `null` as the result of the underlying tasks.](https://docs.oracle.com/javase/8/docs/api/java/util/concurrent/Future.html)
 
 ### *Blocking* methods always *declare* the checked `InterruptedException`
 
