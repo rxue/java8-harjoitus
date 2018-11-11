@@ -28,9 +28,22 @@ As the aforementioned *resource starvation* could happen only when *mutual exclu
 
 ### *Intrinsic Lock*
 > `static synchronized` methods used the `Class` object for the lock <sup>Java Concurrency in Practice</sup>
-### `ExecutorService` has to call `shutdown()` to be shut down explicitly
 
-#### *Blocking* methods always *declare* the checked `InterruptedException`
+### `ExecutorService`
+#### `ExecutorService` has to call `shutdown()` to be shut down explicitly
+
+### *Blocking* methods always *declare* the checked `InterruptedException`
+
+### Parallel Stream
+#### Reduction Operations
+##### *Reduce* Methods
+###### `reduce` - *Reduce* with *Immutable Identity*
+There are three overloaded `reduce methods`:
+* `U reduce(U identity, BinaryFunction<U, ? super T, U> accumulator BinaryOperator<U> combiner)`
+* `T reduce(T identity, BinaryOperator<T> accumulator)`
+* `Optional<T> reduce(BinaryOperator<T> accumulator)`
+
+###### *Reduce* with *Mutable Identity* - `collect`
 
 ## IO
 ### `InputStream`/`OutputStream`
