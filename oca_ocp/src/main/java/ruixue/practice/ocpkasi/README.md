@@ -1,11 +1,15 @@
-# Summary
-## Synthetic Comparisons
-### *Anonymous Inner Class* VS *Lambda Expresson*
+# Exam Essentials
+## *Inner Class*
+### Synthetic Comparison on *Anonymous Inner Class* and *Lambda Expression*
 *Anonymous inner class* and *lambda expresson* are similar in that as to the accessibility of *local variable*, both do not have access unless those variables are *final* or *effectively final*.
 
-# Exam Essentials
 ## *Functional Interface*
 None of the *built-in* *functional interfaces* in *Java 8* allows for *checked exception* to be thrown
+
+## *IO*
+### *NIO.2* 
+#### *Path*
+There is only one method, which `return` a `String`, on *Path*, i.e. the `toString()`
 
 ## Concurrency
 ### Terminologies 
