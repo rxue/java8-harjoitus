@@ -12,7 +12,7 @@ import org.junit.jupiter.api.Test;
 
 public class FilesDeleteTest {
 	@Test
-	public void testDeleteNonexistentDirectory() {
+	public void testDeleteNonEmptyDirectory() {
 		Path p = Paths.get("to_delete");
 		Path childFile = p.resolve("file");
 		try {
@@ -33,5 +33,4 @@ public class FilesDeleteTest {
 			e.printStackTrace();
 		}
 	}
-
 }
