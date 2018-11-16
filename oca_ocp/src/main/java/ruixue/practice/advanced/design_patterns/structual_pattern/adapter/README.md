@@ -6,8 +6,8 @@
 ![object_adapter_inputstreamreader](https://user-images.githubusercontent.com/3033388/48624281-ae275b00-e9b4-11e8-9ebe-cdf6db54e844.jpg)
 
 * *Target*: `Reader`
-*`*Adapter*: `InputStreamReader`
-*`*Adaptee*: `InputStream`
+* *Adapter*: `InputStreamReader`
+* *Adaptee*: `InputStream`
 
 Based on gof23, the relationship between *adaptee* and *adapter* should be *composition*. But in this practice, there is no direct composition relationship between the `InputStreamReader` and the `InputStream`, say ...
 
