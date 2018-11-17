@@ -7,6 +7,9 @@
 None of the *built-in* *functional interfaces* in *Java 8* allows for *checked exception* to be thrown
 
 ## *IO*
+### Legacy *IO*
+#### Naming Conventions in Legacy *IO*
+Among the methods in `java.io.File`, most methods returning `File` or array of `File` objects are suffixed with `File` or `Files`. 
 
 ### Legacy *IO* VS *NIO.2*
 #### Many Methods Return `boolean` to Indicate Success/Failure in Legacy *IO*
