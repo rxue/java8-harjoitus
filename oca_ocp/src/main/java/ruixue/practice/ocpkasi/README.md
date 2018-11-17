@@ -11,6 +11,11 @@ None of the *built-in* *functional interfaces* in *Java 8* allows for *checked e
 #### *Path*
 There is only one method, which `return` a `String`, on *Path*, i.e. the `toString()`
 
+### *IO* VS *NIO.2*
+#### Delete Operation
+In **legacy *IO* **, the **`delete`** method in `File` returns boolean, whose **`false`** value indicates the **failure of deletion without any information about what went wrong**. Wheresas in *NIO.2*, the `delete` method in `Files` would throw more specific exception such as `NoSuchFileException` in case of deleting nonexistent file.
+
+
 ## Concurrency
 ### Terminologies 
 #### *Scaling*
