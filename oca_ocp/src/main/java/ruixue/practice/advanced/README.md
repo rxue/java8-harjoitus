@@ -1,4 +1,10 @@
-## Java Language
+# Java Language
+## Buzzwords
+### *Hook Operation* aka *Hook Method*
+*Hook operations* provide default behavior that subclasses can extend if necessary. A *hook operation* often does nothing by default.<sup>gof23</sup>
+### *Legacy Code*
+### *Marker Interface*
+`Serializable` is a *marker interface* without any methods to be implemented  
 
 ### Java's [*Ordinal* starts from 0](http://www.cs.utexas.edu/users/EWD/transcriptions/EWD08xx/EWD831.html)
 
