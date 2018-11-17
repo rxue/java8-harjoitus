@@ -7,13 +7,17 @@
 None of the *built-in* *functional interfaces* in *Java 8* allows for *checked exception* to be thrown
 
 ## *IO*
+
+### Legacy *IO* VS *NIO.2*
+#### Many Methods Return `boolean` to Indicate Success/Failure in Legacy *IO*
+The **`delete`** method in `java.io.File` returns **`false`** to indicate the **failure of deletion without any information about what went wrong**. Wheresas in *NIO.2*, the `delete` method in `Files` would throw more specific exception such as `NoSuchFileException` in case of deleting nonexistent file.
+
+The **`mkdir` and `mkdirs`** methods in `java.io.File` returns **`false`** to indicate the **failure of directory creation without any information about what went wrong**. Whereas in *NIO.2*, the `createDirectory` and `createdDirectories` methods in `java.nio.file.Files` would throw more specification exception such as `FileAlreadyExistsException` in case of creating a directory whose name already exists in the file system. 
+
 ### *NIO.2* 
 #### *Path*
 There is only one method, which `return` a `String`, on *Path*, i.e. the `toString()`
 
-### *IO* VS *NIO.2*
-#### Delete Operation
-In **legacy *IO* **, the **`delete`** method in `File` returns boolean, whose **`false`** value indicates the **failure of deletion without any information about what went wrong**. Wheresas in *NIO.2*, the `delete` method in `Files` would throw more specific exception such as `NoSuchFileException` in case of deleting nonexistent file.
 
 
 ## Concurrency
