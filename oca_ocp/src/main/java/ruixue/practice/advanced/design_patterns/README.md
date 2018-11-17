@@ -19,14 +19,8 @@ The *factory pattern*, sometimes referred to as the *factory method pattern*, is
 * ~~[`java.time.ZonedDateTime`](http://grepcode.com/file/repository.grepcode.com/java/root/jdk/openjdk/8-b132/java/time/ZonedDateTime.java)~~
   * ~~refer to the *overloading* of `static` method [`ZonedDateTime.of`](https://docs.oracle.com/javase/8/docs/api/java/time/ZonedDateTime.html#of-int-int-int-int-int-int-int-java.time.ZoneId-)~~
 
-## *Structural* Patterns > *Adapter*
-### *Object Adapter* in `java.io`
-`InputStreamReader` is the *adapter* of *adaptee* - `InputStream` - in relation to `Reader` as the *target*. In other words, `InputStreamReader` is the only `Reader` with a *constructor* accepting `InputStream` as a *parameter*. 
-![object_adapter_java io inputstreamreader](https://user-images.githubusercontent.com/3033388/42907376-3fc5e60e-8ae6-11e8-84b1-91f8c15f7fc1.jpg)
-Similarly, in the aspect of `Writer`, `OutputStreamWriter` is the only `Writer` with a *Constructor* accepting `OutputStream` as a *parameter*.
-## *Behavioral* Patterns > *Iterator*
-> The *iterator pattern* provides a way to access the elements of an aggregate object sequentially without exposing its underlying representation.
 
+> The *iterator pattern* provides a way to access the elements of an aggregate object sequentially without exposing its underlying representation.
 ## *Behavioral* Patterns > *Class Behavioral* > *Template method*
 
 ### Application of *Template Method*
@@ -56,3 +50,5 @@ This *strategy* resembles the *strategy* enum pattern<sup>[Effective Java](https
 
 * `public String format(DateTimeFormatter formatter)` in `LocalDate`,`LocalTime`,`LocalDateTime`,`ZonedDateTime`
 * `public static LocalDate parse(CharSequence text, DateTimeFormatter formatter)` in `LocalDate`,`LocalTime`,`LocalDateTime`,`ZonedDateTime` 
+## Application of Design Patterns in Practice
+The design patterns introduced in accademic books, such as gof23, have sort of formal patterns described in UML, on base of which patterns can be used. However, the conditions in practice might not be that perfect, so it is not compulsory to be rigidly constrained by the pattern descriptions from those books. The design patterns should be used judiciously with flexibility. 
