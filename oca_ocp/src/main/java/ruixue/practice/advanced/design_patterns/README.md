@@ -51,4 +51,4 @@ This *strategy* resembles the *strategy* enum pattern<sup>[Effective Java](https
 * `public String format(DateTimeFormatter formatter)` in `LocalDate`,`LocalTime`,`LocalDateTime`,`ZonedDateTime`
 * `public static LocalDate parse(CharSequence text, DateTimeFormatter formatter)` in `LocalDate`,`LocalTime`,`LocalDateTime`,`ZonedDateTime` 
 ## Application of Design Patterns in Practice
-The design patterns introduced in accademic books, such as gof23, have sort of formal patterns described in UML, on base of which patterns can be used. However, the conditions in practice might not be that perfect, so it is not compulsory to be rigidly constrained by the pattern descriptions from those books. The design patterns should be used judiciously with flexibility. 
+The design patterns introduced in books, such as gof23, have sort of formal patterns described in UML or its predecessor, OMT (Object Modelling Technique). However, the real world is usually not perfect, so the design patterns should be used judiciously with flexibility rather than dogmatically applying the formulated UML. 
