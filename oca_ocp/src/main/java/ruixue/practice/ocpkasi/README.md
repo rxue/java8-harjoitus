@@ -6,7 +6,10 @@
 ## *Functional Interface*
 None of the *built-in* *functional interfaces* in *Java 8* allows for *checked exception* to be thrown
 
-## *Exceptions* and *Assertions* 
+## *Exceptions* and *Assertions*
+### *Checked Exception*
+#### The Rationale of How A Method Should *Declare* or *Handle Exceptions*
+The compiler can determine if the method should *declare* or *handle exceptions* on the base of the *signatures* of those invoked methods inside other than the method bodies of those invoked methods.
 ## *IO*
 ### Legacy *IO*
 #### Naming Conventions in Legacy *IO*
@@ -165,7 +168,11 @@ Assuming these two methods returns `boolean`, then `true` for `beforeFirst()` sh
 ###### `String getString(String columnLabel)`
 ##### There Is No *Getter* but `update...` Methods in `ResultSet`
 
-## Synthtic Mnemonic
-### `java.io.Closeable` VS `java.lang.AutoCloseable`
+## Summary
+### Synthtic Mnemonic
+#### `java.io.Closeable` VS `java.lang.AutoCloseable`
 First off, resources `Closeable` are also allowed to be initialized, or say opened, in the *try-with-resource* clause because, `Closeable` is changed to [`extends AutoCloseable`](https://docs.oracle.com/javase/8/docs/api/java/io/Closeable.html) since *Java 7* for the sake of *backward compatibility*. Secondly, as to exception declaration, the legacy `Closeable.close()` declares `IOException`, whereas the exception of `close()` method of `AutoCloseable` is widened to be `Exception` to be more versatile in use. The source code of `Closeable` since *Java 7* is a showcase of *subclass* being able to declare narrower exception.
+### Compiler Behavior
+#### The Rationale of How A Method Should Declare or Handle *Checked Exceptions*
+There are usually other method calls inside a method. It is common that some invoked methods declared *checked exceptions*. The compiler determines if the method should declare or handle exceptions on the base of the signatures of those invoked methods inside other than the method bodies of those invoked methods.
 
