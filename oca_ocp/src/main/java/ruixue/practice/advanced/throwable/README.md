@@ -10,5 +10,5 @@ The Java Language Specification, short for [*JLS*](https://docs.oracle.com/javas
 
 The second quote mentioned that *checked exceptions* are `Throwable` and its direct subclasses other than `RuntimeException` and `Error`. In another word, among the subclasses of `Throwable`, the complement of *unchecked euxceptions* is the set of *checked exceptions*. To better understand the *checked exceptions*, the demo class, [SubclassOfTHrowable](https://github.com/rxue/java8-perusharjoitus/blob/master/error_code/src/main/java/ruixue/advanced/throwable/SubclassOfThrowable.java), is a special case of *checked exception*. Note that this demo is located in the [error_code](https://github.com/rxue/java8-perusharjoitus/tree/master/error_code) because, the book, *Effective Java*, explained in **Item 70** that such **malform** of *checked exception* is not addressed in the JLS, neither does it offer any benifit but just confuse the API user. So never do this in practice!
 
-To sum up, the key point of *checked exceptions* and *unchecked exceptions* is the word *checked*. which happens at *compile-time*.
+To sum up, the key point of *checked exceptions* and *unchecked exceptions* is the word *checked*. which happens at *compile-time*. That is, **whether the exception is enforced to be checked at compile time or not**.
 
