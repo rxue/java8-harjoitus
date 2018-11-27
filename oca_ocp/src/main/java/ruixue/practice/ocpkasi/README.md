@@ -6,6 +6,13 @@
 ## *Functional Interface*
 None of the *built-in* *functional interfaces* in *Java 8* allows for *checked exception* to be thrown
 
+## *Stream*
+### *Stream* Operations
+#### *Intermediate* Operations
+#### *Terminal* Operations
+##### Finding
+##### Matching Operations Return `boolean` with `Predicate` as Parameter
+
 ## Date/Time API since *Java 7*
 
 ### `Temporal`
