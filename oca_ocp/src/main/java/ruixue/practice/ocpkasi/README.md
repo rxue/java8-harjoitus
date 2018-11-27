@@ -6,6 +6,28 @@
 ## *Functional Interface*
 None of the *built-in* *functional interfaces* in *Java 8* allows for *checked exception* to be thrown
 
+## Date/Time API since *Java 7*
+
+### `Temporal`
+The `Temporal` implementations within the domain of OCP can be grouped into 2 categories:
+* with reference frame - UTC
+  * `Instant` - an instantaneous point on the time-line
+  * `ZonedDateTime`, where there is a `toInstant()` method to convert this `ZonedDateTime` to `Instant`
+* without reference frame - date and time are considered as local and have nothing to do with UTC
+  * `LocalDate`
+  * `LocaleTime`
+  * `LocaleDateTime`
+#### `ZonedDateTime`
+##### About Daylight Savings Time in relation to `ZonedDateTime`
+
+### [Format of Date/Time](https://www.w3.org/TR/NOTE-datetime)
+In relation to the normal date/time format, i.e., the format containing only year, month, day, hour, minute, second, the case of the letter representing the these time units decreases from upper to lower case along with the decrement of the magnitude of the time unit 
+
+
+In time zone **US/Eastern**
+
+* on March 13th, there is no **[2:00,3:00)**
+* on November 6th, there are twice **[1:00, 2:00)**
 ## *Exceptions* and *Assertions*
 ### *Checked Exception*
 #### The Rationale of How A Method Should *Declare* or *Handle Exceptions*
