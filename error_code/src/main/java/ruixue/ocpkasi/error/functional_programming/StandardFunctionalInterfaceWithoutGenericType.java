@@ -4,4 +4,5 @@ import java.util.function.Predicate;
 public class StandardFunctionalInterfaceWithoutGenericType {
 	static Predicate predicate = t -> "x".equals(t); 
 	static Predicate wrongPredicate = t -> "x".equalsIgnoreCase(t); 
+	static Predicate<String> stringPredicate = t -> "x".equalsIgnoreCase(t);
 }
