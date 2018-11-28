@@ -55,6 +55,12 @@ The compiler can determine if the method should *declare* or *handle exceptions*
 #### Naming Conventions in Legacy *IO*
 Among the methods in `java.io.File`, most methods returning `File` or array of `File` objects are suffixed with `File` or `Files`. 
 
+#### `InputStream` VS `Reader`
+Both classes contain the following methods in common:
+* `int read()`
+* `void reset()`
+* `long skip(long n)`
+
 ### Legacy *IO* VS *NIO.2*
 #### Many Methods Return `boolean` to Indicate Success/Failure in Legacy *IO*
 The **`delete`** method in `java.io.File` returns **`false`** to indicate the **failure of deletion without any information about what went wrong**. Wheresas in *NIO.2*, the `delete` method in `Files` would throw more specific exception such as `NoSuchFileException` in case of deleting nonexistent file.
