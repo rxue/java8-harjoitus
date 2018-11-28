@@ -3,10 +3,15 @@
 ### Synthetic Comparison on *Anonymous Inner Class* and *Lambda Expression*
 *Anonymous inner class* and *lambda expresson* are similar in that as to the accessibility of *local variable*, both do not have access unless those variables are *final* or *effectively final*.
 
-## *Functional Interface*
+## *Functional Programming*
 ### Standard Functional Interfaces
 #### Drawback of Standard Functional Interfaces
 None of the *built-in* *functional interfaces* in *Java 8* allows for *checked exception* to be thrown
+
+### `Optional`
+#### `orElse`... Methods
+##### `T orElseGet(Supplier<? extends T> other)`
+The method name would be more logical to be **`orElseCompute`**<sup>Effective Java</sup>
 
 ### *Functional Interface* > Exam Tips
 * The exam may trap you by initializing a variable inside the functional block with the same name as the input parameters. For instance, `(Long w) -> {Long w=5; return 5;}` is not a valid *lambda expession*
