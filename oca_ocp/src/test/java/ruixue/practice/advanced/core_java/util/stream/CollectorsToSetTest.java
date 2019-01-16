@@ -12,7 +12,7 @@ import org.junit.jupiter.api.Test;
 
 public class CollectorsToSetTest {
 	/**
-	 * toSet() returns a HashSet by default
+	 * collect(Collectors.toSet()) returns a HashSet by default
 	 */
 	@Test
 	public void testToSetReturnHashSet() {
