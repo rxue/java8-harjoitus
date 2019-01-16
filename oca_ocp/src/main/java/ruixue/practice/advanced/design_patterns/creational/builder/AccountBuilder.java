@@ -1,6 +1,6 @@
 package ruixue.practice.advanced.design_patterns.creational.builder;
 
-import ruixue.practice.advanced.design_patterns.immutable.Account;
+import ruixue.practice.advanced.design_patterns.creational.immutable.Account;
 
 public class AccountBuilder {
 	private String id;
