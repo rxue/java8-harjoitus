@@ -1,4 +1,4 @@
-package ruixue.practice.advanced.design_patterns.creational.immutable;
+package rx.practice.advanced.design_pattern.creational.immutable;
 
 public class Account {
 	private String id;
