@@ -3,6 +3,7 @@ package rx.practice.advanced.design_pattern.structural.object.proxy;
 import java.lang.reflect.Proxy;
 
 import org.junit.jupiter.api.Test;
+import static org.junit.jupiter.api.Assertions.*;
 
 public class DynamicProxyTest {
 
@@ -13,7 +14,8 @@ public class DynamicProxyTest {
 		Subject subjectProxy = (Subject) Proxy.newProxyInstance(
 				subjectClass.getClassLoader(), 
 				new Class<?>[] {subjectClass}, new LoggerHandler(realSubject));
-		subjectProxy.calculateIncome();
+		Integer income = subjectProxy.calculateIncome();
+		assertEquals(new Integer(1000), income);
 	}
 
 }
