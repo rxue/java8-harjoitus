@@ -3,6 +3,9 @@
 ### Naming Convention
 * Be aware of `NullPointerException` (NPE), try to make use of `Optional` to resolve
 
+#### Avoid Underscore in the Package or Class Name
+[*snake_case*](#) is not commonly used in Java
+
 #### Name the `abstract class` with `Abstract` as the prefix
 Examples in Practice:
 * [AbstractCollection](https://docs.oracle.com/javase/8/docs/api/java/util/AbstractCollection.html)
