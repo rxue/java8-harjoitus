@@ -10,7 +10,7 @@ import static org.junit.jupiter.api.Assertions.*;
 public class ListResourceBundleTest {
 	@Test
 	public void testMissingResourceException() {
-		String bundleName = "ruixue.practice.ocpkasi.core_java.util.HeaderListResourceBundle";
+		String bundleName = "rx.practice.ocpkasi.core_java.util.HeaderListResourceBundle";
 		ResourceBundle rb = ResourceBundle.getBundle(bundleName, Locale.US);
 		assertEquals(bundleName, rb.getBaseBundleName());
 		assertTrue(rb instanceof HeaderListResourceBundle_en_US);
@@ -19,7 +19,7 @@ public class ListResourceBundleTest {
 	
 	@Test
 	public void testGetStringFromParentBundle() {
-		String bundleName = "ruixue.practice.ocpkasi.core_java.util.HeaderListResourceBundle";
+		String bundleName = "rx.practice.ocpkasi.core_java.util.HeaderListResourceBundle";
 		ResourceBundle rb = ResourceBundle.getBundle(bundleName, Locale.US);
 		assertEquals(bundleName, rb.getBaseBundleName());
 		assertTrue(rb instanceof HeaderListResourceBundle_en_US);
