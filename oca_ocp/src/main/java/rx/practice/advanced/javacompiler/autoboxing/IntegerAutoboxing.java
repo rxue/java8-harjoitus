@@ -1,4 +1,4 @@
-package ruixue.practice.advanced.compiler_behavior.autoboxing;
+package rx.practice.advanced.javacompiler.autoboxing;
 
 public class IntegerAutoboxing {
 

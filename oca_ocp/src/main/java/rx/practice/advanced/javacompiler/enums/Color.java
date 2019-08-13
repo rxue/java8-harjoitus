@@ -1,4 +1,4 @@
-package ruixue.practice.advanced.compiler_behavior.enums;
+package rx.practice.advanced.javacompiler.enums;
 
 public enum Color {
 	WHITE("valkoinen"),

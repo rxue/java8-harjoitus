@@ -1,4 +1,4 @@
-package ruixue.practice.advanced.core_java.io;
+package rx.practice.advanced.corejava.io;
 
 import java.io.IOException;
 import java.io.ObjectInputStream;

@@ -1,4 +1,4 @@
-package ruixue.practice.advanced.concurrency;
+package rx.practice.advanced.concurrency;
 
 import java.util.Arrays;
 import java.util.List;

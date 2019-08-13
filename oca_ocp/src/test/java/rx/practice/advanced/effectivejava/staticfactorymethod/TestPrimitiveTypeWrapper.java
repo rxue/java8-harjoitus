@@ -1,4 +1,4 @@
-package ruixue.practice.creating_objects.static_factory_method;
+package rx.practice.advanced.effectivejava.staticfactorymethod;
 
 import static org.junit.jupiter.api.Assertions.*;
 

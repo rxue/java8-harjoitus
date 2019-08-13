@@ -1,4 +1,4 @@
-package ruixue.practice.advanced;
+package rx.practice.advanced;
 
 import java.util.Arrays;
 

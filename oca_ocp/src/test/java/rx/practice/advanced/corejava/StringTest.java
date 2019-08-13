@@ -1,4 +1,4 @@
-package ruixue.practice.advanced.core_java;
+package rx.practice.advanced.corejava;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
