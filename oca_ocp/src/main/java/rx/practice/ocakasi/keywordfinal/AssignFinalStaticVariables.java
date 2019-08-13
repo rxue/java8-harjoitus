@@ -1,4 +1,4 @@
-package rx.practice.ocakasi.keyword_final;
+package rx.practice.ocakasi.keywordfinal;
 
 public class AssignFinalStaticVariables {
 	public static final String leftRope;
