@@ -5,7 +5,7 @@ import static org.junit.jupiter.api.Assertions.*;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.DisplayName;
 
-public class TestPrimitiveTypeWrapper {
+public class PrimitiveTypeWrapperTest {
 
 	@Test
 	@DisplayName("Test the Boolean objects instantiated differently")
