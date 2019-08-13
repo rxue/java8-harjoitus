@@ -1,4 +1,4 @@
-package ruixue.practice.data_structure;
+package rx.practice.datastructure;
 
 import java.util.function.Consumer;
 

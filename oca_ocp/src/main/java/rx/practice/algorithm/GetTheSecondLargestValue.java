@@ -1,4 +1,4 @@
-package ruixue.practice.algorithm;
+package rx.practice.algorithm;
 
 public class GetTheSecondLargestValue {
 	
