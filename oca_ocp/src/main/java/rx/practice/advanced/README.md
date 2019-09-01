@@ -25,3 +25,11 @@ In *Java*, *polymorphism* is also called *dynamic binding*, or *late binding* or
 
 However, it is illogical to invoke *static methods* in the middle of *method chaining*
 
+# JRE Tools (20190901)
+## `keytool`
+# JDK Tools
+All JRE tools is the subset of JDK tools
+## `jcmd`
+It can be typically used to get System properties of a running Java process in a JVM instance
+### Example: `jcmd 67723 VM.system_properties`
+Get all the system properties of the process with PID 67723
