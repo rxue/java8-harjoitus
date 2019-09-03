@@ -11,6 +11,7 @@ import java.security.cert.CertificateException;
 
 public class RestAPICallWithBasicAuthentication {
     public static void main(String[] args) {
+        System.out.println("DEBUG*:: keystore is " + System.getProperty("javax.net.ssl.keyStore"));
         String urlStr = args[0];
         String userName = args[1];
         String password = args[2];
@@ -65,9 +66,9 @@ public class RestAPICallWithBasicAuthentication {
                     return new PasswordAuthentication (userName, password.toCharArray());
                 }
             });
-            SSLContext sc = SSLContext.getInstance ("SSL");
+/*            SSLContext sc = SSLContext.getInstance ("SSL");
             sc.init (null, trustAllCerts, new java.security.SecureRandom ());
-            HttpsURLConnection.setDefaultSSLSocketFactory(sc.getSocketFactory());
+            HttpsURLConnection.setDefaultSSLSocketFactory(sc.getSocketFactory());*/
             URL url = new URL(urlStr);
             HttpsURLConnection urlConnection = (HttpsURLConnection)url.openConnection();
             urlConnection.setRequestProperty("Content-Type", "application/json");
@@ -78,11 +79,11 @@ public class RestAPICallWithBasicAuthentication {
             e.printStackTrace();
         } catch (IOException e) {
             e.printStackTrace();
-        } catch (NoSuchAlgorithmException e) {
+        } /*catch (NoSuchAlgorithmException e) {
             e.printStackTrace();
         } catch (KeyManagementException e) {
             e.printStackTrace();
-        }
+        }*/
 
     }
 }

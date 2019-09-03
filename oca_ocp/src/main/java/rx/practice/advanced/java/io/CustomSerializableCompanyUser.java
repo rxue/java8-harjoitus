@@ -1,4 +1,4 @@
-package rx.practice.advanced.corejava.io;
+package rx.practice.advanced.java.io;
 
 import java.io.IOException;
 import java.io.ObjectInputStream;

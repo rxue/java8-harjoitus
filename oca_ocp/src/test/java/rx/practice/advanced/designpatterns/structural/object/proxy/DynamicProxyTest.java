@@ -1,4 +1,4 @@
-package rx.practice.advanced.design_pattern.structural.object.proxy;
+package rx.practice.advanced.designpatterns.structural.object.proxy;
 
 import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.*;

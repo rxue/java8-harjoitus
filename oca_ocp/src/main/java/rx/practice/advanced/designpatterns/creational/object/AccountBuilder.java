@@ -1,4 +1,4 @@
-package rx.practice.advanced.design_pattern.object_creational.builder;
+package rx.practice.advanced.designpatterns.creational.object;
 
 import rx.practice.advanced.design_pattern.creational.immutable.Account;
 

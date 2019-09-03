@@ -1,4 +1,4 @@
-package rx.practice.advanced.corejava.io;
+package rx.practice.advanced.java.io;
 
 import java.io.File;
 import java.io.FileInputStream;
