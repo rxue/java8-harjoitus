@@ -28,6 +28,12 @@
 		    <artifactId>log4j-core</artifactId>
 		    <version>${log4j.version}</version>
 		</dependency>
+		  <dependency>
+			  <groupId>org.projectlombok</groupId>
+			  <artifactId>lombok</artifactId>
+			  <version>1.18.10</version>
+			  <scope>provided</scope>
+		  </dependency>
 		<!-- Only required to run tests in an IDE that bundles an older version -->
 		<dependency>
 			<groupId>org.junit.platform</groupId>
