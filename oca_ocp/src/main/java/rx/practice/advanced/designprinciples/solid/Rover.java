@@ -2,16 +2,18 @@ package rx.practice.advanced.designprinciples.solid;
 
 import lombok.Getter;
 
-import java.util.Map;
-
 public class Rover {
     @Getter
     private State state;
-    private Map<Character,IProcessor> processorMapper;
+    private ProcessorGraph processorGraph;
     public Rover(State state) {
         this.state = state;
+        processorGraph = new ProcessorGraph();
     }
-    public void move(char[] command) {
-        //state = processorMapper.get(command).process(state);
+    public void move(char[] commands) {
+        for (char command : commands)
+            state = processorGraph
+                    .getProcessor(state.getDirection(), command)
+                    .move(state);
     }
 }
