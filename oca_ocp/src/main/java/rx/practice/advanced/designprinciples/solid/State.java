@@ -8,5 +8,4 @@ import lombok.Getter;
 public class State {
     private Position position;
     private Direction direction;
-
 }

@@ -16,4 +16,16 @@ public class RoverSingleCommandTest {
         assertEquals(direction, movedToState.getDirection());
         assertEquals(new Position(1, 0), movedToState.getPosition());
     }
+
+    @Test
+    public void testEastMoveLeft() {
+        Position origin = new Position(0,0);
+        Direction direction = Direction.EAST;
+        State state = new State(origin, direction);
+        Rover rover = new Rover(state);
+        rover.move("l".toCharArray());
+        State movedToState = rover.getState();
+        assertEquals(Direction.NORTH, movedToState.getDirection());
+        assertEquals(new Position(0, 0), movedToState.getPosition());
+    }
 }

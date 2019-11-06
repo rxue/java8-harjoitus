@@ -5,15 +5,16 @@ import lombok.Getter;
 public class Rover {
     @Getter
     private State state;
-    private ProcessorGraph processorGraph;
+    private IProcessorComponent rootProcessor;
     public Rover(State state) {
         this.state = state;
-        processorGraph = new ProcessorGraph();
+        rootProcessor = new RootProcessor();
     }
     public void move(char[] commands) {
-        for (char command : commands)
-            state = processorGraph
-                    .getProcessor(state.getDirection(), command)
+        for (char c : commands)
+            state = rootProcessor
+                    .getChild(state.getDirection())
+                    .getChild(new Command(c))
                     .move(state);
     }
 }

@@ -1,5 +1,5 @@
 package rx.practice.advanced.designprinciples.solid;
 
-public enum Direction {
+public enum Direction implements IComponentKey {
     NORTH, SOUTH, WEST, EAST
 }
