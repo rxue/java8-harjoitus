@@ -1,7 +1,9 @@
-package rx.practice.advanced.designprinciples.solid;
+package rx.practice.advanced.designprinciples.solid.composite;
+
+import rx.practice.advanced.designprinciples.solid.IComponentKey;
+import rx.practice.advanced.designprinciples.solid.State;
 
 import java.util.Map;
-import java.util.Optional;
 
 @FunctionalInterface
 public interface IProcessorComponent {
@@ -9,7 +11,7 @@ public interface IProcessorComponent {
         throw new UnsupportedOperationException();
     }
     default IProcessorComponent getChild(IComponentKey argument) {
-        return getChildComponentMap().get(argument);
+        throw new UnsupportedOperationException();
     }
     State move(State originalState);
 }

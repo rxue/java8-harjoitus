@@ -1,9 +1,11 @@
-package rx.practice.advanced.designprinciples.solid;
+package rx.practice.advanced.designprinciples.solid.composite;
+
+import rx.practice.advanced.designprinciples.solid.*;
 
 import java.util.HashMap;
 import java.util.Map;
 
-public class EastCompositeProcessor implements IProcessorComponent {
+public class EastCompositeProcessor extends AbstractCompositeProcessorComponent {
     @Override
     public Map<IComponentKey,IProcessorComponent> getChildComponentMap() {
         Map<IComponentKey, IProcessorComponent> processorMap = new HashMap<>();
@@ -14,11 +16,6 @@ public class EastCompositeProcessor implements IProcessorComponent {
         });
         processorMap.put(new Command('l'), state -> new State(state.getPosition(), Direction.NORTH));
         return processorMap;
-    }
-
-    @Override
-    public State move(State originalState) {
-        throw new UnsupportedOperationException("Composite component does not have operation");
     }
 }
 
