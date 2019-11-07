@@ -1,6 +1,4 @@
-package rx.practice.advanced.designprinciples.solid.composite;
-
-import rx.practice.advanced.designprinciples.solid.*;
+package rx.practice.advanced.designpatterns.structural.object.composite;
 
 import java.util.HashMap;
 import java.util.Map;

@@ -1,6 +1,7 @@
-package rx.practice.advanced.designprinciples.solid;
+package rx.practice.advanced.designpatterns.structural.object.composite;
 
 import org.junit.jupiter.api.Test;
+
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
@@ -26,6 +27,17 @@ public class RoverSingleCommandTest {
         rover.move("l".toCharArray());
         State movedToState = rover.getState();
         assertEquals(Direction.NORTH, movedToState.getDirection());
+        assertEquals(new Position(0, 0), movedToState.getPosition());
+    }
+    @Test
+    public void testNorthMoveLeft() {
+        Position origin = new Position(0,0);
+        Direction direction = Direction.NORTH;
+        State state = new State(origin, direction);
+        Rover rover = new Rover(state);
+        rover.move("l".toCharArray());
+        State movedToState = rover.getState();
+        assertEquals(Direction.WEST, movedToState.getDirection());
         assertEquals(new Position(0, 0), movedToState.getPosition());
     }
 }

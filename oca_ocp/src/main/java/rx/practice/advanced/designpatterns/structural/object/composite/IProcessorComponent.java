@@ -1,7 +1,4 @@
-package rx.practice.advanced.designprinciples.solid.composite;
-
-import rx.practice.advanced.designprinciples.solid.IComponentKey;
-import rx.practice.advanced.designprinciples.solid.State;
+package rx.practice.advanced.designpatterns.structural.object.composite;
 
 import java.util.Map;
 

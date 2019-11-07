@@ -1,8 +1,6 @@
-package rx.practice.advanced.designprinciples.solid;
+package rx.practice.advanced.designpatterns.structural.object.composite;
 
 import lombok.Getter;
-import rx.practice.advanced.designprinciples.solid.composite.IProcessorComponent;
-import rx.practice.advanced.designprinciples.solid.composite.RootProcessor;
 
 public class Rover {
     @Getter

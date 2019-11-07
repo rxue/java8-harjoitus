@@ -1,4 +1,4 @@
-package rx.practice.advanced.designprinciples.solid;
+package rx.practice.advanced.designpatterns.structural.object.composite;
 
 import lombok.AllArgsConstructor;
 import lombok.Getter;
