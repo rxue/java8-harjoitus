@@ -10,12 +10,13 @@
 ### *Singleton Pattern* Application in Java Core
 * [`java.lang.RunTime`](http://grepcode.com/file/repository.grepcode.com/java/root/jdk/openjdk/8-b132/java/lang/Runtime.java)
 ## *Builder*
-The main purpose of *builder* is to avoid *telescoping constructor*. There are the following contract:
+The main purpose of *builder* is to avoid *telescoping constructor*. There are the following formula:
 
 Assume the object the builder is going to build is A
 
-* the *fields* of A have to `private final`
 * the *builder* of A is usually a *nested* `static` class in A
 * A is usually immutable **without any public constructor** but one `private` *constructor* whose parameter is the *builder*
-* the required fields in the *builder* have to `private final`, others don't necessarily need to be
+* the required fields in the *builder* have to `private final` so that it **has to and can only be assigned through the *constructor* **
+
+Reference: Effective Java > *Item 2: Consider a builder when faced with many constructor parameters* 
 

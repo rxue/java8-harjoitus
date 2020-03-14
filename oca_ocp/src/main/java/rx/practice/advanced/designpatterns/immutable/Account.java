@@ -1,8 +1,8 @@
-package rx.practice.advanced.design_pattern.creational.immutable;
+package rx.practice.advanced.designpatterns.immutable;
 
 public class Account {
-	private String id;
-	private double amount;
+	private final String id;
+	private final double amount;
 	public Account(String id, double amount) {
 		this.id = id;
 		this.amount = amount;
