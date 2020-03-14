@@ -16,7 +16,7 @@ Assume the object the builder is going to build is A
 
 * the *builder* of A is usually a *nested* `static` class in A
 * A is usually immutable **without any public constructor** but one `private` *constructor* whose parameter is the *builder*
-* the required fields in the *builder* have to `private final` so that it **has to and can only be assigned through the *constructor***
+* the required fields in the *builder* have to `private final` so that it **has to and can only be assigned through the *constructor***. In another word, the constructor parameters of a Builder are usually the values to be assigned to the required fields of A
 
 Reference: Effective Java > *Item 2: Consider a builder when faced with many constructor parameters* 
 
