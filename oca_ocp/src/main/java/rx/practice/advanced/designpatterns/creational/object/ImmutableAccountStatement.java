@@ -7,7 +7,7 @@ public class ImmutableAccountStatement {
     private final String name;
     private ImmutableAccountStatement(Builder builder) {
         id = builder.id;
-        name = builder.name.orElse("xxxx");
+        name = builder.name.orElse("");
     }
     public static class Builder {
         private final String id;//required
