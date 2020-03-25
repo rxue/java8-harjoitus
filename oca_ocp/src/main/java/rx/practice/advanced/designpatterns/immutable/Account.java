@@ -1,5 +1,7 @@
 package rx.practice.advanced.designpatterns.immutable;
 
+import org.apache.commons.lang3.builder.ToStringBuilder;
+
 public class Account {
 	private final String id;
 	private final double amount;
@@ -16,4 +18,11 @@ public class Account {
 		return amount;
 	}
 
+	@Override
+	public String toString() {
+		return new ToStringBuilder(this)
+				.append("id", id.toString())
+				.append("amount", amount )
+				.toString();
+	}
 }
