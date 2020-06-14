@@ -1,4 +1,4 @@
-package rx.practice.ocpkasi.javacompiler.try_with_resource;
+package rx.practice.ocpkasi.javacompiler.trywithresource;
 
 class PrimaryException extends Exception {
 	private static final long serialVersionUID = 1L;
