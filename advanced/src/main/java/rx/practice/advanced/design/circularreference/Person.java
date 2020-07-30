@@ -1,5 +1,8 @@
 package rx.practice.advanced.design.circularreference;
 
+/**
+ * Problem: Without a dereference to each other, this will not be able to be collected by garbage collector
+ */
 public class Person {
     private Person couple;
     public void setCouple(Person couple) {
