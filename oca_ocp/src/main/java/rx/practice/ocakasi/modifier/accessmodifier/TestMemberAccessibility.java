@@ -1,6 +1,6 @@
-package rx.practice.ocakasi.accessmodifier;
+package rx.practice.ocakasi.modifier.accessmodifier;
 
-import rx.practice.ocakasi.accessmodifier.other_package.Gosling;
+import rx.practice.ocakasi.modifier.accessmodifier.otherpackage.Gosling;
 
 public class TestMemberAccessibility {
 	public static void main(String[] args) {

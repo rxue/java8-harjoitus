@@ -1,4 +1,4 @@
-package rx.practice.ocakasi.accessmodifier.other_package;
+package rx.practice.ocakasi.modifier.accessmodifier.otherpackage;
 
 public class TestMemberAccessibility {
 

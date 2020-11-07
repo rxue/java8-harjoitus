@@ -1,4 +1,4 @@
-package rx.practice.ocakasi.accessmodifier;
+package rx.practice.ocakasi.modifier.accessmodifier;
 
 public class Swan {
 	boolean canFly = true;

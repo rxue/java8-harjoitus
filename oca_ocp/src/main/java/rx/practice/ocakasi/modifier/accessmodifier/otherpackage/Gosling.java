@@ -1,6 +1,6 @@
-package rx.practice.ocakasi.accessmodifier.other_package;
+package rx.practice.ocakasi.modifier.accessmodifier.otherpackage;
 
-import rx.practice.ocakasi.accessmodifier.Swan;
+import rx.practice.ocakasi.modifier.accessmodifier.Swan;
 
 public class Gosling extends Swan {
 	public void tryToSwim() {
