@@ -31,8 +31,3 @@ Examples in Practice:
   * `junit-platform-launcher` is used in Eclipse IDE
 * `maven-surefire-plugin`
   * `junit-platform-surefire-provider` is used by `mvn` command
-
-## Effective Java (3rd Edition)
-### Chapter 8: Methods
-#### Item 54: Return empty collections or arrays, not nulls
-The Java 8 Stream API, e.g. `filter` was designed so
