@@ -1,4 +1,4 @@
-package rx.practice.advanced.learningtests.java;
+package rx.practice.advanced.learningtests;
 
 import org.junit.jupiter.api.Test;
 

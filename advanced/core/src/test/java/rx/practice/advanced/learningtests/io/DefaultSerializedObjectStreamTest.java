@@ -1,4 +1,4 @@
-package rx.practice.advanced.learningtests.java.io;
+package rx.practice.advanced.learningtests.io;
 
 import java.io.File;
 import java.io.FileInputStream;

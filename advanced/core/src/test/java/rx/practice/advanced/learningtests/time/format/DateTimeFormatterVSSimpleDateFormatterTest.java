@@ -1,4 +1,4 @@
-package rx.practice.advanced.learningtests.java.time.format;
+package rx.practice.advanced.learningtests.time.format;
 
 import org.junit.jupiter.api.Test;
 

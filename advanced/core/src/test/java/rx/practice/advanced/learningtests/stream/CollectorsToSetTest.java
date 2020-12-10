@@ -1,4 +1,4 @@
-package rx.practice.advanced.learningtests.java.stream;
+package rx.practice.advanced.learningtests.stream;
 
 import static org.junit.jupiter.api.Assertions.assertTrue;
 
