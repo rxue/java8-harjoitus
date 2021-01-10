@@ -16,5 +16,5 @@ The Java 8 Stream API, e.g. `filter` was designed so
 #### 3 differences between *primitives* and *boxed primitives*
 * primitives have only their values, whereas boxed primitives have identities distinct from their values
 * primitive types have only fully functional values, whereas each boxed primitive type has nonfunctional value, which is `null`
-* primitives are more type- and space-efficient than boxed primitives
+* primitives are more time- and space-efficient than boxed primitives
 
