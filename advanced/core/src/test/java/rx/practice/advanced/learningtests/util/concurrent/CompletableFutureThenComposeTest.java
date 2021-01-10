@@ -1,10 +1,11 @@
 package rx.practice.advanced.learningtests.util.concurrent;
 
+import org.junit.jupiter.api.Tag;
 import org.junit.jupiter.api.Test;
 
 import java.util.concurrent.*;
 import java.util.function.Function;
-
+@Tag("SLOW")
 public class CompletableFutureThenComposeTest {
     @Test
     public void testThenCompose() throws InterruptedException {
