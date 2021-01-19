@@ -1,4 +1,4 @@
-package rx.practice.ocakasi.primitive.autoboxing_vs_unboxing;
+package rx.practice.advanced.primitives.autoboxingvsunboxing;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -8,7 +8,7 @@ import java.util.List;
  * @author rxue
  *
  */
-public class TestAutoboxingAndUnboxing {
+public class DemoAutoboxingAndUnboxing {
 
 	public static void main(String[] args) {
 		byte b = new Byte((byte)10); //unboxing i.e. compiler convert it to: new Byte((byte)10).byteValue();

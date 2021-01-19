@@ -3,7 +3,7 @@ package rx.practice.ocakasi.primitive;
 import java.util.ArrayList;
 import java.util.List;
 
-public class TestIntegralVariableAssignment {
+public class DemoIntegralVariableAssignment {
 	public static void main(String[] args) {
 		byte b1 = 127;//Range in [-127, 127] => OK
 		//byte b2 = 128;//out of range of [-127, 127] => Does not compile! 

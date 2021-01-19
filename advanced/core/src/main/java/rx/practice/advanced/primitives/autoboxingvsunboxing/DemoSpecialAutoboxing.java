@@ -1,6 +1,6 @@
-package rx.practice.ocakasi.primitive.autoboxing_vs_unboxing;
+package rx.practice.advanced.primitives.autoboxingvsunboxing;
 
-public class TestSpecialAutoboxing {
+public class DemoSpecialAutoboxing {
 
 	public static void main(String[] args) {
 		Object o1 = 100;

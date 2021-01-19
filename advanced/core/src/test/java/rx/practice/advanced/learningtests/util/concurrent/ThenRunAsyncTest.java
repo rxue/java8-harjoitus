@@ -1,6 +1,6 @@
 package rx.practice.advanced.learningtests.util.concurrent;
 
-import org.junit.jupiter.api.Disabled;
+import org.junit.jupiter.api.Tag;
 import org.junit.jupiter.api.Test;
 
 import java.util.concurrent.*;
@@ -8,7 +8,7 @@ import java.util.concurrent.*;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertSame;
 
-@Disabled("This test is slow, so no need to test when running with mvn clean test")
+@Tag("SLOW")
 public class ThenRunAsyncTest {
     @Test
     public void testThenRunAsyncFollowedByAllOf() throws InterruptedException, ExecutionException {
