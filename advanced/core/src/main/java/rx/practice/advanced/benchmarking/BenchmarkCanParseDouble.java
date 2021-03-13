@@ -1,11 +1,11 @@
 package rx.practice.advanced.benchmarking;
 
-import org.apache.commons.lang3.math.NumberUtils;
 import org.openjdk.jmh.annotations.*;
 
 import java.util.concurrent.TimeUnit;
+
 @State(Scope.Benchmark)
-public class BenchmarkIsCreatable {
+public class BenchmarkCanParseDouble {
     @Param({"x","1", "1a"})
     String input;
 
@@ -16,6 +16,6 @@ public class BenchmarkIsCreatable {
     @Measurement(iterations=1)
     @OutputTimeUnit(TimeUnit.NANOSECONDS)
     public boolean init() {
-        return NumberUtils.isCreatable(input);
+        return Parser.canParseDouble(input);
     }
 }
