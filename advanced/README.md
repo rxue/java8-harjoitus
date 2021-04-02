@@ -2,6 +2,7 @@
 ## Coding Convention
 * Be aware of `NullPointerException` (NPE), try to make use of `Optional` to resolve
 
+
 ### [Naming Convention](https://www.oracle.com/java/technologies/javase/codeconventions-namingconventions.html)
 
 #### Avoid Underscore in the `package` or Class Name
@@ -25,6 +26,13 @@ Examples in Practice:
 * [AbstractCollection](https://docs.oracle.com/javase/8/docs/api/java/util/AbstractCollection.html)
 
 #### Don't simply change *access modifier* for the sake of the Law of Demeter
+
+### Counterpart of Nested Functions, i.e. *Functional Programming* Interfaces
+As mentioned in [Refactoring, Improving the Design of Existing Code](https://www.amazon.com/Refactoring-Improving-Existing-Addison-Wesley-Signature/dp/0134757599) > Chapter 6 A First Set of Refactorings > Extract Function > Mechanics:
+
+> If the language supports *nested functions* , nest the extracted function inside the source function. That will reduce the amount of out-of-scope variables to deal with ... I can always use *Move Function (198)* later.
+
+The counterpart of *nested functions* in Java (8+) is the *functional programming* interfaces. So, in case a *method* is used merely in one place, a `Function` could be nested in the enclosing *method* instead. The "nested" *Function* can be moved out as a *method* once it is needed to be invoked in other places than the original enclosing methods.  
 
 ## Junit 5 configuration in `pom.xml`
 * `dependencies`
