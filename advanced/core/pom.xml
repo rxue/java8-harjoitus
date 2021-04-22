@@ -106,12 +106,38 @@
 	  </dependency -->
 		<!-- Only required to run tests in an IDE that bundles an older version -->
 	  <dependency>
+		  <groupId>org.junit.platform</groupId>
+		  <artifactId>junit-platform-launcher</artifactId>
+	  </dependency>
+	  <dependency>
+		  <groupId>org.junit.platform</groupId>
+		  <artifactId>junit-platform-runner</artifactId>
+		  <version>1.7.1</version>
+		  <scope>test</scope>
+	  </dependency>
+	  <dependency>
+		  <groupId>org.junit.platform</groupId>
+		  <artifactId>junit-platform-commons</artifactId>
+		  <version>1.7.1</version>
+		  <scope>test</scope>
+	  </dependency>
+	  <dependency>
 		  <groupId>org.junit.jupiter</groupId>
 		  <artifactId>junit-jupiter-api</artifactId>
 	  </dependency>
 	  <dependency>
+		  <groupId>org.junit.platform</groupId>
+		  <artifactId>junit-platform-suite-api</artifactId>
+	  </dependency>
+	  <dependency>
 		  <groupId>org.junit.jupiter</groupId>
 		  <artifactId>junit-jupiter-engine</artifactId>
+	  </dependency>
+	  <dependency>
+		  <groupId>junit</groupId>
+		  <artifactId>junit</artifactId>
+		  <version>4.13</version>
+		  <scope>test</scope>
 	  </dependency>
 	  <dependency>
 		  <groupId>javax</groupId>
