@@ -7,7 +7,7 @@ package rx.practice.advanced.javapuzzlers;
  */
 public class BrideOfLooper {
     public static void main(String[] args) {
-        double i = 0.0d/0.0;
-        while (i != i) {};
+        double i = Double.NaN;
+        while (i != i) {}
     }
 }
