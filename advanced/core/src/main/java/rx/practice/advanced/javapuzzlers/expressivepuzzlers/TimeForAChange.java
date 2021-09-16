@@ -1,4 +1,4 @@
-package rx.practice.advanced.javapuzzlers;
+package rx.practice.advanced.javapuzzlers.expressivepuzzlers;
 
 /**
  * Puzzler 2: Time for a Change
