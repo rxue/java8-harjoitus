@@ -1,4 +1,4 @@
-# java8-perusharjoitus
+# Advanced Java
 ## Coding Convention
 * Be aware of `NullPointerException` (NPE), try to make use of `Optional` to resolve
 
@@ -33,6 +33,9 @@ As mentioned in [Refactoring, Improving the Design of Existing Code](https://www
 > If the language supports *nested functions* , nest the extracted function inside the source function. That will reduce the amount of out-of-scope variables to deal with ... I can always use *Move Function (198)* later.
 
 The counterpart of *nested functions* in Java (8+) is the *functional programming* interfaces. So, in case a *method* is used merely in one place, a `Function` could be nested in the enclosing *method* instead. The "nested" *Function* can be moved out as a *method* once it is needed to be invoked in other places than the original enclosing methods.  
+
+## Nomenclature
+### [Tag Interface](https://wiki.c2.com/?TagInterface)
 
 ## Junit 5 
 ### Configuration in `pom.xml`
