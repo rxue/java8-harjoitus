@@ -11,18 +11,19 @@ import java.util.Properties;
 public class InitialContextLookupMDBDemo {
     public static void main(String[] args) throws JMSException {
         try {
+            String principal = "test";
+            String password = "test";
             Properties p = new Properties();
-            p.setProperty(Context.PROVIDER_URL, "http-remoting://127.0.0.1:8083");
+            p.setProperty(Context.PROVIDER_URL, "http-remoting://172.20.0.2:8081");
             p.setProperty(Context.INITIAL_CONTEXT_FACTORY, WildFlyInitialContextFactory.class.getName());
-            p.setProperty(Context.SECURITY_PRINCIPAL, "test");
-            p.setProperty(Context.SECURITY_CREDENTIALS, "test");
+            p.setProperty(Context.SECURITY_PRINCIPAL, principal);
+            p.setProperty(Context.SECURITY_CREDENTIALS, password);
             InitialContext context = new InitialContext(p);
             ConnectionFactory queueConnFactory = (ConnectionFactory) context.lookup("jms/RemoteConnectionFactory");
-            try(Connection conn = queueConnFactory.createConnection("test", "test");
-                Session session = conn.createSession(false, QueueSession.AUTO_ACKNOWLEDGE)) {
-                    Destination destination = (Destination) context.lookup("jms/queue/TestQueue");
-                    MessageProducer producer = session.createProducer(destination);
-                    producer.send(session.createTextMessage());
+            Queue jmsQueue = (Queue) context.lookup("jms/PublicQueue");
+            try(JMSContext jmsContext = queueConnFactory.createContext()) {
+                Message message = jmsContext.createTextMessage("This is the message sent to the jms queue");
+                jmsContext.createProducer().send(jmsQueue, message);
             }
         } catch (NamingException e) {
             e.printStackTrace();
