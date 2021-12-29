@@ -1,4 +1,4 @@
-package rx.practice.advanced.javapuzzlers;
+package rx.practice.advanced.javapuzzlers.expressivepuzzlers;
 
 /**
  * Puzzle 4: It's elementary

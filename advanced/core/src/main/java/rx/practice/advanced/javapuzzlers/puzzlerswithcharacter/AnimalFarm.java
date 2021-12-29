@@ -1,4 +1,4 @@
-package rx.practice.advanced.javapuzzlers;
+package rx.practice.advanced.javapuzzlers.puzzlerswithcharacter;
 
 /**
  * Puzzle 13: Animal Form

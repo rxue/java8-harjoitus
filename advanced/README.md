@@ -1,4 +1,4 @@
-# java8-perusharjoitus
+# Advanced Java
 ## Coding Convention
 * Be aware of `NullPointerException` (NPE), try to make use of `Optional` to resolve
 
@@ -34,8 +34,16 @@ As mentioned in [Refactoring, Improving the Design of Existing Code](https://www
 
 The counterpart of *nested functions* in Java (8+) is the *functional programming* interfaces. So, in case a *method* is used merely in one place, a `Function` could be nested in the enclosing *method* instead. The "nested" *Function* can be moved out as a *method* once it is needed to be invoked in other places than the original enclosing methods.  
 
-## Junit 5 configuration in `pom.xml`
+## Nomenclature
+### [Tag Interface](https://wiki.c2.com/?TagInterface)
+
+## Junit 5 
+### Configuration in `pom.xml`
 * `dependencies`
   * `junit-platform-launcher` is used in Eclipse IDE
 * `maven-surefire-plugin`
   * `junit-platform-surefire-provider` is used by `mvn` command
+### Practical Work Approach in Project Using JUnit 5
+#### Support on [*Test Suite*](https://junit.org/junit5/docs/current/user-guide/#running-tests-junit-platform-runner-test-suite)
+*Test Suite* is a feature in JUnit 4, in order to use it, the `@RunWith(JUnitPlatform.class)` annotation is a must. 
+

@@ -4,10 +4,10 @@ import org.junit.jupiter.api.Test;
 
 import java.util.ArrayList;
 import java.util.ConcurrentModificationException;
+import java.util.Iterator;
 import java.util.List;
 
-import static org.junit.jupiter.api.Assertions.assertEquals;
-import static org.junit.jupiter.api.Assertions.assertThrows;
+import static org.junit.jupiter.api.Assertions.*;
 
 
 public class ModificationOnForEachLoopTest {
@@ -26,6 +26,9 @@ public class ModificationOnForEachLoopTest {
     public void testRemoveInForEach() {
         List<String> collection = new ArrayList<>();
         collection.add("first");
+        Iterator<String> first = collection.iterator();
+        Iterator<String> second = collection.iterator();
+        assertFalse(first == second);
         assertThrows(ConcurrentModificationException.class, () -> {
             for (String current : collection) {
                 collection.remove("first");
