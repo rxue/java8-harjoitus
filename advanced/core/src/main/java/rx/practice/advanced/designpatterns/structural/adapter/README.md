@@ -1,4 +1,8 @@
 ## Adapter
+As mentioned in Chapter 18 Base patterns > Gateway in the Patterns of Enterprise Application Architecture (P of EAA) of Martin Fowler,
+
+> *Adapter* alters an implementation's interface to match another interface you need to work with.
+
 ### Application of Object Adapter Pattern in Core Java
 #### *Object Adapter* in `java.io`
 ##### `InputStreamReader` is the *Adapter* of `Reader` for Accessing to `InputStream`
