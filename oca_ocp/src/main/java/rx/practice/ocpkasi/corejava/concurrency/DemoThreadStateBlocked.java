@@ -1,4 +1,4 @@
-package rx.practice.ocpkasi.concurrency;
+package rx.practice.ocpkasi.corejava.concurrency;
 
 class SynchronizedClass {
 	

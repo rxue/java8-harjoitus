@@ -54,6 +54,13 @@ In comparison with `Executor`, *tasks* executed by `ExecutorService` are control
 #### `void Executor.execute(Runnable task)` VS `Future<?> submit(Runnable task)`
 People might wonder why therke is still `submit` method for submitting `Runnable` when there is `execute` method already in the super-interface `Executor`. The key point of the answer to this question is the as the aforementioned, submission of *tasks* by `ExecutorService` returns a `Future<?>`, by means of which the submitted tasks are controllable. Refer to [TestExecutorServiceSubmit](https://github.com/rxue/java8-perusharjoitus/blob/master/oca_ocp/src/test/java/ruixue/practice/ocpkasi/concurrency/TestExecutorServiceSubmit.java) 
 
+### `invokeAll`
+> you can wait for any or all of a collection of tasks to complete (using the `invokAny` or `invokeAll` methods)
+
+Reference: Effective Java > Chapter 11 Concurrency > Item 80: Prefer executors, tasks and streams to threads
+
+Demo: [DemoExecutorService.demoInvokeAll](#) proves in live that the `invokeAll` method is waiting until all the `Callable` tasks completes
+
 ### `shutdown()` VS `shutdownNow()`
 |Comparison on the term                         |`shutdown()`                               |`shutdownNow()`
 |-----------------------------------------------|-------------------------------------------|---------------
