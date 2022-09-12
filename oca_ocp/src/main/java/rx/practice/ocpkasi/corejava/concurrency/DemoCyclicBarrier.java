@@ -1,4 +1,4 @@
-package rx.practice.ocpkasi.concurrency;
+package rx.practice.ocpkasi.corejava.concurrency;
 
 import java.util.concurrent.BrokenBarrierException;
 import java.util.concurrent.CyclicBarrier;

@@ -1,4 +1,4 @@
-package rx.practice.ocpkasi.concurrency;
+package rx.practice.ocpkasi.corejava.concurrency;
 
 import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.*;
