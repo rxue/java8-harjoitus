@@ -1,4 +1,4 @@
-package rx.practice.advanced.javapuzzlers;
+package rx.practice.advanced.javapuzzlers.loopypuzzlers;
 
 /**
  * Puzzle 29: Bride of Looper
