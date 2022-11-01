@@ -4,7 +4,7 @@ import org.junit.jupiter.api.Test;
 
 import java.util.Locale;
 
-import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.*;
 
 public class LanguageLocaleTest {
     @Test
@@ -12,7 +12,7 @@ public class LanguageLocaleTest {
         Locale english = Locale.ENGLISH;
         assertEquals("en", english.getLanguage());
         assertEquals("en", english.toLanguageTag());
-        assertEquals(Locale.forLanguageTag("en"), Locale.ENGLISH);
+        assertSame(Locale.ENGLISH, Locale.forLanguageTag("en"));
     }
 
     @Test
@@ -23,7 +23,9 @@ public class LanguageLocaleTest {
         assertEquals("Chinese", simplifiedChinese.getDisplayLanguage());
 
         assertEquals("zh-CN", simplifiedChinese.toLanguageTag());
-        assertEquals(Locale.forLanguageTag("zh-CN"), Locale.SIMPLIFIED_CHINESE);
+        assertSame(Locale.SIMPLIFIED_CHINESE, Locale.forLanguageTag("zh-CN"));
+        assertNotEquals(Locale.SIMPLIFIED_CHINESE, new Locale("zh-CN"));
+
     }
 
     @Test
@@ -34,7 +36,13 @@ public class LanguageLocaleTest {
         assertEquals("Chinese", traditionalChinese.getDisplayLanguage());
 
         assertEquals("zh-TW", traditionalChinese.toLanguageTag());
-        assertEquals(Locale.forLanguageTag("zh-TW"), Locale.TRADITIONAL_CHINESE);
+        assertSame(Locale.TRADITIONAL_CHINESE, Locale.forLanguageTag("zh-TW"));
 
+    }
+
+    @Test
+    public void test_Finnish() {
+        Locale finnish = Locale.forLanguageTag("fi");
+        assertEquals(finnish, new Locale("fi"));
     }
 }
