@@ -14,6 +14,13 @@ public class LanguageLocaleTest {
         assertEquals("en", english.toLanguageTag());
         assertSame(Locale.ENGLISH, Locale.forLanguageTag("en"));
     }
+    @Test
+    public void test_EnglishUS() {
+        Locale englishUS = Locale.US;
+        assertEquals("en", englishUS.getLanguage());
+        assertEquals("en-US", englishUS.toLanguageTag());
+        assertSame(Locale.US, Locale.forLanguageTag("en-US"));
+    }
 
     @Test
     public void test_simplifiedChinese() {
