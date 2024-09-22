@@ -1,7 +1,7 @@
 package rx.practice.advanced.javax.naming;
 
 import org.wildfly.naming.client.WildFlyInitialContextFactory;
-import rx.practice.ejb.RemoteEJB;
+//import rx.practice.ejb.RemoteEJB;
 
 import javax.naming.Context;
 import javax.naming.InitialContext;
@@ -17,8 +17,8 @@ public class InitialContextLookupDemo {
             p.setProperty(Context.SECURITY_PRINCIPAL, "jmsuser");
             p.setProperty(Context.SECURITY_CREDENTIALS, "jmspassword");
             InitialContext context = new InitialContext(p);
-            RemoteEJB helloWorld = (RemoteEJB) context.lookup("java:/ejb-executor/RemoteEJBImpl!rx.practice.ejb.RemoteEJB");
-            helloWorld.test();
+            //RemoteEJB helloWorld = (RemoteEJB) context.lookup("java:/ejb-executor/RemoteEJBImpl!rx.practice.ejb.RemoteEJB");
+            //helloWorld.test();
         } catch (NamingException e) {
             e.printStackTrace();
         }
